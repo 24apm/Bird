@@ -55,7 +55,6 @@
     } else if (self.properties.rotation < -20.f) {
         self.properties.rotation = -20.f;
     }
-    NSLog(@"y %0.2f",self.properties.rotation);
 
     self.imageView.transform =
     CGAffineTransformMakeRotation(DegreesToRadians(self.properties.rotation));
