@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0E11E8418A49F2C00DC7793 /* WorldObjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E11E8318A49F2C00DC7793 /* WorldObjectView.m */; };
 		D0E30E8518A376E300FFD3CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30E8418A376E300FFD3CE /* Foundation.framework */; };
 		D0E30E8718A376E300FFD3CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30E8618A376E300FFD3CE /* CoreGraphics.framework */; };
 		D0E30E8918A376E300FFD3CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30E8818A376E300FFD3CE /* UIKit.framework */; };
@@ -52,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0E11E8218A49F2C00DC7793 /* WorldObjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldObjectView.h; sourceTree = "<group>"; };
+		D0E11E8318A49F2C00DC7793 /* WorldObjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldObjectView.m; sourceTree = "<group>"; };
 		D0E30E8118A376E300FFD3CE /* Bird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E30E8418A376E300FFD3CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0E30E8618A376E300FFD3CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -226,6 +229,8 @@
 				D0E30EC618A3771C00FFD3CE /* XibView.m */,
 				D0E30EE018A37EF300FFD3CE /* GameLoopTimer.h */,
 				D0E30EE118A37EF400FFD3CE /* GameLoopTimer.m */,
+				D0E11E8218A49F2C00DC7793 /* WorldObjectView.h */,
+				D0E11E8318A49F2C00DC7793 /* WorldObjectView.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -388,6 +393,7 @@
 				D0E30E9518A376E300FFD3CE /* AppDelegate.m in Sources */,
 				D0E30E9118A376E300FFD3CE /* main.m in Sources */,
 				D0E41ED118A3965700B37819 /* GameConstants.m in Sources */,
+				D0E11E8418A49F2C00DC7793 /* WorldObjectView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -44,9 +44,9 @@
     self.ladyBugView.properties.speed = CGPointMake(0.f, 0.f);
 
     
-    self.ladyBugView.properties.acceleration = CGPointMake(self.ladyBugView.properties.acceleration.x, self.ladyBugView.properties.acceleration.y - TAP_ACCELATION_INCREASE);
+    self.ladyBugView.properties.acceleration = CGPointMake(self.ladyBugView.properties.acceleration.x, self.ladyBugView.properties.acceleration.y + TAP_ACCELATION_INCREASE);
     
-    self.ladyBugView.properties.rotation = 0.f;    
+    self.ladyBugView.properties.rotation = 0.f;
 }
 
 - (void)viewDidLoad

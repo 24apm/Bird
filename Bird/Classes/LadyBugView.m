@@ -26,11 +26,17 @@
 
 - (void)setup {
     [super setup];
-    self.properties = [[WorldObjectProperties alloc] init];
     self.properties.rotation = 0.f;
-    self.properties.speed = CGPointMake(0.f, 2.f);
     self.properties.acceleration = CGPointMake(0.f, 0.f);
+    self.properties.accelerationMin = CGPointMake(0.f, -1.6f);
+    self.properties.accelerationMax = CGPointMake(0.f, 0.20f);
+
+    self.properties.speed = CGPointMake(0.f, 2.f);
+    self.properties.speedMin = CGPointMake(0.f, -3.0f);
+    self.properties.speedMax = CGPointMake(0.f, 5.f);
+
     self.properties.gravity = CGPointMake(0.f, GRAVITY);
+    
 }
 
 - (void)paused {
@@ -40,35 +46,19 @@
 }
 
 - (void)drawStep {
-    CGPoint center = self.center;
-    CGFloat newX = center.x + self.properties.speed.x;
-    CGFloat newY = center.y + self.properties.speed.y;
-    self.center = CGPointMake(newX, newY);
+    [super drawStep];
+
+    self.properties.rotation += 10.0f * self.properties.acceleration.y;
     
-    self.properties.acceleration = CGPointMake(0.f, self.properties.acceleration.y + self.properties.gravity.y);
-    
-    // Cap flying and falling to reduce acceleration crazyness
-    if (self.properties.acceleration.y > MAX_ACCELATION_DOWN) {
-        self.properties.acceleration = CGPointMake(0.f, MAX_ACCELATION_DOWN);
-    }
-    
-    if (self.properties.acceleration.y < MAX_ACCELATION_UP) {
-        self.properties.acceleration = CGPointMake(0.f, -MAX_ACCELATION_UP);
-    }
-    
-    self.properties.speed = CGPointMake(0.f, self.properties.speed.y + self.properties.acceleration.y);
-    if (self.properties.speed.y > 0.f) {
-        self.properties.rotation += 10.0f * self.properties.acceleration.y;
-    }
     if(self.properties.rotation > 90.f) {
         self.properties.rotation = 90.f;
-    } else if (self.properties.rotation < 0.f) {
-        self.properties.rotation = 0.f;
+    } else if (self.properties.rotation < -20.f) {
+        self.properties.rotation = -20.f;
     }
-    
+    NSLog(@"y %0.2f",self.properties.rotation);
+
     self.imageView.transform =
     CGAffineTransformMakeRotation(DegreesToRadians(self.properties.rotation));
-
 }
 
 @end

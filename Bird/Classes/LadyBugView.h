@@ -7,11 +7,10 @@
 //
 
 #import "XibView.h"
-#import "WorldObjectProperties.h"
+#import "WorldObjectView.h"
 
-@interface LadyBugView : XibView
+@interface LadyBugView : WorldObjectView
 
-@property WorldObjectProperties *properties;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 - (void)drawStep;

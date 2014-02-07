@@ -11,7 +11,11 @@
 @interface WorldObjectProperties : NSObject
 
 @property (nonatomic) CGPoint speed;
+@property (nonatomic) CGPoint speedMin;
+@property (nonatomic) CGPoint speedMax;
 @property (nonatomic) CGPoint acceleration;
+@property (nonatomic) CGPoint accelerationMin;
+@property (nonatomic) CGPoint accelerationMax;
 @property (nonatomic) CGPoint gravity;
 @property (nonatomic) CGFloat rotation;
 
