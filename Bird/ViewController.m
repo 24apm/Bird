@@ -18,20 +18,6 @@
 
 @implementation ViewController
 
-- (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    if (!(self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        return self;
-    }
-    
-    return self;
-}
-
-- (void) awakeFromNib
-{
-    [super awakeFromNib];
-}
-
 - (void)initialize {
     [[GameLoopTimer instance] initialize];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(drawStep) name:DRAW_STEP_NOTIFICATION object:nil];

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D0E11E8418A49F2C00DC7793 /* WorldObjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E11E8318A49F2C00DC7793 /* WorldObjectView.m */; };
+		D0E11EC118A4ABD600DC7793 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E11EC018A4ABD600DC7793 /* ViewController.xib */; };
 		D0E30E8518A376E300FFD3CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30E8418A376E300FFD3CE /* Foundation.framework */; };
 		D0E30E8718A376E300FFD3CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30E8618A376E300FFD3CE /* CoreGraphics.framework */; };
 		D0E30E8918A376E300FFD3CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30E8818A376E300FFD3CE /* UIKit.framework */; };
@@ -40,6 +41,7 @@
 		D0E30EEA18A387A500FFD3CE /* LadyBugView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E30EE918A387A500FFD3CE /* LadyBugView.m */; };
 		D0E30EEE18A3938200FFD3CE /* LadyBugView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E30EED18A3938200FFD3CE /* LadyBugView.xib */; };
 		D0E41ED118A3965700B37819 /* GameConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E41ED018A3965700B37819 /* GameConstants.m */; };
+		D0E79C9E18A4B40F00CBBF73 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E79C9D18A4B40F00CBBF73 /* MainWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,7 @@
 /* Begin PBXFileReference section */
 		D0E11E8218A49F2C00DC7793 /* WorldObjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldObjectView.h; sourceTree = "<group>"; };
 		D0E11E8318A49F2C00DC7793 /* WorldObjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldObjectView.m; sourceTree = "<group>"; };
+		D0E11EC018A4ABD600DC7793 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		D0E30E8118A376E300FFD3CE /* Bird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E30E8418A376E300FFD3CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0E30E8618A376E300FFD3CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -104,6 +107,7 @@
 		D0E30EED18A3938200FFD3CE /* LadyBugView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LadyBugView.xib; sourceTree = "<group>"; };
 		D0E41ECF18A3965700B37819 /* GameConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameConstants.h; path = Classes/GameConstants.h; sourceTree = "<group>"; };
 		D0E41ED018A3965700B37819 /* GameConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameConstants.m; path = Classes/GameConstants.m; sourceTree = "<group>"; };
+		D0E79C9D18A4B40F00CBBF73 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,7 +262,9 @@
 			isa = PBXGroup;
 			children = (
 				D0E30ED818A37A3900FFD3CE /* BackgroundView.xib */,
+				D0E79C9D18A4B40F00CBBF73 /* MainWindow.xib */,
 				D0E30EED18A3938200FFD3CE /* LadyBugView.xib */,
+				D0E11EC018A4ABD600DC7793 /* ViewController.xib */,
 			);
 			name = Xib;
 			sourceTree = "<group>";
@@ -352,6 +358,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0E79C9E18A4B40F00CBBF73 /* MainWindow.xib in Resources */,
+				D0E11EC118A4ABD600DC7793 /* ViewController.xib in Resources */,
 				D0E30EEE18A3938200FFD3CE /* LadyBugView.xib in Resources */,
 				D0E30ED418A3794C00FFD3CE /* pipe_face_down.png in Resources */,
 				D0E30E9D18A376E300FFD3CE /* Images.xcassets in Resources */,
