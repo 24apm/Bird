@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 #import "BackgroundView.h"
 #import "LadyBugView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <ADBannerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet BackgroundView *backgroundView;
 @property (weak, nonatomic) IBOutlet UIButton *tapButton;
 @property (weak, nonatomic) IBOutlet LadyBugView *ladyBugView;
+
+@property (nonatomic, retain) ADBannerView *adBannerView;
 
 @end
