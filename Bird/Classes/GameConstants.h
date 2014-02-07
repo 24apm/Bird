@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define GRAVITY 0.02
+#define GRAVITY 0.05
 #define TAP_ACCELATION_INCREASE 0.40
 #define MAX_ACCELATION_UP -0.5f
 #define MAX_ACCELATION_DOWN 0.07f
