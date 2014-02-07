@@ -46,9 +46,10 @@
         UIView *xibView = [nibObjects objectAtIndex:0];
         self.backgroundColor = [UIColor clearColor];
         self.autoresizingMask = loaderView.autoresizingMask;
-        loaderView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         loaderView.frame = xibView.frame;
         [loaderView addSubview:xibView];
+        self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, loaderView.frame.size.width, loaderView.frame.size.height);
+        loaderView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     }
 }
 

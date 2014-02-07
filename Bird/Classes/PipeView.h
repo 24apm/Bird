@@ -6,8 +6,14 @@
 //  Copyright (c) 2014 MacCoder. All rights reserved.
 //
 
-#import "WorldObjectProperties.h"
+#import "WorldObjectView.h"
 
-@interface PipView : WorldObjectProperties
+@interface PipeView : WorldObjectView
+
+@property (weak, nonatomic) IBOutlet UIImageView *pipeTopView;
+@property (weak, nonatomic) IBOutlet UIImageView *pipeDownView;
+
+
+- (void)setupGapDistance:(float)gapDistance gapCenterY:(float)gapCenterY;
 
 @end

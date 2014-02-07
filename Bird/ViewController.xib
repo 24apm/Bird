@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1280" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
                 <outlet property="backgroundView" destination="ud9-hT-BwW" id="wbI-db-BqQ"/>
                 <outlet property="ladyBugView" destination="e5o-3P-nu2" id="OXH-zP-8az"/>
+                <outlet property="obstacleLayer" destination="hSA-WF-Sfn" id="nEU-6o-LyS"/>
                 <outlet property="tapButton" destination="ggc-J1-uXo" id="TzF-aZ-as4"/>
                 <outlet property="view" destination="tyK-BE-phm" id="Vmq-x3-jLJ"/>
             </connections>
@@ -22,6 +23,11 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="hSA-WF-Sfn" userLabel="Obstacles">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" id="e5o-3P-nu2" customClass="LadyBugView">
                     <rect key="frame" x="140" y="220" width="40" height="40"/>
@@ -37,6 +43,18 @@
                     </state>
                     <connections>
                         <action selector="tapButtonPressed:" destination="-1" eventType="touchUpInside" id="7aY-RE-Awo"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hn7-uR-1al">
+                    <rect key="frame" x="238" y="418" width="73" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="REMATCH">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="rematchPressed:" destination="-1" eventType="touchUpInside" id="PEV-83-aWM"/>
                     </connections>
                 </button>
             </subviews>

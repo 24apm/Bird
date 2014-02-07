@@ -14,6 +14,7 @@
 @interface ViewController : UIViewController <ADBannerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet BackgroundView *backgroundView;
+@property (weak, nonatomic) IBOutlet UIView *obstacleLayer;
 @property (weak, nonatomic) IBOutlet UIButton *tapButton;
 @property (weak, nonatomic) IBOutlet LadyBugView *ladyBugView;
 

@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#define GRAVITY 0.05
-#define TAP_ACCELATION_INCREASE -0.90
+#define GRAVITY 0.05f
+#define TAP_ACCELATION_INCREASE -0.90f
+#define OBSTACLE_SPEED -3.0f
 
 @interface GameConstants : NSObject
 

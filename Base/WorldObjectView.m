@@ -37,11 +37,11 @@
     }
     
     if (self.properties.speed.y > self.properties.speedMax.y) {
-        self.properties.speed = CGPointMake(0.f, self.properties.speedMax.y);
+        self.properties.speed = CGPointMake(self.properties.speed.x, self.properties.speedMax.y);
     } else if (self.properties.speed.y < self.properties.speedMin.y) {
-        self.properties.speed = CGPointMake(0.f, self.properties.speedMin.y);
+        self.properties.speed = CGPointMake(self.properties.speed.x, self.properties.speedMin.y);
     } else {
-        self.properties.speed = CGPointMake(0.f, self.properties.speed.y + self.properties.acceleration.y);
+        self.properties.speed = CGPointMake(self.properties.speed.x, self.properties.speed.y + self.properties.acceleration.y);
     }
     
     CGPoint center = self.center;

@@ -8,6 +8,8 @@
 
 #import "Utils.h"
 
+#define ARC4RANDOM_MAX 0x100000000
+
 @implementation Utils
 
 + (CGSize)screenSize {
@@ -21,5 +23,8 @@
     return screenSize;
 }
 
++ (float)randBetweenMin:(int)min max:(int)max {
+    return ((float)arc4random() / ARC4RANDOM_MAX) * (max-min) + min;
+}
 
 @end
