@@ -12,15 +12,50 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    // Handle launching from a notification
+    UILocalNotification *locationNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+    if (locationNotification) {
+        // Set icon badge number to zero
+        application.applicationIconBadgeNumber = 0;
+    }
+    
     self.window.frame = UIScreen.mainScreen.applicationFrame;
 
     [self.window addSubview:self.viewController.view];
     [self.window makeKeyAndVisible];
     self.window.rootViewController = self.viewController;
 
+    [self registerNotifications];
+    
     return YES;
 }
-							
+
+- (void)registerNotifications {
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    [self registerLocalNotification:10 bodyText:@"10" actionText:@"10 action"];
+    [self registerLocalNotification:20 bodyText:@"20" actionText:@"20 action"];
+    [self registerLocalNotification:40 bodyText:@"40" actionText:@"40 action"];
+    [self registerLocalNotification:80 bodyText:@"80" actionText:@"80 action"];
+    [self registerLocalNotification:160 bodyText:@"160" actionText:@"160 action"];
+}
+
+- (void)registerLocalNotification:(NSTimeInterval)sec bodyText:(NSString *)bodyText actionText:(NSString *)actionText{
+    UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:sec];
+    localNotification.alertBody = bodyText;
+    localNotification.alertAction = actionText;
+    localNotification.timeZone = [NSTimeZone defaultTimeZone];
+    localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    // Set icon badge number to zero
+    application.applicationIconBadgeNumber = 0;
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -35,7 +70,8 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    application.applicationIconBadgeNumber = 0;
+    
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

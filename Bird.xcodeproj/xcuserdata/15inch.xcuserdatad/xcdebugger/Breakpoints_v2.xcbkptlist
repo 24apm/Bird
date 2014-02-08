@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bird/GameViewController.m"
-            timestampString = "413548700.76962"
+            timestampString = "413552044.815"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "265"
-            endingLineNumber = "265"
+            startingLineNumber = "282"
+            endingLineNumber = "282"
             landmarkName = "-bannerViewActionDidFinish:"
             landmarkType = "5">
          </BreakpointContent>
@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bird/GameViewController.m"
-            timestampString = "413548000.085502"
+            timestampString = "413552044.815"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "-flash"
             landmarkType = "5">
          </BreakpointContent>
