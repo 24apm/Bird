@@ -15,5 +15,6 @@
 
 - (void)drawStep;
 - (void)paused;
+- (void)resume;
 
 @end

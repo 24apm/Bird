@@ -28,12 +28,12 @@
     [super setup];
     self.properties.rotation = 0.f;
     self.properties.acceleration = CGPointMake(0.f, 0.f);
-    self.properties.accelerationMin = CGPointMake(0.f, -1.6f);
-    self.properties.accelerationMax = CGPointMake(0.f, 0.20f);
+    self.properties.accelerationMin = CGPointMake(0.f, 0.00f);
+    self.properties.accelerationMax = CGPointMake(0.f, 1.50f);
 
     self.properties.speed = CGPointMake(0.f, 2.f);
-    self.properties.speedMin = CGPointMake(0.f, -3.0f);
-    self.properties.speedMax = CGPointMake(0.f, 5.f);
+    self.properties.speedMin = CGPointMake(0.f, TAP_SPEED_INCREASE);
+    self.properties.speedMax = CGPointMake(0.f, 10.f);
 
     self.properties.gravity = CGPointMake(0.f, GRAVITY);
     
@@ -43,6 +43,12 @@
     self.properties.speed = CGPointMake(0.f, 0.f);
     self.properties.acceleration = CGPointMake(0.f, 0.f);
     self.properties.gravity = CGPointMake(0.f, 0.f);
+}
+
+- (void)resume {
+    self.properties.speed = CGPointMake(0.f, 2.f);
+    self.properties.acceleration = CGPointMake(0.f, 0.f);
+    self.properties.gravity = CGPointMake(0.f, GRAVITY);
 }
 
 - (void)drawStep {

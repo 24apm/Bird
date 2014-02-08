@@ -15,7 +15,10 @@
 @interface GameViewController ()
 
 @property (strong, nonatomic) NSMutableArray *worldObstacles;
+@property (strong, nonatomic) NSMutableArray *scorableObjects;
+
 @property (nonatomic) BOOL isGameOver;
+@property (nonatomic) int score;
 
 @end
 
@@ -25,6 +28,7 @@
     [[GameLoopTimer instance] initialize];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(drawStep) name:DRAW_STEP_NOTIFICATION object:nil];
     self.worldObstacles = [NSMutableArray array];
+    self.scorableObjects = [NSMutableArray array];
     [self createObstacle];
     self.isGameOver = NO;
 }
@@ -32,40 +36,52 @@
 - (IBAction)tapButtonPressed:(id)sender {
     if (self.isGameOver == YES) return;
 
-    self.ladyBugView.properties.gravity = CGPointMake(0.f, GRAVITY);
-
-    self.ladyBugView.properties.speed = CGPointMake(0.f, -5.f);
-
+    [self.ladyBugView resume];
+    self.ladyBugView.properties.speed = CGPointMake(0.f, TAP_SPEED_INCREASE);
     
-//    self.ladyBugView.properties.acceleration = CGPointMake(self.ladyBugView.properties.acceleration.x, self.ladyBugView.properties.acceleration.y + TAP_ACCELATION_INCREASE);
+    self.ladyBugView.properties.acceleration = CGPointMake(self.ladyBugView.properties.acceleration.x, self.ladyBugView.properties.acceleration.y + TAP_ACCELATION_INCREASE);
     
     self.ladyBugView.properties.rotation = 0.f;
 }
 
 - (void)createObstacle {
     PipeView *pipeView;
-    for (int i = 0; i < 2; i++) {
+    for (int i = 0; i < 1; i++) {
         pipeView = [[PipeView alloc] init];
         [self.worldObstacles addObject:pipeView];
         [self.obstacleLayer addSubview:pipeView];
-        pipeView.center = CGPointMake(self.view.frame.size.width * (i + 1), self.view.center.y);
-        float randomY = [Utils randBetweenMin:self.view.frame.size.height * 0.3f max:self.view.frame.size.height * 0.7f];
+
+    }
+    [self resetPipes];
+}
+
+- (void)resetPipe:(PipeView *)pipeView {
+    float randomY = [Utils randBetweenMin:self.view.frame.size.height * 0.3f max:self.view.frame.size.height * 0.7f];
+    [pipeView setupGapDistance:self.ladyBugView.frame.size.height * 4.f gapCenterY:randomY];
+    [self.scorableObjects addObject:pipeView];
+}
+
+- (void)resetPipes {
+    int i = 1.f;
+    for (PipeView *pipeView in self.worldObstacles) {
+        // off map
+        [self resetPipe:pipeView];
+        pipeView.center = CGPointMake(self.view.frame.size.width * i * 1.5f, pipeView.center.y);
         
-        [pipeView setupGapDistance:self.ladyBugView.frame.size.height * 3.f gapCenterY:randomY];
-        pipeView.properties.speed = CGPointMake(OBSTACLE_SPEED, 0.f);
+        i++;
     }
 }
 
 - (IBAction)rematchPressed:(id)sender {
     self.isGameOver = NO;
-    int i = 1.f;
-    for (PipeView *pipeView in self.worldObstacles) {
-        // off map
-            pipeView.center = CGPointMake(self.view.frame.size.width * i * 2.0f, pipeView.center.y);
-            float randomY = [Utils randBetweenMin:self.view.frame.size.height * 0.3f max:self.view.frame.size.height * 0.7f];
-            [pipeView setupGapDistance:self.ladyBugView.frame.size.height * 3.f gapCenterY:randomY];
-        i++;
-    }
+    [self.scorableObjects removeAllObjects];
+    [self resetPipes];
+    [self.ladyBugView resume];
+    self.ladyBugView.center = self.view.center;
+    
+    
+    self.score = 0;
+    [self refreshLabel];
 }
 
 - (void)viewDidLoad
@@ -89,6 +105,7 @@
         self.ladyBugView.frame = CGRectMake(self.ladyBugView.frame.origin.x, (self.self.view.frame.size.height - self.ladyBugView.frame.size.height), self.ladyBugView.frame.size.width, self.ladyBugView.frame.size.height);
         self.ladyBugView.properties.rotation = 90.f;
         [self.ladyBugView paused];
+        self.isGameOver = YES;
     }
 }
 
@@ -96,9 +113,8 @@
     for (PipeView *pipeView in self.worldObstacles) {
         // off map
         if (pipeView.center.x < -pipeView.frame.size.width) {
-            pipeView.center = CGPointMake(self.view.frame.size.width * 4.f, pipeView.center.y);
-            float randomY = [Utils randBetweenMin:self.view.frame.size.height * 0.3f max:self.view.frame.size.height * 0.7f];
-            [pipeView setupGapDistance:self.ladyBugView.frame.size.height * 3.f gapCenterY:randomY];
+            [self resetPipe:pipeView];
+            pipeView.center = CGPointMake(self.view.frame.size.width + pipeView.frame.size.width, pipeView.center.y);
         }
     }
 }
@@ -117,19 +133,56 @@
     }
 }
 
+- (void)checkIfScored {
+    if (self.scorableObjects.count <= 0) return;
+    for (PipeView *pipeView in self.scorableObjects) {
+        // passed ladybug
+        CGRect pipeFrame = [pipeView.superview convertRect:pipeView.frame toView:self.ladyBugView.superview];
+        if (self.ladyBugView.center.x > pipeFrame.origin.x + pipeView.frame.size.width) {
+            [self.scorableObjects removeObject:pipeView];
+            self.score++;
+            [self refreshLabel];
+        }
+    }
+}
+
+- (void)refreshLabel {
+    self.scoreLabel.text = [NSString stringWithFormat:@"%d", self.score];
+}
+
+- (void)stopObstacles {
+    for (PipeView *pipeView in self.worldObstacles) {
+        pipeView.properties.speed = CGPointMake(0.f, 0.f);
+    }
+}
+
+- (void)resumeObstacles {
+    for (PipeView *pipeView in self.worldObstacles) {
+        pipeView.properties.speed = CGPointMake(OBSTACLE_SPEED, 0.f);
+    }
+}
 
 - (void)drawStep {
-    if (self.isGameOver == NO) {
-        [self.backgroundView drawStep];
-        for (PipeView *pipeView in self.worldObstacles) {
-            [pipeView drawStep];
-        }
-        [self boundaryTestForPipes];
-//        [self collisionDetection];
+    [self.backgroundView drawStep];
+    for (PipeView *pipeView in self.worldObstacles) {
+        [pipeView drawStep];
     }
-
-    [self.ladyBugView drawStep];
+    [self boundaryTestForPipes];
+//    
+    [self collisionDetection];
     [self boundaryTestForLadyBug];
+    
+    [self.ladyBugView drawStep];
+    [self checkIfScored];
+}
+
+- (void)setIsGameOver:(BOOL)isGameOver {
+    _isGameOver = isGameOver;
+    if (isGameOver) {
+        [self stopObstacles];
+    } else {
+        [self resumeObstacles];
+    }
 }
 
 #pragma mark - ADs
