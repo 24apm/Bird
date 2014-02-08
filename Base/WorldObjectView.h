@@ -11,7 +11,7 @@
 
 @interface WorldObjectView : XibView
 
-@property WorldObjectProperties *properties;
+@property (strong, nonatomic) WorldObjectProperties *properties;
 
 - (void)drawStep;
 

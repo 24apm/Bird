@@ -54,14 +54,22 @@
 - (void)drawStep {
     [super drawStep];
 
-    self.properties.rotation += 10.0f * self.properties.acceleration.y;
-    
+    if(self.properties.speed.y < 0) {
+        self.properties.rotation = -20;
+    } else if (self.properties.speed.y > 0){
+        self.properties.rotation = -20 + (110.f * self.properties.speed.y/self.properties.speedMax.y);
+    } else {
+        self.properties.rotation = 90.f;
+
+    }
+
+    // capped
     if(self.properties.rotation > 90.f) {
         self.properties.rotation = 90.f;
     } else if (self.properties.rotation < -20.f) {
         self.properties.rotation = -20.f;
     }
-
+    
     self.imageView.transform =
     CGAffineTransformMakeRotation(DegreesToRadians(self.properties.rotation));
 }

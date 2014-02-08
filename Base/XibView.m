@@ -50,6 +50,7 @@
         [loaderView addSubview:xibView];
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, loaderView.frame.size.width, loaderView.frame.size.height);
         loaderView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        self.autoresizingMask = xibView.autoresizingMask;
     }
 }
 

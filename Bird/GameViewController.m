@@ -119,6 +119,17 @@
     }
 }
 
+- (void)flash {
+    self.flashOverlay.alpha = 0.f;
+    [UIView animateWithDuration:0.1f delay:0.f options:nil animations:^{
+        self.flashOverlay.alpha = 1.0f;
+    } completion:^(BOOL completed){
+        [UIView animateWithDuration:0.1f delay:0.f options:nil animations:^{
+        } completion:^(BOOL completed){
+            self.flashOverlay.alpha = 0.0f;
+        } ];    } ];
+}
+
 - (void)collisionDetection {
     for (PipeView *pipe in self.worldObstacles) {
         
@@ -168,7 +179,7 @@
         [pipeView drawStep];
     }
     [self boundaryTestForPipes];
-//    
+   
     [self collisionDetection];
     [self boundaryTestForLadyBug];
     
@@ -177,8 +188,11 @@
 }
 
 - (void)setIsGameOver:(BOOL)isGameOver {
+    if (self.isGameOver == isGameOver) return;
+    
     _isGameOver = isGameOver;
     if (isGameOver) {
+        [self flash];
         [self stopObstacles];
     } else {
         [self resumeObstacles];

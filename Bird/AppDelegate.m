@@ -12,6 +12,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window.frame = UIScreen.mainScreen.applicationFrame;
+
     [self.window addSubview:self.viewController.view];
     [self.window makeKeyAndVisible];
     self.window.rootViewController = self.viewController;

@@ -16,8 +16,9 @@
 @property (weak, nonatomic) IBOutlet BackgroundView *backgroundView;
 @property (weak, nonatomic) IBOutlet UIView *obstacleLayer;
 @property (weak, nonatomic) IBOutlet UIButton *tapButton;
-@property (weak, nonatomic) IBOutlet LadyBugView *ladyBugView;
+@property (strong, nonatomic) IBOutlet LadyBugView *ladyBugView;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (strong, nonatomic) IBOutlet UIView *flashOverlay;
 
 @property (nonatomic, retain) ADBannerView *adBannerView;
 
