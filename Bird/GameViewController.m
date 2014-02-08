@@ -77,7 +77,7 @@
     [self.scorableObjects removeAllObjects];
     [self resetPipes];
     [self.ladyBugView resume];
-    self.ladyBugView.center = self.view.center;
+    self.ladyBugView.center = CGPointMake(self.ladyBugView.center.x, self.view.center.y) ;
     
     
     self.score = 0;
