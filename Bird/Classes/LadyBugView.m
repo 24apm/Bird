@@ -33,7 +33,7 @@
 
     self.properties.speed = CGPointMake(0.f, 2.f);
     self.properties.speedMin = CGPointMake(0.f, TAP_SPEED_INCREASE);
-    self.properties.speedMax = CGPointMake(0.f, 10.f);
+    self.properties.speedMax = CGPointMake(0.f, 14.f);
 
     self.properties.gravity = CGPointMake(0.f, GRAVITY);
     
