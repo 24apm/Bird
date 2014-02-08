@@ -11,7 +11,7 @@
 #import "BackgroundView.h"
 #import "LadyBugView.h"
 
-@interface ViewController : UIViewController <ADBannerViewDelegate>
+@interface GameViewController : UIViewController <ADBannerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet BackgroundView *backgroundView;
 @property (weak, nonatomic) IBOutlet UIView *obstacleLayer;

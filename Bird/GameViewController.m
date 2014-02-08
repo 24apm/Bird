@@ -6,20 +6,20 @@
 //  Copyright (c) 2014 MacCoder. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "GameViewController.h"
 #import "GameLoopTimer.h"
 #import "GameConstants.h"
 #import "PipeView.h"
 #import "Utils.h"
 
-@interface ViewController ()
+@interface GameViewController ()
 
 @property (strong, nonatomic) NSMutableArray *worldObstacles;
 @property (nonatomic) BOOL isGameOver;
 
 @end
 
-@implementation ViewController
+@implementation GameViewController
 
 - (void)initialize {
     [[GameLoopTimer instance] initialize];
@@ -37,7 +37,7 @@
     self.ladyBugView.properties.speed = CGPointMake(0.f, -5.f);
 
     
-    self.ladyBugView.properties.acceleration = CGPointMake(self.ladyBugView.properties.acceleration.x, self.ladyBugView.properties.acceleration.y + TAP_ACCELATION_INCREASE);
+//    self.ladyBugView.properties.acceleration = CGPointMake(self.ladyBugView.properties.acceleration.x, self.ladyBugView.properties.acceleration.y + TAP_ACCELATION_INCREASE);
     
     self.ladyBugView.properties.rotation = 0.f;
 }
@@ -125,7 +125,7 @@
             [pipeView drawStep];
         }
         [self boundaryTestForPipes];
-        [self collisionDetection];
+//        [self collisionDetection];
     }
 
     [self.ladyBugView drawStep];

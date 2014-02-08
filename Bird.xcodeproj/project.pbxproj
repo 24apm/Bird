@@ -11,14 +11,14 @@
 		D07F418218A4E208009680FD /* PipeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D07F418118A4E208009680FD /* PipeView.xib */; };
 		D07F418518A4E223009680FD /* PipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D07F418418A4E223009680FD /* PipeView.m */; };
 		D0E11E8418A49F2C00DC7793 /* WorldObjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E11E8318A49F2C00DC7793 /* WorldObjectView.m */; };
-		D0E11EC118A4ABD600DC7793 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E11EC018A4ABD600DC7793 /* ViewController.xib */; };
+		D0E11EC118A4ABD600DC7793 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E11EC018A4ABD600DC7793 /* GameViewController.xib */; };
 		D0E30E8518A376E300FFD3CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30E8418A376E300FFD3CE /* Foundation.framework */; };
 		D0E30E8718A376E300FFD3CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30E8618A376E300FFD3CE /* CoreGraphics.framework */; };
 		D0E30E8918A376E300FFD3CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30E8818A376E300FFD3CE /* UIKit.framework */; };
 		D0E30E8F18A376E300FFD3CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0E30E8D18A376E300FFD3CE /* InfoPlist.strings */; };
 		D0E30E9118A376E300FFD3CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E30E9018A376E300FFD3CE /* main.m */; };
 		D0E30E9518A376E300FFD3CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E30E9418A376E300FFD3CE /* AppDelegate.m */; };
-		D0E30E9B18A376E300FFD3CE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E30E9A18A376E300FFD3CE /* ViewController.m */; };
+		D0E30E9B18A376E300FFD3CE /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E30E9A18A376E300FFD3CE /* GameViewController.m */; };
 		D0E30E9D18A376E300FFD3CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E30E9C18A376E300FFD3CE /* Images.xcassets */; };
 		D0E30EA418A376E300FFD3CE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30EA318A376E300FFD3CE /* XCTest.framework */; };
 		D0E30EA518A376E300FFD3CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30E8418A376E300FFD3CE /* Foundation.framework */; };
@@ -63,7 +63,7 @@
 		D07F418418A4E223009680FD /* PipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PipeView.m; path = Classes/PipeView.m; sourceTree = "<group>"; };
 		D0E11E8218A49F2C00DC7793 /* WorldObjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldObjectView.h; sourceTree = "<group>"; };
 		D0E11E8318A49F2C00DC7793 /* WorldObjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldObjectView.m; sourceTree = "<group>"; };
-		D0E11EC018A4ABD600DC7793 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		D0E11EC018A4ABD600DC7793 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		D0E30E8118A376E300FFD3CE /* Bird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E30E8418A376E300FFD3CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0E30E8618A376E300FFD3CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,8 +74,8 @@
 		D0E30E9218A376E300FFD3CE /* Bird-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bird-Prefix.pch"; sourceTree = "<group>"; };
 		D0E30E9318A376E300FFD3CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D0E30E9418A376E300FFD3CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D0E30E9918A376E300FFD3CE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D0E30E9A18A376E300FFD3CE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D0E30E9918A376E300FFD3CE /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		D0E30E9A18A376E300FFD3CE /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		D0E30E9C18A376E300FFD3CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D0E30EA218A376E300FFD3CE /* BirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E30EA318A376E300FFD3CE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -182,8 +182,8 @@
 				D0E30ED718A37A1F00FFD3CE /* Xib */,
 				D0E30E9318A376E300FFD3CE /* AppDelegate.h */,
 				D0E30E9418A376E300FFD3CE /* AppDelegate.m */,
-				D0E30E9918A376E300FFD3CE /* ViewController.h */,
-				D0E30E9A18A376E300FFD3CE /* ViewController.m */,
+				D0E30E9918A376E300FFD3CE /* GameViewController.h */,
+				D0E30E9A18A376E300FFD3CE /* GameViewController.m */,
 				D0E30E9C18A376E300FFD3CE /* Images.xcassets */,
 				D0E30E8B18A376E300FFD3CE /* Supporting Files */,
 			);
@@ -270,7 +270,7 @@
 				D0E30ED818A37A3900FFD3CE /* BackgroundView.xib */,
 				D0E79C9D18A4B40F00CBBF73 /* MainWindow.xib */,
 				D0E30EED18A3938200FFD3CE /* LadyBugView.xib */,
-				D0E11EC018A4ABD600DC7793 /* ViewController.xib */,
+				D0E11EC018A4ABD600DC7793 /* GameViewController.xib */,
 				D07F418118A4E208009680FD /* PipeView.xib */,
 			);
 			name = Xib;
@@ -368,7 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0E79C9E18A4B40F00CBBF73 /* MainWindow.xib in Resources */,
-				D0E11EC118A4ABD600DC7793 /* ViewController.xib in Resources */,
+				D0E11EC118A4ABD600DC7793 /* GameViewController.xib in Resources */,
 				D0E30EEE18A3938200FFD3CE /* LadyBugView.xib in Resources */,
 				D0E30ED418A3794C00FFD3CE /* pipe_face_down.png in Resources */,
 				D0E30E9D18A376E300FFD3CE /* Images.xcassets in Resources */,
@@ -401,7 +401,7 @@
 				D0E30EE518A3875100FFD3CE /* WorldObjectProperties.m in Sources */,
 				D0E30EC818A3771C00FFD3CE /* Base.m in Sources */,
 				D0E30EC718A3771C00FFD3CE /* AnimUtil.m in Sources */,
-				D0E30E9B18A376E300FFD3CE /* ViewController.m in Sources */,
+				D0E30E9B18A376E300FFD3CE /* GameViewController.m in Sources */,
 				D0E30EEA18A387A500FFD3CE /* LadyBugView.m in Sources */,
 				D0E30ECB18A3771C00FFD3CE /* Utils.m in Sources */,
 				D07F418518A4E223009680FD /* PipeView.m in Sources */,
