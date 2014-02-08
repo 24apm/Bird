@@ -11,6 +11,7 @@
                 <outlet property="flashOverlay" destination="tU8-3W-3Ec" id="Yqa-3d-Pxa"/>
                 <outlet property="ladyBugView" destination="e5o-3P-nu2" id="OXH-zP-8az"/>
                 <outlet property="obstacleLayer" destination="hSA-WF-Sfn" id="nEU-6o-LyS"/>
+                <outlet property="resultView" destination="A4e-r0-AZm" id="sl9-bJ-2Bl"/>
                 <outlet property="scoreLabel" destination="hfA-pq-WM9" id="V4j-dM-Rk0"/>
                 <outlet property="tapButton" destination="ggc-J1-uXo" id="TzF-aZ-as4"/>
                 <outlet property="view" destination="tyK-BE-phm" id="Vmq-x3-jLJ"/>
@@ -72,6 +73,11 @@
                     <color key="textColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" id="A4e-r0-AZm" userLabel="Result View" customClass="ResultView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
         </view>

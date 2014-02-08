@@ -10,6 +10,9 @@
 		D07F418018A4D8C7009680FD /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07F417F18A4D8C7009680FD /* iAd.framework */; };
 		D07F418218A4E208009680FD /* PipeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D07F418118A4E208009680FD /* PipeView.xib */; };
 		D07F418518A4E223009680FD /* PipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D07F418418A4E223009680FD /* PipeView.m */; };
+		D08942C718A6E84500C44A0A /* ResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08942C618A6E84500C44A0A /* ResultView.xib */; };
+		D08942CA18A6E86100C44A0A /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = D08942C918A6E86100C44A0A /* ResultView.m */; };
+		D08942CD18A6EC7400C44A0A /* UIView+ViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D08942CC18A6EC7400C44A0A /* UIView+ViewUtil.m */; };
 		D0E11E8418A49F2C00DC7793 /* WorldObjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E11E8318A49F2C00DC7793 /* WorldObjectView.m */; };
 		D0E11EC118A4ABD600DC7793 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E11EC018A4ABD600DC7793 /* GameViewController.xib */; };
 		D0E30E8518A376E300FFD3CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30E8418A376E300FFD3CE /* Foundation.framework */; };
@@ -61,6 +64,11 @@
 		D07F418118A4E208009680FD /* PipeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PipeView.xib; sourceTree = "<group>"; };
 		D07F418318A4E223009680FD /* PipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PipeView.h; path = Classes/PipeView.h; sourceTree = "<group>"; };
 		D07F418418A4E223009680FD /* PipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PipeView.m; path = Classes/PipeView.m; sourceTree = "<group>"; };
+		D08942C618A6E84500C44A0A /* ResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultView.xib; sourceTree = "<group>"; };
+		D08942C818A6E86100C44A0A /* ResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultView.h; path = Classes/ResultView.h; sourceTree = "<group>"; };
+		D08942C918A6E86100C44A0A /* ResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultView.m; path = Classes/ResultView.m; sourceTree = "<group>"; };
+		D08942CB18A6EC7400C44A0A /* UIView+ViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewUtil.h"; sourceTree = "<group>"; };
+		D08942CC18A6EC7400C44A0A /* UIView+ViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewUtil.m"; sourceTree = "<group>"; };
 		D0E11E8218A49F2C00DC7793 /* WorldObjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldObjectView.h; sourceTree = "<group>"; };
 		D0E11E8318A49F2C00DC7793 /* WorldObjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldObjectView.m; sourceTree = "<group>"; };
 		D0E11EC018A4ABD600DC7793 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
@@ -241,6 +249,8 @@
 				D0E30EE118A37EF400FFD3CE /* GameLoopTimer.m */,
 				D0E11E8218A49F2C00DC7793 /* WorldObjectView.h */,
 				D0E11E8318A49F2C00DC7793 /* WorldObjectView.m */,
+				D08942CB18A6EC7400C44A0A /* UIView+ViewUtil.h */,
+				D08942CC18A6EC7400C44A0A /* UIView+ViewUtil.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -272,6 +282,7 @@
 				D0E30EED18A3938200FFD3CE /* LadyBugView.xib */,
 				D0E11EC018A4ABD600DC7793 /* GameViewController.xib */,
 				D07F418118A4E208009680FD /* PipeView.xib */,
+				D08942C618A6E84500C44A0A /* ResultView.xib */,
 			);
 			name = Xib;
 			sourceTree = "<group>";
@@ -287,6 +298,8 @@
 				D0E41ED018A3965700B37819 /* GameConstants.m */,
 				D07F418318A4E223009680FD /* PipeView.h */,
 				D07F418418A4E223009680FD /* PipeView.m */,
+				D08942C818A6E86100C44A0A /* ResultView.h */,
+				D08942C918A6E86100C44A0A /* ResultView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -376,6 +389,7 @@
 				D0E30E8F18A376E300FFD3CE /* InfoPlist.strings in Resources */,
 				D0E30ED518A3794C00FFD3CE /* background_cloud.jpeg in Resources */,
 				D0E30ED018A3782300FFD3CE /* Ladybug.png in Resources */,
+				D08942C718A6E84500C44A0A /* ResultView.xib in Resources */,
 				D07F418218A4E208009680FD /* PipeView.xib in Resources */,
 				D0E30ED918A37A3900FFD3CE /* BackgroundView.xib in Resources */,
 			);
@@ -401,6 +415,7 @@
 				D0E30EE518A3875100FFD3CE /* WorldObjectProperties.m in Sources */,
 				D0E30EC818A3771C00FFD3CE /* Base.m in Sources */,
 				D0E30EC718A3771C00FFD3CE /* AnimUtil.m in Sources */,
+				D08942CD18A6EC7400C44A0A /* UIView+ViewUtil.m in Sources */,
 				D0E30E9B18A376E300FFD3CE /* GameViewController.m in Sources */,
 				D0E30EEA18A387A500FFD3CE /* LadyBugView.m in Sources */,
 				D0E30ECB18A3771C00FFD3CE /* Utils.m in Sources */,
@@ -410,6 +425,7 @@
 				D0E30EC918A3771C00FFD3CE /* Hex.m in Sources */,
 				D0E30E9518A376E300FFD3CE /* AppDelegate.m in Sources */,
 				D0E30E9118A376E300FFD3CE /* main.m in Sources */,
+				D08942CA18A6E86100C44A0A /* ResultView.m in Sources */,
 				D0E41ED118A3965700B37819 /* GameConstants.m in Sources */,
 				D0E11E8418A49F2C00DC7793 /* WorldObjectView.m in Sources */,
 			);

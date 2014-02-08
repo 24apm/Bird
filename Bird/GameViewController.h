@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet LadyBugView *ladyBugView;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (strong, nonatomic) IBOutlet UIView *flashOverlay;
+@property (strong, nonatomic) IBOutlet UIView *resultView;
 
 @property (nonatomic, retain) ADBannerView *adBannerView;
 
