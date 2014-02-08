@@ -11,6 +11,7 @@
 #import "GameConstants.h"
 #import "PipeView.h"
 #import "Utils.h"
+#import "UIView+ViewUtil.h"
 
 @interface GameViewController ()
 
@@ -144,6 +145,20 @@
     }
 }
 
+- (void)showResult {
+    [UIView animateWithDuration:0.3f animations:^{
+        self.resultView.y = 0.f;
+    } completion:^(BOOL complete) {
+    }];
+}
+
+- (void)hideResult {
+    [UIView animateWithDuration:0.3f animations:^{
+        self.resultView.y = self.view.height;
+    } completion:^(BOOL complete) {
+    }];
+}
+
 - (void)checkIfScored {
     if (self.scorableObjects.count <= 0) return;
     for (PipeView *pipeView in self.scorableObjects) {
@@ -194,8 +209,10 @@
     if (isGameOver) {
         [self flash];
         [self stopObstacles];
+        [self showResult];
     } else {
         [self resumeObstacles];
+        [self hideResult];
     }
 }
 
