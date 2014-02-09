@@ -10,6 +10,7 @@
 #import <iAd/iAd.h>
 #import "BackgroundView.h"
 #import "LadyBugView.h"
+#import "ResultView.h"
 
 @interface GameViewController : UIViewController <ADBannerViewDelegate>
 
@@ -19,7 +20,7 @@
 @property (strong, nonatomic) IBOutlet LadyBugView *ladyBugView;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (strong, nonatomic) IBOutlet UIView *flashOverlay;
-@property (strong, nonatomic) IBOutlet UIView *resultView;
+@property (strong, nonatomic) IBOutlet ResultView *resultView;
 
 @property (nonatomic, retain) ADBannerView *adBannerView;
 

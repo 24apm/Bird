@@ -22,6 +22,7 @@
 
 @property (nonatomic) BOOL isGameOver;
 @property (nonatomic) int score;
+@property (nonatomic) int maxScore;
 
 @end
 
@@ -32,10 +33,23 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(drawStep) name:DRAW_STEP_NOTIFICATION object:nil];
     self.worldObstacles = [NSMutableArray array];
     self.scorableObjects = [NSMutableArray array];
-    [self createObstacle];
+    self.score = 0;
+    self.maxScore = 0;
     self.isGameOver = NO;
-    
+    [self loadUserData];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resultViewDissed) name:RESULT_VIEW_DISMISSED_NOTIFICATION object:nil];
+    [self createObstacle];
+}
+
+
+- (void)saveUserData{
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    [defaults setValue:@(self.maxScore) forKey:@"maxScore"];
+    [defaults synchronize];
+}
+
+- (void)loadUserData {
+    self.maxScore = [[[NSUserDefaults standardUserDefaults] valueForKey:@"maxScore"] intValue];
 }
 
 - (void)resultViewDissed {
@@ -166,6 +180,14 @@
         self.resultView.y = 0.f;
     } completion:^(BOOL complete) {
     }];
+    
+    self.resultView.currentScoreLabel.text = [NSString stringWithFormat:@"%d", self.score];
+    
+    if (self.score > self.maxScore) {
+        self.maxScore = self.score;
+        [self saveUserData];
+    }
+    self.resultView.maxScoreLabel.text = [NSString stringWithFormat:@"%d", self.maxScore];
 }
 
 - (void)hideResult {

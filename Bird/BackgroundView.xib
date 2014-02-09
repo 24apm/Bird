@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_cloud.jpeg" id="T9O-Rk-2XH" userLabel="Image View - background_cloud">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.png" id="T9O-Rk-2XH" userLabel="Image View - background_cloud">
                     <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -25,6 +25,6 @@
         </view>
     </objects>
     <resources>
-        <image name="background_cloud.jpeg" width="300" height="168"/>
+        <image name="bg.png" width="640" height="480"/>
     </resources>
 </document>

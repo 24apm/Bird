@@ -16,11 +16,11 @@
             <rect key="frame" x="0.0" y="0.0" width="80" height="480"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pipe_face_down.png" id="TMj-Cv-GpV">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="obstacles_top.png" id="TMj-Cv-GpV">
                     <rect key="frame" x="0.0" y="0.0" width="80" height="480"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pipe_face_up.png" id="MKF-m2-QAN">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="obstacles_bottom.png" id="MKF-m2-QAN">
                     <rect key="frame" x="0.0" y="0.0" width="80" height="480"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -30,7 +30,7 @@
         </view>
     </objects>
     <resources>
-        <image name="pipe_face_down.png" width="399" height="556"/>
-        <image name="pipe_face_up.png" width="399" height="556"/>
+        <image name="obstacles_bottom.png" width="80" height="480"/>
+        <image name="obstacles_top.png" width="80" height="480"/>
     </resources>
 </document>

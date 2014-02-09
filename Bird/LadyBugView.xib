@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ladybug.png" id="hIj-pf-Z39">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="man.png" id="hIj-pf-Z39">
                     <rect key="frame" x="-5" y="-5" width="40" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -25,6 +25,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Ladybug.png" width="464" height="388"/>
+        <image name="man.png" width="40" height="40"/>
     </resources>
 </document>
