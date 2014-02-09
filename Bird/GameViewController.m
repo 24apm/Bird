@@ -24,6 +24,7 @@
 @property (nonatomic) BOOL isGameOver;
 @property (nonatomic) int score;
 @property (nonatomic) int maxScore;
+@property (nonatomic) BOOL firstTapped;
 
 @end
 
@@ -41,7 +42,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resultViewDismiss) name:RESULT_VIEW_DISMISSED_NOTIFICATION object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuViewDismiss) name:MENU_VIEW_DISMISSED_NOTIFICATION object:nil];
     [self createObstacle];
-    [self gameViewsHidden:YES];
+    self.currentGameState = GameStateMenuMode;
+    [self refresh];
 }
 
 - (void)gameViewsHidden:(BOOL)hidden {
@@ -60,19 +62,45 @@
 }
 
 - (void)resultViewDismiss {
-    [self gameViewsHidden:YES];
-    [self.menuView show];
+    self.currentGameState = GameStateMenuMode;
+    [self refresh];
 }
 
 - (void)menuViewDismiss {
-    [self restartGame];
-    [self gameViewsHidden:NO];
+    self.currentGameState = GameStateTutorialMode;
+    [self refresh];
+}
+
+- (void)refresh {
+    [self gameViewsHidden:YES];
+    switch (self.currentGameState) {
+        case GameStateMenuMode:
+            [self.menuView show];
+            break;
+        case GameStateTutorialMode:
+            [self gameViewsHidden:NO];
+            [self restartGame];
+            self.ladyBugView.currentState = LadyBugViewStateTutorialMode;
+            [self.ladyBugView refresh];
+            break;
+        case GameStateGameMode:
+            [self gameViewsHidden:NO];
+            self.ladyBugView.currentState = LadyBugViewStateGameMode;
+            [self.ladyBugView refresh];
+            break;
+        case GameStateResultMode:
+            [self gameViewsHidden:NO];
+            [self showResult];
+            break;
+        default:
+            break;
+    }
 }
 
 - (IBAction)tapButtonPressed:(id)sender {
     if (self.isGameOver == YES) return;
     
-    
+    self.firstTapped = YES;
     [self.ladyBugView resume];
     self.ladyBugView.properties.speed = CGPointMake(0.f, TAP_SPEED_INCREASE);
     
@@ -84,9 +112,7 @@
         self.ladyBugView.properties.speed = CGPointMake(0.f, 0);
         
         self.ladyBugView.properties.acceleration = CGPointMake(self.ladyBugView.properties.acceleration.x, 0);
-        
     }
-
 }
 
 - (void)createObstacle {
@@ -112,7 +138,6 @@
         // off map
         [self resetPipe:pipeView];
         pipeView.center = CGPointMake(self.view.frame.size.width * i * 1.5f, pipeView.center.y);
-        
         i++;
     }
 }
@@ -123,8 +148,18 @@
     [self resetPipes];
     [self.ladyBugView resume];
     self.ladyBugView.center = CGPointMake(self.ladyBugView.center.x, self.view.center.y) ;
+    self.ladyBugView.startingPoint = self.ladyBugView.center;
     self.score = 0;
+    self.firstTapped = NO;
     [self refreshLabel];
+}
+
+- (void)setFirstTapped:(BOOL)firstTapped {
+    _firstTapped = firstTapped;
+    if (firstTapped) {
+        self.currentGameState = GameStateGameMode;
+        [self refresh];
+    }
 }
 
 - (IBAction)rematchPressed:(id)sender {
@@ -204,16 +239,6 @@
     self.resultView.maxScoreLabel.text = [NSString stringWithFormat:@"%d", self.maxScore];
 }
 
-- (void)hideResult {
-    
-    [UIView animateWithDuration:0.3f
-                          delay:0.0f
-                        options:UIViewAnimationOptionLayoutSubviews
-                     animations:^{
-                         self.resultView.y = self.view.height;
-                     } completion:^(BOOL complete) {
-                     }];
-}
 
 - (void)animateCollision {
     float duration = 0.2f;
@@ -263,16 +288,19 @@
 
 - (void)drawStep {
     [self.backgroundView drawStep];
-    for (PipeView *pipeView in self.worldObstacles) {
-        [pipeView drawStep];
-    }
-    [self boundaryTestForPipes];
-   
-    [self collisionDetection];
-    [self boundaryTestForLadyBug];
     
-    [self.ladyBugView drawStep];
-    [self checkIfScored];
+    if (self.currentGameState == GameStateTutorialMode || self.currentGameState == GameStateGameMode) {
+        if (self.firstTapped) {
+            for (PipeView *pipeView in self.worldObstacles) {
+                [pipeView drawStep];
+            }
+            [self boundaryTestForPipes];
+            [self collisionDetection];
+            [self boundaryTestForLadyBug];
+            [self checkIfScored];
+        }
+        [self.ladyBugView drawStep];
+    }
 }
 
 - (void)setIsGameOver:(BOOL)isGameOver {
@@ -282,10 +310,10 @@
     if (isGameOver) {
         [self animateCollision];
         [self stopObstacles];
-        [self showResult];
+        self.currentGameState = GameStateResultMode;
+        [self refresh];
     } else {
         [self resumeObstacles];
-        [self hideResult];
     }
 }
 

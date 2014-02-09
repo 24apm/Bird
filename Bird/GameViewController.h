@@ -14,6 +14,13 @@
 #import "FXLabel.h"
 #import "MenuView.h"
 
+typedef enum {
+    GameStateMenuMode,
+    GameStateTutorialMode,
+    GameStateGameMode,
+    GameStateResultMode
+} GameState;
+
 @interface GameViewController : UIViewController <ADBannerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet BackgroundView *backgroundView;
@@ -24,6 +31,7 @@
 @property (strong, nonatomic) IBOutlet UIView *flashOverlay;
 @property (strong, nonatomic) IBOutlet ResultView *resultView;
 @property (strong, nonatomic) IBOutlet MenuView *menuView;
+@property (nonatomic) GameState currentGameState;
 
 @property (nonatomic, retain) ADBannerView *adBannerView;
 

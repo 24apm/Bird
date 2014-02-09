@@ -9,12 +9,20 @@
 #import "XibView.h"
 #import "WorldObjectView.h"
 
+typedef enum {
+    LadyBugViewStateTutorialMode,
+    LadyBugViewStateGameMode
+} LadyBugViewState;
+
 @interface LadyBugView : WorldObjectView
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic) LadyBugViewState currentState;
+@property (nonatomic) CGPoint startingPoint;
 
 - (void)drawStep;
 - (void)paused;
 - (void)resume;
+- (void)refresh;
 
 @end
