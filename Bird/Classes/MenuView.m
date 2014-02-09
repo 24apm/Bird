@@ -1,46 +1,42 @@
 //
-//  ResultView.m
+//  MenuView.m
 //  Bird
 //
 //  Created by MacCoder on 2/8/14.
 //  Copyright (c) 2014 MacCoder. All rights reserved.
 //
 
-#import "ResultView.h"
-#import "iRate.h"
+#import "MenuView.h"
 
-@implementation ResultView
+@implementation MenuView
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.y = self.height;
+        self.alpha = 0.0f;
+        self.transform = CGAffineTransformMakeScale(2.0f, 2.0f);
     }
     return self;
 }
 
-- (IBAction)playAgainPressed:(id)sender {
+- (IBAction)startButtonPressed:(id)sender {
     [self hide];
 }
 
 - (void)show {
     [UIView animateWithDuration:0.3f animations:^{
-        self.y = 0.f;
+        self.transform = CGAffineTransformIdentity;
+        self.alpha = 1.0f;
     } completion:^(BOOL complete) {
     }];
-    
-    [[iRate sharedInstance] promptIfNetworkAvailable];
-}
-
-- (IBAction)ratePressed:(id)sender {
-	[[iRate sharedInstance] promptIfNetworkAvailable];
 }
 
 - (void)hide {
     [UIView animateWithDuration:0.3f animations:^{
-        self.y = self.height;
+        self.transform = CGAffineTransformMakeScale(2.0f, 2.0f);
+        self.alpha = 0.0f;
     } completion:^(BOOL complete) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:RESULT_VIEW_DISMISSED_NOTIFICATION object:self];
+        [[NSNotificationCenter defaultCenter] postNotificationName:MENU_VIEW_DISMISSED_NOTIFICATION object:self];
     }];
 }
 

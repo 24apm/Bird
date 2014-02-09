@@ -11,6 +11,8 @@
 #import "BackgroundView.h"
 #import "LadyBugView.h"
 #import "ResultView.h"
+#import "FXLabel.h"
+#import "MenuView.h"
 
 @interface GameViewController : UIViewController <ADBannerViewDelegate>
 
@@ -18,9 +20,10 @@
 @property (weak, nonatomic) IBOutlet UIView *obstacleLayer;
 @property (weak, nonatomic) IBOutlet UIButton *tapButton;
 @property (strong, nonatomic) IBOutlet LadyBugView *ladyBugView;
-@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet FXLabel *scoreLabel;
 @property (strong, nonatomic) IBOutlet UIView *flashOverlay;
 @property (strong, nonatomic) IBOutlet ResultView *resultView;
+@property (strong, nonatomic) IBOutlet MenuView *menuView;
 
 @property (nonatomic, retain) ADBannerView *adBannerView;
 

@@ -10,6 +10,7 @@
                 <outlet property="backgroundView" destination="ud9-hT-BwW" id="wbI-db-BqQ"/>
                 <outlet property="flashOverlay" destination="tU8-3W-3Ec" id="Yqa-3d-Pxa"/>
                 <outlet property="ladyBugView" destination="e5o-3P-nu2" id="OXH-zP-8az"/>
+                <outlet property="menuView" destination="xE4-tR-Zdf" id="UKS-WW-fU8"/>
                 <outlet property="obstacleLayer" destination="hSA-WF-Sfn" id="nEU-6o-LyS"/>
                 <outlet property="resultView" destination="A4e-r0-AZm" id="sl9-bJ-2Bl"/>
                 <outlet property="scoreLabel" destination="hfA-pq-WM9" id="V4j-dM-Rk0"/>
@@ -54,14 +55,25 @@
                         <action selector="tapButtonPressed:" destination="-1" eventType="touchUpInside" id="7aY-RE-Awo"/>
                     </connections>
                 </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hfA-pq-WM9" userLabel="Score Label">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hfA-pq-WM9" userLabel="Score Label" customClass="FXLabel">
                     <rect key="frame" x="129" y="121" width="60" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <color key="textColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
+                    <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </label>
                 <view contentMode="scaleToFill" id="A4e-r0-AZm" userLabel="Result View" customClass="ResultView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="xE4-tR-Zdf" customClass="MenuView">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

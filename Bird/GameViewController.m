@@ -14,6 +14,7 @@
 #import "UIView+ViewUtil.h"
 #import "AnimUtil.h"
 #import "ResultView.h"
+#import "MenuView.h"
 
 @interface GameViewController ()
 
@@ -35,12 +36,18 @@
     self.scorableObjects = [NSMutableArray array];
     self.score = 0;
     self.maxScore = 0;
-    self.isGameOver = NO;
+    _isGameOver = YES;
     [self loadUserData];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resultViewDissed) name:RESULT_VIEW_DISMISSED_NOTIFICATION object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resultViewDismiss) name:RESULT_VIEW_DISMISSED_NOTIFICATION object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuViewDismiss) name:MENU_VIEW_DISMISSED_NOTIFICATION object:nil];
     [self createObstacle];
+    [self gameViewsHidden:YES];
 }
 
+- (void)gameViewsHidden:(BOOL)hidden {
+    self.ladyBugView.hidden = hidden;
+    self.obstacleLayer.hidden = hidden;
+}
 
 - (void)saveUserData{
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
@@ -52,8 +59,14 @@
     self.maxScore = [[[NSUserDefaults standardUserDefaults] valueForKey:@"maxScore"] intValue];
 }
 
-- (void)resultViewDissed {
+- (void)resultViewDismiss {
+    [self gameViewsHidden:YES];
+    [self.menuView show];
+}
+
+- (void)menuViewDismiss {
     [self restartGame];
+    [self gameViewsHidden:NO];
 }
 
 - (IBAction)tapButtonPressed:(id)sender {
@@ -123,6 +136,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self initialize];
+    [self.menuView show];
     
     [self createAdBannerView];
     [self.view addSubview:self.adBannerView];

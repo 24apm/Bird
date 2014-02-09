@@ -7,8 +7,24 @@
 //
 
 #import "AppDelegate.h"
+#import "iRate.h"
 
 @implementation AppDelegate
+
++ (void)initialize
+{
+    //set the bundle ID. normally you wouldn't need to do this
+    //as it is picked up automatically from your Info.plist file
+    //but we want to test with an app that's actually on the store
+//    [iRate sharedInstance].applicationBundleID = @"com.charcoaldesign.rainbowblocks-free";
+    
+    //enable preview mode
+    [iRate sharedInstance].previewMode = NO;
+    
+    //configure iRate
+    [iRate sharedInstance].daysUntilPrompt = 5;
+    [iRate sharedInstance].usesUntilPrompt = 15;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
