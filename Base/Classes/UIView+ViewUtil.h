@@ -14,5 +14,6 @@
 @property (nonatomic) float y;
 @property (nonatomic) float width;
 @property (nonatomic) float height;
+@property (nonatomic) CGSize size;
 
 @end

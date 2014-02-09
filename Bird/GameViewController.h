@@ -28,10 +28,9 @@ typedef enum {
 @property (weak, nonatomic) IBOutlet UIButton *tapButton;
 @property (strong, nonatomic) IBOutlet LadyBugView *ladyBugView;
 @property (weak, nonatomic) IBOutlet FXLabel *scoreLabel;
-@property (strong, nonatomic) IBOutlet UIView *flashOverlay;
-@property (strong, nonatomic) IBOutlet ResultView *resultView;
-@property (strong, nonatomic) IBOutlet MenuView *menuView;
+@property (strong, nonatomic) IBOutlet UIView *flashOverlay;;
 @property (nonatomic) GameState currentGameState;
+@property (strong, nonatomic) IBOutlet UIView *containerView;
 
 @property (nonatomic, retain) ADBannerView *adBannerView;
 

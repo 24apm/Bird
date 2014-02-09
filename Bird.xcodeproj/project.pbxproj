@@ -55,6 +55,8 @@
 		D0E50A6618A745CA00AA353E /* FXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E50A5918A745CA00AA353E /* FXLabel.m */; };
 		D0E50A6818A75ACC00AA353E /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E50A6718A75ACC00AA353E /* MenuView.xib */; };
 		D0E50A6B18A75AE200AA353E /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E50A6A18A75AE200AA353E /* MenuView.m */; };
+		D0E50A6D18A7701200AA353E /* TutorialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E50A6C18A7701200AA353E /* TutorialView.xib */; };
+		D0E50A7018A7702100AA353E /* TutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E50A6F18A7702100AA353E /* TutorialView.m */; };
 		D0E79C9E18A4B40F00CBBF73 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E79C9D18A4B40F00CBBF73 /* MainWindow.xib */; };
 /* End PBXBuildFile section */
 
@@ -141,6 +143,9 @@
 		D0E50A6718A75ACC00AA353E /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		D0E50A6918A75AE200AA353E /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuView.h; path = Classes/MenuView.h; sourceTree = "<group>"; };
 		D0E50A6A18A75AE200AA353E /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuView.m; path = Classes/MenuView.m; sourceTree = "<group>"; };
+		D0E50A6C18A7701200AA353E /* TutorialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialView.xib; sourceTree = "<group>"; };
+		D0E50A6E18A7702100AA353E /* TutorialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TutorialView.h; path = Classes/TutorialView.h; sourceTree = "<group>"; };
+		D0E50A6F18A7702100AA353E /* TutorialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TutorialView.m; path = Classes/TutorialView.m; sourceTree = "<group>"; };
 		D0E79C9D18A4B40F00CBBF73 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -276,6 +281,7 @@
 				D07F418118A4E208009680FD /* PipeView.xib */,
 				D08942C618A6E84500C44A0A /* ResultView.xib */,
 				D0E50A6718A75ACC00AA353E /* MenuView.xib */,
+				D0E50A6C18A7701200AA353E /* TutorialView.xib */,
 			);
 			name = Xib;
 			sourceTree = "<group>";
@@ -295,6 +301,8 @@
 				D08942C918A6E86100C44A0A /* ResultView.m */,
 				D0E50A6918A75AE200AA353E /* MenuView.h */,
 				D0E50A6A18A75AE200AA353E /* MenuView.m */,
+				D0E50A6E18A7702100AA353E /* TutorialView.h */,
+				D0E50A6F18A7702100AA353E /* TutorialView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -456,6 +464,7 @@
 				D07F418218A4E208009680FD /* PipeView.xib in Resources */,
 				D0E50A3618A7349300AA353E /* obstacles_top.png in Resources */,
 				D0E30ED918A37A3900FFD3CE /* BackgroundView.xib in Resources */,
+				D0E50A6D18A7701200AA353E /* TutorialView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +501,7 @@
 				D0E50A5F18A745CA00AA353E /* UIView+ViewUtil.m in Sources */,
 				D08942CA18A6E86100C44A0A /* ResultView.m in Sources */,
 				D0E50A6118A745CA00AA353E /* WorldObjectProperties.m in Sources */,
+				D0E50A7018A7702100AA353E /* TutorialView.m in Sources */,
 				D0E50A6618A745CA00AA353E /* FXLabel.m in Sources */,
 				D0E41ED118A3965700B37819 /* GameConstants.m in Sources */,
 				D0E50A6B18A75AE200AA353E /* MenuView.m in Sources */,

@@ -15,6 +15,7 @@
 #import "AnimUtil.h"
 #import "ResultView.h"
 #import "MenuView.h"
+#import "TutorialView.h"
 
 @interface GameViewController ()
 
@@ -25,6 +26,9 @@
 @property (nonatomic) int score;
 @property (nonatomic) int maxScore;
 @property (nonatomic) BOOL firstTapped;
+@property (strong, nonatomic) TutorialView *tutorialView;
+@property (strong, nonatomic) ResultView *resultView;
+@property (strong, nonatomic) MenuView *menuView;
 
 @end
 
@@ -42,6 +46,22 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resultViewDismiss) name:RESULT_VIEW_DISMISSED_NOTIFICATION object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuViewDismiss) name:MENU_VIEW_DISMISSED_NOTIFICATION object:nil];
     [self createObstacle];
+    
+    self.tutorialView = [[TutorialView alloc] init];
+    [self.containerView addSubview:self.tutorialView];
+    self.tutorialView.hidden = YES;
+    self.tutorialView.size = self.containerView.size;
+    
+    self.resultView = [[ResultView alloc] init];
+    [self.containerView addSubview:self.resultView];
+    self.resultView.hidden = YES;
+    self.resultView.size = self.containerView.size;
+
+    self.menuView = [[MenuView alloc] init];
+    [self.containerView addSubview:self.menuView];
+    self.menuView.hidden = YES;
+    self.menuView.size = self.containerView.size;
+
     self.currentGameState = GameStateMenuMode;
     [self refresh];
 }
@@ -49,6 +69,7 @@
 - (void)gameViewsHidden:(BOOL)hidden {
     self.ladyBugView.hidden = hidden;
     self.obstacleLayer.hidden = hidden;
+    self.scoreLabel.hidden = hidden;
 }
 
 - (void)saveUserData{
@@ -73,22 +94,33 @@
 
 - (void)refresh {
     [self gameViewsHidden:YES];
+    self.containerView.hidden = NO;
+    self.containerView.userInteractionEnabled = YES;
+    self.menuView.hidden = YES;
+    self.tutorialView.hidden = YES;
+    self.resultView.hidden = YES;
+    
     switch (self.currentGameState) {
         case GameStateMenuMode:
+            self.menuView.hidden = NO;
             [self.menuView show];
             break;
         case GameStateTutorialMode:
             [self gameViewsHidden:NO];
+            self.containerView.userInteractionEnabled = NO;
+            self.tutorialView.hidden = NO;
             [self restartGame];
             self.ladyBugView.currentState = LadyBugViewStateTutorialMode;
             [self.ladyBugView refresh];
             break;
         case GameStateGameMode:
+            self.containerView.hidden = YES;
             [self gameViewsHidden:NO];
             self.ladyBugView.currentState = LadyBugViewStateGameMode;
             [self.ladyBugView refresh];
             break;
         case GameStateResultMode:
+            self.resultView.hidden = NO;
             [self gameViewsHidden:NO];
             [self showResult];
             break;
@@ -222,6 +254,7 @@
 }
 
 - (void)showResult {
+    self.resultView.y = self.resultView.height;
     [UIView animateWithDuration:0.3f
                           delay:0.3f
                         options:UIViewAnimationOptionLayoutSubviews
@@ -289,7 +322,7 @@
 - (void)drawStep {
     [self.backgroundView drawStep];
     
-    if (self.currentGameState == GameStateTutorialMode || self.currentGameState == GameStateGameMode) {
+    if (self.currentGameState == GameStateTutorialMode || self.currentGameState == GameStateGameMode || self.currentGameState == GameStateResultMode) {
         if (self.firstTapped) {
             for (PipeView *pipeView in self.worldObstacles) {
                 [pipeView drawStep];
