@@ -12,6 +12,8 @@
 #import "PipeView.h"
 #import "Utils.h"
 #import "UIView+ViewUtil.h"
+#import "AnimUtil.h"
+#import "ResultView.h"
 
 @interface GameViewController ()
 
@@ -32,17 +34,32 @@
     self.scorableObjects = [NSMutableArray array];
     [self createObstacle];
     self.isGameOver = NO;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resultViewDissed) name:RESULT_VIEW_DISMISSED_NOTIFICATION object:nil];
+}
+
+- (void)resultViewDissed {
+    [self restartGame];
 }
 
 - (IBAction)tapButtonPressed:(id)sender {
     if (self.isGameOver == YES) return;
-
+    
+    
     [self.ladyBugView resume];
     self.ladyBugView.properties.speed = CGPointMake(0.f, TAP_SPEED_INCREASE);
     
     self.ladyBugView.properties.acceleration = CGPointMake(self.ladyBugView.properties.acceleration.x, self.ladyBugView.properties.acceleration.y + TAP_ACCELATION_INCREASE);
     
     self.ladyBugView.properties.rotation = 0.f;
+    
+    if (self.ladyBugView.frame.origin.y < 0.f) {
+        self.ladyBugView.properties.speed = CGPointMake(0.f, 0);
+        
+        self.ladyBugView.properties.acceleration = CGPointMake(self.ladyBugView.properties.acceleration.x, 0);
+        
+    }
+
 }
 
 - (void)createObstacle {
@@ -73,16 +90,18 @@
     }
 }
 
-- (IBAction)rematchPressed:(id)sender {
+- (void)restartGame {
     self.isGameOver = NO;
     [self.scorableObjects removeAllObjects];
     [self resetPipes];
     [self.ladyBugView resume];
     self.ladyBugView.center = CGPointMake(self.ladyBugView.center.x, self.view.center.y) ;
-    
-    
     self.score = 0;
     [self refreshLabel];
+}
+
+- (IBAction)rematchPressed:(id)sender {
+    [self restartGame];
 }
 
 - (void)viewDidLoad
@@ -102,6 +121,7 @@
 }
 
 - (void)boundaryTestForLadyBug {
+    
     if ((self.ladyBugView.frame.origin.y + self.ladyBugView.frame.size.height) > self.view.frame.size.height) {
         self.ladyBugView.frame = CGRectMake(self.ladyBugView.frame.origin.x, (self.self.view.frame.size.height - self.ladyBugView.frame.size.height), self.ladyBugView.frame.size.width, self.ladyBugView.frame.size.height);
         self.ladyBugView.properties.rotation = 90.f;
@@ -111,6 +131,8 @@
 }
 
 - (void)boundaryTestForPipes {
+    if (self.isGameOver) return;
+
     for (PipeView *pipeView in self.worldObstacles) {
         // off map
         if (pipeView.center.x < -pipeView.frame.size.width) {
@@ -120,18 +142,9 @@
     }
 }
 
-- (void)flash {
-    self.flashOverlay.alpha = 0.f;
-    [UIView animateWithDuration:0.1f delay:0.f options:nil animations:^{
-        self.flashOverlay.alpha = 1.0f;
-    } completion:^(BOOL completed){
-        [UIView animateWithDuration:0.1f delay:0.f options:nil animations:^{
-        } completion:^(BOOL completed){
-            self.flashOverlay.alpha = 0.0f;
-        } ];    } ];
-}
-
 - (void)collisionDetection {
+    if (self.isGameOver) return;
+    
     for (PipeView *pipe in self.worldObstacles) {
         
         CGRect topFrame = [pipe.pipeTopView.superview convertRect:pipe.pipeTopView.frame toView:self.ladyBugView.superview];
@@ -146,20 +159,44 @@
 }
 
 - (void)showResult {
-    [UIView animateWithDuration:0.3f animations:^{
+    [UIView animateWithDuration:0.3f
+                          delay:0.3f
+                        options:UIViewAnimationOptionLayoutSubviews
+                     animations:^{
         self.resultView.y = 0.f;
     } completion:^(BOOL complete) {
     }];
 }
 
 - (void)hideResult {
-    [UIView animateWithDuration:0.3f animations:^{
-        self.resultView.y = self.view.height;
-    } completion:^(BOOL complete) {
-    }];
+    
+    [UIView animateWithDuration:0.3f
+                          delay:0.0f
+                        options:UIViewAnimationOptionLayoutSubviews
+                     animations:^{
+                         self.resultView.y = self.view.height;
+                     } completion:^(BOOL complete) {
+                     }];
+}
+
+- (void)animateCollision {
+    float duration = 0.2f;
+    self.flashOverlay.alpha = 0.f;
+    [UIView animateWithDuration:duration delay:0.f options:UIViewAnimationOptionLayoutSubviews animations:^{
+        self.flashOverlay.alpha = 1.0f;
+    } completion:^(BOOL completed){
+        [UIView animateWithDuration:duration delay:0.f options:UIViewAnimationOptionLayoutSubviews animations:^{
+        } completion:^(BOOL completed){
+            self.flashOverlay.alpha = 0.0f;
+        } ];
+    } ];
+    
+    [AnimUtil wobble:self.view duration:0.1f angle:M_PI/128.f];
 }
 
 - (void)checkIfScored {
+    if (self.isGameOver) return;
+
     if (self.scorableObjects.count <= 0) return;
     for (PipeView *pipeView in self.scorableObjects) {
         // passed ladybug
@@ -207,7 +244,7 @@
     
     _isGameOver = isGameOver;
     if (isGameOver) {
-        [self flash];
+        [self animateCollision];
         [self stopObstacles];
         [self showResult];
     } else {

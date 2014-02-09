@@ -8,6 +8,8 @@
 
 #import "XibView.h"
 
+#define RESULT_VIEW_DISMISSED_NOTIFICATION @"RESULT_VIEW_DISMISSED_NOTIFICATION"
+
 @interface ResultView : XibView
 
 @property (weak, nonatomic) IBOutlet UILabel *currentScoreLabel;

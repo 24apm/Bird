@@ -7,6 +7,7 @@
 //
 
 #import "ResultView.h"
+
 @implementation ResultView
 
 - (IBAction)playAgainPressed:(id)sender {
@@ -25,6 +26,7 @@
     [UIView animateWithDuration:0.3f animations:^{
         self.y = self.height;
     } completion:^(BOOL complete) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:RESULT_VIEW_DISMISSED_NOTIFICATION object:self];
     }];
 }
 

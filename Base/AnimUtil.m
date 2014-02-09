@@ -38,4 +38,15 @@
     }];
 }
 
++ (void)wobble:(UIView *)view duration:(float)duration angle:(CGFloat)angle {
+    [view.layer removeAnimationForKey:@"iconShake"];
+    CABasicAnimation* anim = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    [anim setFromValue:[NSNumber numberWithDouble:angle]]; // rotation angle
+    [anim setToValue:[NSNumber numberWithFloat:-angle]];
+    [anim setDuration:duration];
+    [anim setRepeatCount:1.f];
+    [anim setAutoreverses:YES];
+    [view.layer addAnimation:anim forKey:@"iconShake"];
+}
+
 @end
