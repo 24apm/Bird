@@ -38,7 +38,6 @@
 
 - (void)show {
     self.y = self.height;
-    self.currentScoreLabel.text = @"11";
     self.currentScore = 0;
     self.targetScore = [self.currentScoreLabel.text intValue];
     self.currentScoreLabel.text = [NSString stringWithFormat:@"%d", self.currentScore];
