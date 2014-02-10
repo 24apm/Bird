@@ -16,6 +16,7 @@
 #import "ResultView.h"
 #import "MenuView.h"
 #import "TutorialView.h"
+#import "SoundEffect.h"
 
 @interface GameViewController ()
 
@@ -64,9 +65,14 @@
     [self.containerView addSubview:self.menuView];
     self.menuView.hidden = YES;
     self.menuView.size = self.containerView.size;
+    [self preloadSoundEffects];
 
     self.currentGameState = GameStateMenuMode;
     [self refresh];
+}
+
+- (void)preloadSoundEffects {
+    [[SoundEffect instance] prepare:@"bounceEffect.caf"];
 }
 
 - (void)gameViewsHidden:(BOOL)hidden {
@@ -148,6 +154,7 @@
         
         self.ladyBugView.properties.acceleration = CGPointMake(self.ladyBugView.properties.acceleration.x, 0);
     }
+    [[SoundEffect instance] play:@"bounceEffect.caf"];
 }
 
 - (void)createObstacle {

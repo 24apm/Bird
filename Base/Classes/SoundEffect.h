@@ -9,15 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface SoundEffect : NSObject <AVAudioPlayerDelegate>
+@interface SoundEffect : AVAudioPlayer
 
-+ (void)play:(NSString *)fileName;
-
-
-
-@property (nonatomic, strong) AVAudioPlayer* theAudio;
-
++ (SoundEffect *)instance;
 - (id)initWithAVSoundNamed:(NSString *)fileName;
-- (void)play;
+- (void)play:(NSString *)fileName;
+- (void)prepare:(NSString *)fileName;
 
 @end

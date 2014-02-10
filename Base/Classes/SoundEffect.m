@@ -10,38 +10,44 @@
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioServices.h>
 
-@implementation SoundEffect {
-    SystemSoundID soundID; 
-}
+@interface SoundEffect()
 
-+ (void)play:(NSString *)soundName {
-    
-    static SoundEffect *soundEffect;
-    if(soundEffect == nil) {
-      soundEffect = [[SoundEffect alloc] initWithAVSoundNamed:soundName];
+@property (nonatomic, retain) NSMutableDictionary *soundEffects;
+
+@end
+
+@implementation SoundEffect
+
++ (SoundEffect *)instance {
+    static SoundEffect *instance = nil;
+    if (!instance) {
+        instance = [[SoundEffect alloc] init];
+        instance.soundEffects = [NSMutableDictionary dictionary];
     }
-    [soundEffect play];
+    return instance;
 }
 
 - (id)initWithAVSoundNamed:(NSString *)fileName {
-    if (self = [super init]) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"caf"];
-        self.theAudio = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
-        [self.theAudio prepareToPlay];
+    NSString *fileExt = [fileName pathExtension];
+	fileName = [fileName stringByDeletingPathExtension];
+    NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:fileExt];
+    if (self = [self initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL]) {
+        [self prepareToPlay];
     }
     return self;
 }
 
-- (void)play {
-    [self.theAudio play];
+- (void)play:(NSString *)fileName {
+    SoundEffect *soundEffect = nil;//[self.soundEffects objectForKey:fileName];
+    if (!soundEffect) {
+        [self prepare:fileName];
+        soundEffect = [self.soundEffects objectForKey:fileName];
+    }
+    [soundEffect play];
 }
 
-- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
-    NSLog(@"audioPlayerDidFinishPlaying");
+- (void)prepare:(NSString *)fileName {
+    [self.soundEffects setObject:[[SoundEffect instance] initWithAVSoundNamed:fileName] forKey:fileName];
 }
-- (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error {
-    NSLog(@"audioPlayerDecodeErrorDidOccur");
-}
-
 
 @end
