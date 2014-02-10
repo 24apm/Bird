@@ -73,6 +73,7 @@
 
 - (void)preloadSoundEffects {
     [[SoundEffect instance] prepare:@"bounceEffect.caf"];
+    [[SoundEffect instance] prepare:@"bumpEffect.caf"];
 }
 
 - (void)gameViewsHidden:(BOOL)hidden {
@@ -299,6 +300,8 @@
     } ];
     
     [AnimUtil wobble:self.view duration:0.1f angle:M_PI/128.f];
+    
+    [[SoundEffect instance] play:@"bumpEffect.caf"];
 }
 
 - (void)checkIfScored {
