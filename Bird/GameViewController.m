@@ -164,14 +164,13 @@
         pipeView = [[PipeView alloc] init];
         [self.worldObstacles addObject:pipeView];
         [self.obstacleLayer addSubview:pipeView];
-
     }
     [self resetPipes];
 }
 
 - (void)resetPipe:(PipeView *)pipeView {
     float randomY = [Utils randBetweenMin:self.view.frame.size.height * 0.3f max:self.view.frame.size.height * 0.7f];
-    [pipeView setupGapDistance:self.ladyBugView.frame.size.height * 4.f gapCenterY:randomY];
+    [pipeView setupGapDistance:self.ladyBugView.frame.size.height * OBSTACLE_GAP_BY_CHARACTER_MULTIPLIER gapCenterY:randomY];
     [self.scorableObjects addObject:pipeView];
     if (self.lastGeneratedPipe) {
         pipeView.x = self.lastGeneratedPipe.x + self.view.width * OBSTACLE_GAP_BY_SCREEN_WIDTH_PERCENTAGE;
