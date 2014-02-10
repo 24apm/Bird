@@ -60,6 +60,7 @@
 		D0E79C9E18A4B40F00CBBF73 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E79C9D18A4B40F00CBBF73 /* MainWindow.xib */; };
 		D0EDB82818A8A55100C103F5 /* bumpEffect.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0EDB82718A8A55100C103F5 /* bumpEffect.caf */; };
 		D0EDB82C18A8AFAC00C103F5 /* THLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EDB82B18A8AFAC00C103F5 /* THLabel.m */; };
+		D0EDB82F18A8DF0E00C103F5 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EDB82E18A8DF0D00C103F5 /* SoundManager.m */; };
 		D0F7853818A8659F00CA1ADA /* bounceEffect.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0F7853718A8659F00CA1ADA /* bounceEffect.caf */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,8 @@
 		D0EDB82718A8A55100C103F5 /* bumpEffect.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bumpEffect.caf; sourceTree = "<group>"; };
 		D0EDB82A18A8AFAC00C103F5 /* THLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THLabel.h; sourceTree = "<group>"; };
 		D0EDB82B18A8AFAC00C103F5 /* THLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THLabel.m; sourceTree = "<group>"; };
+		D0EDB82D18A8DF0D00C103F5 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
+		D0EDB82E18A8DF0D00C103F5 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
 		D0F7853718A8659F00CA1ADA /* bounceEffect.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bounceEffect.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -312,6 +315,8 @@
 				D0E50A6A18A75AE200AA353E /* MenuView.m */,
 				D0E50A6E18A7702100AA353E /* TutorialView.h */,
 				D0E50A6F18A7702100AA353E /* TutorialView.m */,
+				D0EDB82D18A8DF0D00C103F5 /* SoundManager.h */,
+				D0EDB82E18A8DF0D00C103F5 /* SoundManager.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -534,6 +539,7 @@
 				D0E50A6118A745CA00AA353E /* WorldObjectProperties.m in Sources */,
 				D0E50A7018A7702100AA353E /* TutorialView.m in Sources */,
 				D0E50A6618A745CA00AA353E /* FXLabel.m in Sources */,
+				D0EDB82F18A8DF0E00C103F5 /* SoundManager.m in Sources */,
 				D0E41ED118A3965700B37819 /* GameConstants.m in Sources */,
 				D0E50A6B18A75AE200AA353E /* MenuView.m in Sources */,
 			);

@@ -38,14 +38,18 @@
 }
 
 - (void)play:(NSString *)fileName {
-    self.audio = [self createAVSoundNamed:fileName];
-    if (self.audio) {
-        [self.audio play];
+    if (!self.audio) {
+        [self prepare:fileName];
     }
+    [self.audio play];
 }
 
 - (void)prepare:(NSString *)fileName {
-    [self createAVSoundNamed:fileName];
+    self.audio = [self createAVSoundNamed:fileName];
+}
+
+- (void)play {
+    [self.audio play];
 }
 
 @end

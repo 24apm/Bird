@@ -15,5 +15,6 @@
 - (AVAudioPlayer *)createAVSoundNamed:(NSString *)fileName;
 - (void)play:(NSString *)fileName;
 - (void)prepare:(NSString *)fileName;
+- (void)play;
 
 @end
