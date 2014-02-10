@@ -24,6 +24,8 @@
 
 @property (nonatomic) BOOL isGameOver;
 @property (nonatomic) int score;
+@property (nonatomic) PipeView *lastGeneratedPipe;
+
 @property (nonatomic) int maxScore;
 @property (nonatomic) BOOL firstTapped;
 @property (strong, nonatomic) TutorialView *tutorialView;
@@ -41,6 +43,7 @@
     self.scorableObjects = [NSMutableArray array];
     self.score = 0;
     self.maxScore = 0;
+    self.lastGeneratedPipe = nil;
     _isGameOver = YES;
     [self loadUserData];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resultViewDismiss) name:RESULT_VIEW_DISMISSED_NOTIFICATION object:nil];
@@ -149,7 +152,7 @@
 
 - (void)createObstacle {
     PipeView *pipeView;
-    for (int i = 0; i < 1; i++) {
+    for (int i = 0; i < PIPES_COUNT; i++) {
         pipeView = [[PipeView alloc] init];
         [self.worldObstacles addObject:pipeView];
         [self.obstacleLayer addSubview:pipeView];
@@ -162,27 +165,31 @@
     float randomY = [Utils randBetweenMin:self.view.frame.size.height * 0.3f max:self.view.frame.size.height * 0.7f];
     [pipeView setupGapDistance:self.ladyBugView.frame.size.height * 4.f gapCenterY:randomY];
     [self.scorableObjects addObject:pipeView];
+    if (self.lastGeneratedPipe) {
+        pipeView.x = self.lastGeneratedPipe.x + self.view.width * OBSTACLE_GAP_BY_SCREEN_WIDTH_PERCENTAGE;
+    } else {
+        pipeView.x = self.view.width * 1.5f;
+    }
+    self.lastGeneratedPipe = pipeView;
 }
 
 - (void)resetPipes {
-    int i = 1.f;
     for (PipeView *pipeView in self.worldObstacles) {
         // off map
         [self resetPipe:pipeView];
-        pipeView.center = CGPointMake(self.view.frame.size.width * i * 1.5f, pipeView.center.y);
-        i++;
     }
 }
 
 - (void)restartGame {
     self.isGameOver = NO;
     [self.scorableObjects removeAllObjects];
-    [self resetPipes];
     [self.ladyBugView resume];
     self.ladyBugView.center = CGPointMake(self.ladyBugView.center.x, self.view.center.y) ;
     self.ladyBugView.startingPoint = self.ladyBugView.center;
     self.score = 0;
     self.firstTapped = NO;
+    self.lastGeneratedPipe = nil;
+    [self resetPipes];
     [self refreshLabel];
 }
 
@@ -232,7 +239,6 @@
         // off map
         if (pipeView.center.x < -pipeView.frame.size.width) {
             [self resetPipe:pipeView];
-            pipeView.center = CGPointMake(self.view.frame.size.width + pipeView.frame.size.width, pipeView.center.y);
         }
     }
 }
@@ -290,17 +296,20 @@
 
 - (void)checkIfScored {
     if (self.isGameOver) return;
-
     if (self.scorableObjects.count <= 0) return;
+    
+    NSMutableArray *scorableObjectsTemp = [NSMutableArray array];
     for (PipeView *pipeView in self.scorableObjects) {
         // passed ladybug
         CGRect pipeFrame = [pipeView.superview convertRect:pipeView.frame toView:self.ladyBugView.superview];
         if (self.ladyBugView.center.x > pipeFrame.origin.x + pipeView.frame.size.width) {
-            [self.scorableObjects removeObject:pipeView];
             self.score++;
             [self refreshLabel];
+        } else {
+            [scorableObjectsTemp addObject:pipeView];
         }
     }
+    self.scorableObjects = scorableObjectsTemp;
 }
 
 - (void)refreshLabel {
@@ -338,6 +347,9 @@
 
 - (void)setIsGameOver:(BOOL)isGameOver {
     if (self.isGameOver == isGameOver) return;
+    if (DEBUG_MODE) {
+        isGameOver = NO;
+    }
     
     _isGameOver = isGameOver;
     if (isGameOver) {

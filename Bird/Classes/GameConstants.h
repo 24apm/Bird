@@ -13,6 +13,10 @@
 #define TAP_SPEED_INCREASE -12.0f
 
 #define OBSTACLE_SPEED -5.0f
+#define OBSTACLE_GAP_BY_SCREEN_WIDTH_PERCENTAGE 0.75
+
+#define PIPES_COUNT 5
+#define DEBUG_MODE NO
 
 @interface GameConstants : NSObject
 
