@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface SoundEffect : AVAudioPlayer
+@interface SoundEffect : NSObject
 
 + (SoundEffect *)instance;
-- (id)initWithAVSoundNamed:(NSString *)fileName;
+- (AVAudioPlayer *)createAVSoundNamed:(NSString *)fileName;
 - (void)play:(NSString *)fileName;
 - (void)prepare:(NSString *)fileName;
 

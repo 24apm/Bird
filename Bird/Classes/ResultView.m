@@ -53,7 +53,6 @@
             [self animateLabel];
         }];
     }];
-    [[iRate sharedInstance] promptIfNetworkAvailable];
 }
 
 - (void)updateScoreLabel {

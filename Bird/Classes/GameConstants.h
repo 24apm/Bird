@@ -18,6 +18,7 @@
 
 #define PIPES_COUNT 5
 #define DEBUG_MODE NO
+#define BLACK_AND_WHITE_MODE NO
 
 @interface GameConstants : NSObject
 

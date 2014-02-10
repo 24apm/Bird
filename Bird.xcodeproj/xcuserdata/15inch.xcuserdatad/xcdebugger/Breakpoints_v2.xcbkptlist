@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bird/GameViewController.m"
-            timestampString = "413713331.778914"
+            timestampString = "413715477.747084"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "445"
-            endingLineNumber = "445">
+            startingLineNumber = "463"
+            endingLineNumber = "463">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -34,11 +34,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bird/GameViewController.m"
-            timestampString = "413713331.778914"
+            timestampString = "413715477.747084"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "263"
-            endingLineNumber = "263"
+            startingLineNumber = "281"
+            endingLineNumber = "281"
             landmarkName = "-collisionDetection"
             landmarkType = "5">
          </BreakpointContent>

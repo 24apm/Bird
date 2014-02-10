@@ -66,7 +66,9 @@
     self.menuView.hidden = YES;
     self.menuView.size = self.containerView.size;
     [self preloadSoundEffects];
-
+    if (BLACK_AND_WHITE_MODE) {
+        [self blackAndWhite];
+    }
     self.currentGameState = GameStateMenuMode;
     [self refresh];
 }
@@ -162,10 +164,26 @@
     PipeView *pipeView;
     for (int i = 0; i < PIPES_COUNT; i++) {
         pipeView = [[PipeView alloc] init];
+        
+        if (BLACK_AND_WHITE_MODE) {
+            pipeView.pipeTopView.image = nil;
+            pipeView.pipeTopView.backgroundColor = [UIColor blackColor];
+            pipeView.pipeDownView.image = nil;
+            pipeView.pipeDownView.backgroundColor = [UIColor blackColor];
+        }
+        
         [self.worldObstacles addObject:pipeView];
         [self.obstacleLayer addSubview:pipeView];
     }
     [self resetPipes];
+}
+
+- (void)blackAndWhite {
+    self.backgroundView.backgroundImage.image = nil;
+    self.backgroundView.backgroundImage.backgroundColor = [UIColor whiteColor];
+    
+    self.ladyBugView.imageView.image = nil;
+    self.ladyBugView.imageView.backgroundColor = [UIColor blackColor];
 }
 
 - (void)resetPipe:(PipeView *)pipeView {
