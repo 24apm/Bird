@@ -14,5 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *currentScoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *maxScoreLabel;
+- (void)show;
 
 @end

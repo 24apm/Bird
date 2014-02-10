@@ -11,7 +11,7 @@
 #import "BackgroundView.h"
 #import "LadyBugView.h"
 #import "ResultView.h"
-#import "FXLabel.h"
+#import "THLabel.h"
 #import "MenuView.h"
 
 typedef enum {
@@ -27,7 +27,7 @@ typedef enum {
 @property (weak, nonatomic) IBOutlet UIView *obstacleLayer;
 @property (weak, nonatomic) IBOutlet UIButton *tapButton;
 @property (strong, nonatomic) IBOutlet LadyBugView *ladyBugView;
-@property (weak, nonatomic) IBOutlet FXLabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet THLabel *scoreLabel;
 @property (strong, nonatomic) IBOutlet UIView *flashOverlay;;
 @property (nonatomic) GameState currentGameState;
 @property (strong, nonatomic) IBOutlet UIView *containerView;

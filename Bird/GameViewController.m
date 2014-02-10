@@ -268,22 +268,13 @@
 }
 
 - (void)showResult {
-    self.resultView.y = self.resultView.height;
-    [UIView animateWithDuration:0.3f
-                          delay:0.3f
-                        options:UIViewAnimationOptionLayoutSubviews
-                     animations:^{
-        self.resultView.y = 0.f;
-    } completion:^(BOOL complete) {
-    }];
-    
-    self.resultView.currentScoreLabel.text = [NSString stringWithFormat:@"%d", self.score];
-    
     if (self.score > self.maxScore) {
         self.maxScore = self.score;
         [self saveUserData];
     }
+    self.resultView.currentScoreLabel.text = [NSString stringWithFormat:@"%d", self.score];
     self.resultView.maxScoreLabel.text = [NSString stringWithFormat:@"%d", self.maxScore];
+    [self.resultView show];
 }
 
 

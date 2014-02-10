@@ -59,6 +59,7 @@
 		D0E50A7018A7702100AA353E /* TutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E50A6F18A7702100AA353E /* TutorialView.m */; };
 		D0E79C9E18A4B40F00CBBF73 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E79C9D18A4B40F00CBBF73 /* MainWindow.xib */; };
 		D0EDB82818A8A55100C103F5 /* bumpEffect.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0EDB82718A8A55100C103F5 /* bumpEffect.caf */; };
+		D0EDB82C18A8AFAC00C103F5 /* THLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EDB82B18A8AFAC00C103F5 /* THLabel.m */; };
 		D0F7853818A8659F00CA1ADA /* bounceEffect.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0F7853718A8659F00CA1ADA /* bounceEffect.caf */; };
 /* End PBXBuildFile section */
 
@@ -150,6 +151,8 @@
 		D0E50A6F18A7702100AA353E /* TutorialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TutorialView.m; path = Classes/TutorialView.m; sourceTree = "<group>"; };
 		D0E79C9D18A4B40F00CBBF73 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		D0EDB82718A8A55100C103F5 /* bumpEffect.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bumpEffect.caf; sourceTree = "<group>"; };
+		D0EDB82A18A8AFAC00C103F5 /* THLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THLabel.h; sourceTree = "<group>"; };
+		D0EDB82B18A8AFAC00C103F5 /* THLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THLabel.m; sourceTree = "<group>"; };
 		D0F7853718A8659F00CA1ADA /* bounceEffect.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bounceEffect.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -260,6 +263,7 @@
 		D0E30EB918A3771C00FFD3CE /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				D0EDB82918A8AFAC00C103F5 /* THLabel */,
 				D0E50A3D18A745CA00AA353E /* Classes */,
 				D0E50A5318A745CA00AA353E /* iRate */,
 				D0E50A5718A745CA00AA353E /* FXLabel */,
@@ -373,6 +377,15 @@
 				D0E50A5918A745CA00AA353E /* FXLabel.m */,
 			);
 			path = FXLabel;
+			sourceTree = "<group>";
+		};
+		D0EDB82918A8AFAC00C103F5 /* THLabel */ = {
+			isa = PBXGroup;
+			children = (
+				D0EDB82A18A8AFAC00C103F5 /* THLabel.h */,
+				D0EDB82B18A8AFAC00C103F5 /* THLabel.m */,
+			);
+			path = THLabel;
 			sourceTree = "<group>";
 		};
 		D0F7853418A8655800CA1ADA /* Sounds */ = {
@@ -504,6 +517,7 @@
 				D0E50A5B18A745CA00AA353E /* Base.m in Sources */,
 				D0E30EDD18A37A8E00FFD3CE /* BackgroundView.m in Sources */,
 				D0E30E9B18A376E300FFD3CE /* GameViewController.m in Sources */,
+				D0EDB82C18A8AFAC00C103F5 /* THLabel.m in Sources */,
 				D0E50A6018A745CA00AA353E /* Utils.m in Sources */,
 				D0E50A5A18A745CA00AA353E /* AnimUtil.m in Sources */,
 				D0E30EEA18A387A500FFD3CE /* LadyBugView.m in Sources */,
