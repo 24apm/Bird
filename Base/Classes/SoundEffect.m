@@ -13,6 +13,7 @@
 @interface SoundEffect()
 
 @property (nonatomic, retain) NSMutableDictionary *soundEffects;
+@property (nonatomic, retain) AVAudioPlayer *audio;
 
 @end
 
@@ -37,16 +38,14 @@
 }
 
 - (void)play:(NSString *)fileName {
-    AVAudioPlayer *audio = nil;//[self.soundEffects objectForKey:fileName];
-    if (!audio) {
-        [self prepare:fileName];
-        audio = [self.soundEffects objectForKey:fileName];
+    self.audio = [self createAVSoundNamed:fileName];
+    if (self.audio) {
+        [self.audio play];
     }
-    [audio play];
 }
 
 - (void)prepare:(NSString *)fileName {
-    [self.soundEffects setObject:[[SoundEffect instance] createAVSoundNamed:fileName] forKey:fileName];
+    [self createAVSoundNamed:fileName];
 }
 
 @end

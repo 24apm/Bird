@@ -40,6 +40,7 @@
 - (void)initialize {
     [[GameLoopTimer instance] initialize];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(drawStep) name:DRAW_STEP_NOTIFICATION object:nil];
+    self.currentGameState = -1;
     self.worldObstacles = [NSMutableArray array];
     self.scorableObjects = [NSMutableArray array];
     self.score = 0;
@@ -69,8 +70,7 @@
     if (BLACK_AND_WHITE_MODE) {
         [self blackAndWhite];
     }
-    self.currentGameState = GameStateMenuMode;
-    [self refresh];
+    [self updateGameState:GameStateMenuMode];
 }
 
 - (void)preloadSoundEffects {
@@ -95,13 +95,11 @@
 }
 
 - (void)resultViewDismiss {
-    self.currentGameState = GameStateMenuMode;
-    [self refresh];
+    [self updateGameState:GameStateMenuMode];
 }
 
 - (void)menuViewDismiss {
-    self.currentGameState = GameStateTutorialMode;
-    [self refresh];
+    [self updateGameState:GameStateTutorialMode];
 }
 
 - (void)refresh {
@@ -138,6 +136,13 @@
             break;
         default:
             break;
+    }
+}
+
+- (void)updateGameState:(GameState)gameState {
+    if (self.currentGameState != gameState) {
+        self.currentGameState = gameState;
+        [self refresh];
     }
 }
 
@@ -221,8 +226,7 @@
 - (void)setFirstTapped:(BOOL)firstTapped {
     _firstTapped = firstTapped;
     if (firstTapped) {
-        self.currentGameState = GameStateGameMode;
-        [self refresh];
+        [self updateGameState:GameStateGameMode];
     }
 }
 
@@ -373,8 +377,7 @@
     if (isGameOver) {
         [self animateCollision];
         [self stopObstacles];
-        self.currentGameState = GameStateResultMode;
-        [self refresh];
+        [self updateGameState:GameStateResultMode];
     } else {
         [self resumeObstacles];
     }
