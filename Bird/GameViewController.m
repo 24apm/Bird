@@ -65,7 +65,9 @@
     [self.containerView addSubview:self.resultView];
     self.resultView.hidden = YES;
     self.resultView.size = self.containerView.size;
-
+    self.resultView.vc = self;
+    self.resultView.sharedImage = [UIImage imageNamed:@"man.png"];
+    
     self.menuView = [[MenuView alloc] init];
     [self.containerView addSubview:self.menuView];
     self.menuView.hidden = YES;
@@ -136,6 +138,7 @@
         case GameStateResultMode:
             self.resultView.hidden = NO;
             [self gameViewsHidden:NO];
+            self.resultView.sharedText = [NSString stringWithFormat:@"High Score: %d!", self.maxScore];
             [self showResult];
             break;
         default:
@@ -391,66 +394,65 @@
 
 - (void) createAdBannerView
 {
-    self.adBannerView = [[ADBannerView alloc] initWithFrame:CGRectZero];
-    CGSize bannerSize = [ADBannerView sizeFromBannerContentSizeIdentifier:self.adBannerView.currentContentSizeIdentifier];
-
-    CGRect bannerFrame = self.adBannerView.frame;
-    bannerFrame.origin.y = -bannerSize.height;
-    self.adBannerView.frame = bannerFrame;
+//    self.adBannerView = [[ADBannerView alloc] initWithFrame:CGRectZero];
+//    CGSize bannerSize = [ADBannerView sizeFromBannerContentSizeIdentifier:self.adBannerView.currentContentSizeIdentifier];
+//
+//    CGRect bannerFrame = self.adBannerView.frame;
+//    bannerFrame.origin.y = -bannerSize.height;
+//    self.adBannerView.frame = bannerFrame;
+//    
+//    self.adBannerView.delegate = self;
+//    self.adBannerView.requiredContentSizeIdentifiers = [NSSet setWithObjects:ADBannerContentSizeIdentifierPortrait, ADBannerContentSizeIdentifierLandscape, nil];
     
+    if ([ADBannerView instancesRespondToSelector:@selector(initWithAdType:)]) {
+        self.adBannerView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
+    } else {
+        self.adBannerView = [[ADBannerView alloc] init];
+    }
     self.adBannerView.delegate = self;
-    self.adBannerView.requiredContentSizeIdentifiers = [NSSet setWithObjects:ADBannerContentSizeIdentifierPortrait, ADBannerContentSizeIdentifierLandscape, nil];
 }
 
-- (void) adjustBannerView
+- (void)layoutAnimated:(BOOL)animated
 {
-    CGRect adBannerFrame = self.adBannerView.frame;
-    
-    if([self.adBannerView isBannerLoaded])
-    {
-        adBannerFrame.origin.y = 0.f;
-    }
-    else
-    {
-        CGSize bannerSize = [ADBannerView sizeFromBannerContentSizeIdentifier:self.adBannerView.currentContentSizeIdentifier];
-        adBannerFrame.origin.y = -bannerSize.height;
+    // As of iOS 6.0, the banner will automatically resize itself based on its width.
+    // To support iOS 5.0 however, we continue to set the currentContentSizeIdentifier appropriately.
+    CGRect contentFrame = self.view.bounds;
+    if (contentFrame.size.width < contentFrame.size.height) {
+        self.adBannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
+    } else {
+        self.adBannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierLandscape;
     }
     
-    [UIView animateWithDuration:0.5 animations:^{
-        self.adBannerView.frame = adBannerFrame;
+    CGRect bannerFrame = self.adBannerView.frame;
+    if (self.adBannerView.bannerLoaded) {
+        contentFrame.size.height -= self.adBannerView.frame.size.height;
+        bannerFrame.origin.y = contentFrame.size.height;
+    } else {
+        bannerFrame.origin.y = contentFrame.size.height;
+    }
+    
+    [UIView animateWithDuration:animated ? 0.25 : 0.0 animations:^{
+        self.view.frame = contentFrame;
+        [self.view layoutIfNeeded];
+        self.adBannerView.frame = bannerFrame;
     }];
 }
 
 #pragma mark - ADBannerViewDelegate
 
+- (void)viewDidLayoutSubviews
+{
+    [self layoutAnimated:[UIView areAnimationsEnabled]];
+}
+
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
-    [self adjustBannerView];
+    [self layoutAnimated:YES];
 }
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
-    [self adjustBannerView];
-}
-
-- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
-{
-    //TO DO
-    //Check internet connecction here
-    /*
-     if(internetNotAvailable)
-     {
-     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No internet." message:@"Please make sure an internet connection is available." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-     [alert show];
-     [alert release];
-     return NO;
-     }*/
-    return YES;
-}
-
-- (void)bannerViewActionDidFinish:(ADBannerView *)banner
-{
-    
+    [self layoutAnimated:YES];
 }
 
 

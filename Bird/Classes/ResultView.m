@@ -8,6 +8,7 @@
 
 #import "ResultView.h"
 #import "iRate.h"
+#import <Social/Social.h>
 
 @interface ResultView()
 
@@ -19,6 +20,9 @@
 @property int currentScore;
 @property int step;
 @property int targetScore;
+
+@property (strong, nonatomic) IBOutlet UIButton *twitterButton;
+@property (strong, nonatomic) IBOutlet UIButton *facebookButton;
 
 @end
 
@@ -71,6 +75,50 @@
 
 - (IBAction)ratePressed:(id)sender {
 	[[iRate sharedInstance] promptIfNetworkAvailable];
+}
+
+- (IBAction)socialPressed:(id)sender {
+    UIButton *button = sender;
+    int tag = button.tag;
+    NSString *socialType = nil;
+    switch (tag) {
+        case 1:
+            socialType = SLServiceTypeTwitter;
+            break;
+        case 2:
+            socialType = SLServiceTypeFacebook;
+            break;
+        default:
+            break;
+    }
+    if (socialType == nil) {
+        return;
+    }
+    
+    if ([SLComposeViewController isAvailableForServiceType:socialType]) {
+        // Initialize Compose View Controller
+        SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:socialType];
+        // Configure Compose View Controller
+        [vc setInitialText:self.sharedText];
+        [vc addImage:self.sharedImage];
+        // Present Compose View Controller
+        [self.vc presentViewController:vc animated:YES completion:nil];
+    } else {
+        NSString *message = [NSString stringWithFormat:@"It seems that we cannot talk to %@ at the moment or you have not yet added your %@ account to this device. Go to the Settings application to add your %@ account to this device.", button.titleLabel.text, button.titleLabel.text, button.titleLabel.text];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+    }
+}
+
+- (IBAction)share:(id)sender {
+    // Activity Items
+    UIImage *image = self.sharedImage;
+    NSString *caption = self.sharedText;
+    NSArray *activityItems = @[image, caption];
+    // Initialize Activity View Controller
+    UIActivityViewController *vc = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    // Present Activity View Controller
+    [self.vc presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)hide {

@@ -14,6 +14,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *currentScoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *maxScoreLabel;
+@property (strong, nonatomic) UIViewController *vc;
+@property (strong, nonatomic) NSString *sharedText;
+@property (strong, nonatomic) UIImage *sharedImage;
+
 - (void)show;
 
 @end
