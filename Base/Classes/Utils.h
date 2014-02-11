@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSArray+Util.h"
 
 #define DegreesToRadians(x)     (M_PI * (x) / 180.0)
 

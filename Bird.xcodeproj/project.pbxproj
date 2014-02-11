@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D04F6F5018A9EBE6000509AA /* SoundEffectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F6F4F18A9EBE6000509AA /* SoundEffectHelper.m */; };
 		D04F6F5318A9ED28000509AA /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F6F5218A9ED28000509AA /* SoundManager.m */; };
+		D04F6F5618A9FD34000509AA /* NSArray+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F6F5518A9FD34000509AA /* NSArray+Util.m */; };
+		D04F6F5918A9FE09000509AA /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F6F5818A9FE09000509AA /* NotificationManager.m */; };
 		D07F418018A4D8C7009680FD /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07F417F18A4D8C7009680FD /* iAd.framework */; };
 		D07F418218A4E208009680FD /* PipeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D07F418118A4E208009680FD /* PipeView.xib */; };
 		D07F418518A4E223009680FD /* PipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D07F418418A4E223009680FD /* PipeView.m */; };
@@ -80,6 +82,10 @@
 		D04F6F4F18A9EBE6000509AA /* SoundEffectHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundEffectHelper.m; sourceTree = "<group>"; };
 		D04F6F5118A9ED28000509AA /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
 		D04F6F5218A9ED28000509AA /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
+		D04F6F5418A9FD34000509AA /* NSArray+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Util.h"; sourceTree = "<group>"; };
+		D04F6F5518A9FD34000509AA /* NSArray+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Util.m"; sourceTree = "<group>"; };
+		D04F6F5718A9FE09000509AA /* NotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationManager.h; path = Classes/NotificationManager.h; sourceTree = "<group>"; };
+		D04F6F5818A9FE09000509AA /* NotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotificationManager.m; path = Classes/NotificationManager.m; sourceTree = "<group>"; };
 		D07F417F18A4D8C7009680FD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		D07F418118A4E208009680FD /* PipeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PipeView.xib; sourceTree = "<group>"; };
 		D07F418318A4E223009680FD /* PipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PipeView.h; path = Classes/PipeView.h; sourceTree = "<group>"; };
@@ -306,6 +312,8 @@
 			children = (
 				D0E30EDB18A37A8E00FFD3CE /* BackgroundView.h */,
 				D0E30EDC18A37A8E00FFD3CE /* BackgroundView.m */,
+				D04F6F5718A9FE09000509AA /* NotificationManager.h */,
+				D04F6F5818A9FE09000509AA /* NotificationManager.m */,
 				D0E30EE818A387A500FFD3CE /* LadyBugView.h */,
 				D0E30EE918A387A500FFD3CE /* LadyBugView.m */,
 				D0E41ECF18A3965700B37819 /* GameConstants.h */,
@@ -366,6 +374,8 @@
 				D04F6F4F18A9EBE6000509AA /* SoundEffectHelper.m */,
 				D04F6F5118A9ED28000509AA /* SoundManager.h */,
 				D04F6F5218A9ED28000509AA /* SoundManager.m */,
+				D04F6F5418A9FD34000509AA /* NSArray+Util.h */,
+				D04F6F5518A9FD34000509AA /* NSArray+Util.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -529,6 +539,8 @@
 				D0E30E9B18A376E300FFD3CE /* GameViewController.m in Sources */,
 				D04F6F5318A9ED28000509AA /* SoundManager.m in Sources */,
 				D0EDB82C18A8AFAC00C103F5 /* THLabel.m in Sources */,
+				D04F6F5918A9FE09000509AA /* NotificationManager.m in Sources */,
+				D04F6F5618A9FD34000509AA /* NSArray+Util.m in Sources */,
 				D0E50A6018A745CA00AA353E /* Utils.m in Sources */,
 				D0E50A5A18A745CA00AA353E /* AnimUtil.m in Sources */,
 				D0E30EEA18A387A500FFD3CE /* LadyBugView.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "iRate.h"
+#import "NotificationManager.h"
 
 @implementation AppDelegate
 
@@ -42,29 +43,10 @@
     [self.window makeKeyAndVisible];
     self.window.rootViewController = self.viewController;
 
-    [self registerNotifications];
-    
+    [[NotificationManager instance] registerNotifications];
     return YES;
 }
 
-- (void)registerNotifications {
-    [[UIApplication sharedApplication] cancelAllLocalNotifications];
-    [self registerLocalNotification:10 bodyText:@"10" actionText:@"10 action"];
-    [self registerLocalNotification:20 bodyText:@"20" actionText:@"20 action"];
-    [self registerLocalNotification:40 bodyText:@"40" actionText:@"40 action"];
-    [self registerLocalNotification:80 bodyText:@"80" actionText:@"80 action"];
-    [self registerLocalNotification:160 bodyText:@"160" actionText:@"160 action"];
-}
-
-- (void)registerLocalNotification:(NSTimeInterval)sec bodyText:(NSString *)bodyText actionText:(NSString *)actionText{
-    UILocalNotification* localNotification = [[UILocalNotification alloc] init];
-    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:sec];
-    localNotification.alertBody = bodyText;
-    localNotification.alertAction = actionText;
-    localNotification.timeZone = [NSTimeZone defaultTimeZone];
-    localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-}
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
