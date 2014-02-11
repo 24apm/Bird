@@ -2,17 +2,16 @@
 //  MenuView.h
 //  Bird
 //
-//  Created by MacCoder on 2/8/14.
+//  Created by MacCoder on 2/11/14.
 //  Copyright (c) 2014 MacCoder. All rights reserved.
 //
 
 #import "XibView.h"
 
-@interface MenuView : XibView
-
 #define MENU_VIEW_DISMISSED_NOTIFICATION @"MENU_VIEW_DISMISSED_NOTIFICATION"
+#define MENU_VIEW_GO_TO_MAIN_MENU_NOTIFICATION @"MENU_VIEW_GO_TO_MAIN_MENU_NOTIFICATION"
 
-@property (strong, nonatomic) IBOutlet UIView *titleView;
+@interface MenuView : XibView
 
 - (void)show;
 

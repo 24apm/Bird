@@ -12,6 +12,8 @@
 		D04F6F5618A9FD34000509AA /* NSArray+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F6F5518A9FD34000509AA /* NSArray+Util.m */; };
 		D04F6F5918A9FE09000509AA /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F6F5818A9FE09000509AA /* NotificationManager.m */; };
 		D04F704218AA1197000509AA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04F704118AA1197000509AA /* Social.framework */; };
+		D073FF1C18AA2D8500448FD5 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF1B18AA2D8500448FD5 /* MenuView.xib */; };
+		D073FF1F18AA2D9A00448FD5 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D073FF1E18AA2D9A00448FD5 /* MenuView.m */; };
 		D07F418018A4D8C7009680FD /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07F417F18A4D8C7009680FD /* iAd.framework */; };
 		D07F418218A4E208009680FD /* PipeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D07F418118A4E208009680FD /* PipeView.xib */; };
 		D07F418518A4E223009680FD /* PipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D07F418418A4E223009680FD /* PipeView.m */; };
@@ -58,8 +60,8 @@
 		D0E50A6418A745CA00AA353E /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0E50A5418A745CA00AA353E /* iRate.bundle */; };
 		D0E50A6518A745CA00AA353E /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E50A5618A745CA00AA353E /* iRate.m */; };
 		D0E50A6618A745CA00AA353E /* FXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E50A5918A745CA00AA353E /* FXLabel.m */; };
-		D0E50A6818A75ACC00AA353E /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E50A6718A75ACC00AA353E /* MenuView.xib */; };
-		D0E50A6B18A75AE200AA353E /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E50A6A18A75AE200AA353E /* MenuView.m */; };
+		D0E50A6818A75ACC00AA353E /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E50A6718A75ACC00AA353E /* MainView.xib */; };
+		D0E50A6B18A75AE200AA353E /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E50A6A18A75AE200AA353E /* MainView.m */; };
 		D0E50A6D18A7701200AA353E /* TutorialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E50A6C18A7701200AA353E /* TutorialView.xib */; };
 		D0E50A7018A7702100AA353E /* TutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E50A6F18A7702100AA353E /* TutorialView.m */; };
 		D0E79C9E18A4B40F00CBBF73 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E79C9D18A4B40F00CBBF73 /* MainWindow.xib */; };
@@ -88,6 +90,9 @@
 		D04F6F5718A9FE09000509AA /* NotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationManager.h; path = Classes/NotificationManager.h; sourceTree = "<group>"; };
 		D04F6F5818A9FE09000509AA /* NotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotificationManager.m; path = Classes/NotificationManager.m; sourceTree = "<group>"; };
 		D04F704118AA1197000509AA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		D073FF1B18AA2D8500448FD5 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		D073FF1D18AA2D9A00448FD5 /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuView.h; path = Classes/MenuView.h; sourceTree = "<group>"; };
+		D073FF1E18AA2D9A00448FD5 /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuView.m; path = Classes/MenuView.m; sourceTree = "<group>"; };
 		D07F417F18A4D8C7009680FD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		D07F418118A4E208009680FD /* PipeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PipeView.xib; sourceTree = "<group>"; };
 		D07F418318A4E223009680FD /* PipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PipeView.h; path = Classes/PipeView.h; sourceTree = "<group>"; };
@@ -157,9 +162,9 @@
 		D0E50A5618A745CA00AA353E /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
 		D0E50A5818A745CA00AA353E /* FXLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXLabel.h; sourceTree = "<group>"; };
 		D0E50A5918A745CA00AA353E /* FXLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXLabel.m; sourceTree = "<group>"; };
-		D0E50A6718A75ACC00AA353E /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
-		D0E50A6918A75AE200AA353E /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuView.h; path = Classes/MenuView.h; sourceTree = "<group>"; };
-		D0E50A6A18A75AE200AA353E /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuView.m; path = Classes/MenuView.m; sourceTree = "<group>"; };
+		D0E50A6718A75ACC00AA353E /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		D0E50A6918A75AE200AA353E /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainView.h; path = Classes/MainView.h; sourceTree = "<group>"; };
+		D0E50A6A18A75AE200AA353E /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainView.m; path = Classes/MainView.m; sourceTree = "<group>"; };
 		D0E50A6C18A7701200AA353E /* TutorialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialView.xib; sourceTree = "<group>"; };
 		D0E50A6E18A7702100AA353E /* TutorialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TutorialView.h; path = Classes/TutorialView.h; sourceTree = "<group>"; };
 		D0E50A6F18A7702100AA353E /* TutorialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TutorialView.m; path = Classes/TutorialView.m; sourceTree = "<group>"; };
@@ -313,7 +318,8 @@
 				D0E11EC018A4ABD600DC7793 /* GameViewController.xib */,
 				D07F418118A4E208009680FD /* PipeView.xib */,
 				D08942C618A6E84500C44A0A /* ResultView.xib */,
-				D0E50A6718A75ACC00AA353E /* MenuView.xib */,
+				D0E50A6718A75ACC00AA353E /* MainView.xib */,
+				D073FF1B18AA2D8500448FD5 /* MenuView.xib */,
 				D0E50A6C18A7701200AA353E /* TutorialView.xib */,
 			);
 			name = Xib;
@@ -330,12 +336,14 @@
 				D0E30EE918A387A500FFD3CE /* LadyBugView.m */,
 				D0E41ECF18A3965700B37819 /* GameConstants.h */,
 				D0E41ED018A3965700B37819 /* GameConstants.m */,
+				D073FF1D18AA2D9A00448FD5 /* MenuView.h */,
+				D073FF1E18AA2D9A00448FD5 /* MenuView.m */,
 				D07F418318A4E223009680FD /* PipeView.h */,
 				D07F418418A4E223009680FD /* PipeView.m */,
 				D08942C818A6E86100C44A0A /* ResultView.h */,
 				D08942C918A6E86100C44A0A /* ResultView.m */,
-				D0E50A6918A75AE200AA353E /* MenuView.h */,
-				D0E50A6A18A75AE200AA353E /* MenuView.m */,
+				D0E50A6918A75AE200AA353E /* MainView.h */,
+				D0E50A6A18A75AE200AA353E /* MainView.m */,
 				D0E50A6E18A7702100AA353E /* TutorialView.h */,
 				D0E50A6F18A7702100AA353E /* TutorialView.m */,
 			);
@@ -507,6 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0E50A3518A7349300AA353E /* obstacles_bottom.png in Resources */,
+				D073FF1C18AA2D8500448FD5 /* MenuView.xib in Resources */,
 				D0E50A3218A7349300AA353E /* bg.png in Resources */,
 				D0E79C9E18A4B40F00CBBF73 /* MainWindow.xib in Resources */,
 				D0E50A3818A7349300AA353E /* pipe_face_up.png in Resources */,
@@ -520,7 +529,7 @@
 				D0EDB82818A8A55100C103F5 /* bumpEffect.caf in Resources */,
 				D0E50A3718A7349300AA353E /* pipe_face_down.png in Resources */,
 				D0E50A6418A745CA00AA353E /* iRate.bundle in Resources */,
-				D0E50A6818A75ACC00AA353E /* MenuView.xib in Resources */,
+				D0E50A6818A75ACC00AA353E /* MainView.xib in Resources */,
 				D08942C718A6E84500C44A0A /* ResultView.xib in Resources */,
 				D07F418218A4E208009680FD /* PipeView.xib in Resources */,
 				D0E50A3618A7349300AA353E /* obstacles_top.png in Resources */,
@@ -558,6 +567,7 @@
 				D0E30EEA18A387A500FFD3CE /* LadyBugView.m in Sources */,
 				D0E50A6518A745CA00AA353E /* iRate.m in Sources */,
 				D07F418518A4E223009680FD /* PipeView.m in Sources */,
+				D073FF1F18AA2D9A00448FD5 /* MenuView.m in Sources */,
 				D0E50A6218A745CA00AA353E /* WorldObjectView.m in Sources */,
 				D04F6F5018A9EBE6000509AA /* SoundEffectHelper.m in Sources */,
 				D0E30E9518A376E300FFD3CE /* AppDelegate.m in Sources */,
@@ -571,7 +581,7 @@
 				D0E50A7018A7702100AA353E /* TutorialView.m in Sources */,
 				D0E50A6618A745CA00AA353E /* FXLabel.m in Sources */,
 				D0E41ED118A3965700B37819 /* GameConstants.m in Sources */,
-				D0E50A6B18A75AE200AA353E /* MenuView.m in Sources */,
+				D0E50A6B18A75AE200AA353E /* MainView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

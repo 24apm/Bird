@@ -13,5 +13,6 @@
 + (void)plop:(UIView*)view;
 + (void)blink:(UIView *)view;
 + (void)wobble:(UIView *)view duration:(float)duration angle:(CGFloat)angle;
++ (void)wobble:(UIView *)view duration:(float)duration angle:(CGFloat)angle repeatCount:(float)repeatCount;
 
 @end

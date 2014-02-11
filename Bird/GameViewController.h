@@ -12,12 +12,14 @@
 #import "LadyBugView.h"
 #import "ResultView.h"
 #import "THLabel.h"
-#import "MenuView.h"
+#import "MainView.h"
 
 typedef enum {
-    GameStateMenuMode,
+    GameStateMainMode,
     GameStateTutorialMode,
     GameStateGameMode,
+    GameStateMenuMode,
+    GameStateResumeMode,
     GameStateResultMode
 } GameState;
 
@@ -27,6 +29,7 @@ typedef enum {
 @property (weak, nonatomic) IBOutlet UIView *obstacleLayer;
 @property (weak, nonatomic) IBOutlet UIButton *tapButton;
 @property (strong, nonatomic) IBOutlet LadyBugView *ladyBugView;
+@property (strong, nonatomic) IBOutlet UIButton *menuButton;
 @property (weak, nonatomic) IBOutlet THLabel *scoreLabel;
 @property (strong, nonatomic) IBOutlet UIView *flashOverlay;;
 @property (nonatomic) GameState currentGameState;

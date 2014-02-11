@@ -8,10 +8,11 @@
 
 #import "ResultView.h"
 #import <Social/Social.h>
+#import "AnimUtil.h"
 
 @interface ResultView()
 
-#define RESULT_VIEW_SCORE_LABEL_ANIMATION_TOTAL_DURATION 1.0f
+#define RESULT_VIEW_SCORE_LABEL_ANIMATION_TOTAL_DURATION 0.8f
 #define RESULT_VIEW_SCORE_LABEL_ANIMATION_STEP_DURATION 0.05f
 #define RESULT_VIEW_VIEW_TOTAL_DURATION 0.3f
 
@@ -42,9 +43,12 @@
 
 - (void)show {
     self.y = self.height;
+    self.playButton.enabled = NO;
+    self.recordLabel.hidden = YES;
     self.currentScore = 0;
     self.targetScore = [self.currentScoreLabel.text intValue];
     self.currentScoreLabel.text = [NSString stringWithFormat:@"%d", self.currentScore];
+    self.maxScoreLabel.text = [NSString stringWithFormat:@"%d", self.lastMaxScore];
     self.step = ceil((float)self.targetScore / (RESULT_VIEW_SCORE_LABEL_ANIMATION_TOTAL_DURATION/RESULT_VIEW_SCORE_LABEL_ANIMATION_STEP_DURATION));
    
     [UIView animateWithDuration:RESULT_VIEW_VIEW_TOTAL_DURATION * 0.9f animations:^{
@@ -53,7 +57,7 @@
         [UIView animateWithDuration:RESULT_VIEW_VIEW_TOTAL_DURATION * 0.1f animations:^{
             self.y = 0.f;
         } completion:^(BOOL complete) {
-            [self performSelector:@selector(animateLabel) withObject:nil afterDelay:1.0f];
+            [self performSelector:@selector(animateLabel) withObject:nil afterDelay:0.4f];
         }];
     }];
 }
@@ -63,9 +67,20 @@
     if (self.currentScore >= self.targetScore) {
         [self.timer invalidate], self.timer = nil;
         self.currentScoreLabel.text = [NSString stringWithFormat:@"%d", self.targetScore];
+        if (self.maxScore > self.lastMaxScore) {
+            [self performSelector:@selector(updateMaxLabel) withObject:nil afterDelay:0.2f];
+        }
+        self.playButton.enabled = YES;
     } else {
         self.currentScore += self.step;
     }
+}
+
+- (void)updateMaxLabel {
+    self.recordLabel.hidden = NO;
+    self.maxScoreLabel.text = [NSString stringWithFormat:@"%d", self.maxScore];
+    [AnimUtil wobble:self.maxScoreLabel duration:0.2f angle:M_PI/128.f repeatCount:6.f];
+    [AnimUtil wobble:self.recordLabel duration:0.2f angle:M_PI/128.f repeatCount:6.f];
 }
 
 - (void)animateLabel {

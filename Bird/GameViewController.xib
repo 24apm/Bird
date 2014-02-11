@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <deployment defaultVersion="1280" identifier="iOS"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
@@ -11,6 +11,7 @@
                 <outlet property="containerView" destination="lGG-UK-Ija" id="SU2-hX-dry"/>
                 <outlet property="flashOverlay" destination="tU8-3W-3Ec" id="Yqa-3d-Pxa"/>
                 <outlet property="ladyBugView" destination="e5o-3P-nu2" id="OXH-zP-8az"/>
+                <outlet property="menuButton" destination="E78-Nf-1Zk" id="1Cz-0Y-WgA"/>
                 <outlet property="obstacleLayer" destination="hSA-WF-Sfn" id="nEU-6o-LyS"/>
                 <outlet property="scoreLabel" destination="hfA-pq-WM9" id="V4j-dM-Rk0"/>
                 <outlet property="tapButton" destination="ggc-J1-uXo" id="TzF-aZ-as4"/>
@@ -71,6 +72,16 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="E78-Nf-1Zk">
+                    <rect key="frame" x="47" y="55" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="MENU">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="menuPressed:" destination="-1" eventType="touchUpInside" id="RCl-4W-6vW"/>
+                    </connections>
+                </button>
                 <view contentMode="scaleToFill" id="lGG-UK-Ija" userLabel="Container View">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
