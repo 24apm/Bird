@@ -20,9 +20,9 @@
 
 - (void)setup {
     [super setup];
-    self.properties.speedMin = CGPointMake(OBSTACLE_SPEED, 0.f);
+    self.properties.speedMin = CGPointMake(OBSTACLE_SPEED * IPAD_SCALE, 0.f);
     self.properties.speedMax = CGPointMake(0.f, 0.f);
-    self.properties.speed = CGPointMake(OBSTACLE_SPEED, 0.f);
+    self.properties.speed = CGPointMake(OBSTACLE_SPEED * IPAD_SCALE, 0.f);
 }
 
 - (void)setupGapDistance:(float)gapDistance gapCenterY:(float)gapCenterY {

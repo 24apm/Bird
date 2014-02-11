@@ -198,7 +198,7 @@
     
     self.firstTapped = YES;
     [self.ladyBugView resume];
-    self.ladyBugView.properties.speed = CGPointMake(0.f, TAP_SPEED_INCREASE);
+    self.ladyBugView.properties.speed = CGPointMake(0.f, TAP_SPEED_INCREASE * IPAD_SCALE);
     
     self.ladyBugView.properties.acceleration = CGPointMake(self.ladyBugView.properties.acceleration.x, self.ladyBugView.properties.acceleration.y + TAP_ACCELATION_INCREASE);
     
@@ -399,7 +399,7 @@
 
 - (void)resumeObstacles {
     for (PipeView *pipeView in self.worldObstacles) {
-        pipeView.properties.speed = CGPointMake(OBSTACLE_SPEED, 0.f);
+        pipeView.properties.speed = CGPointMake(OBSTACLE_SPEED * IPAD_SCALE, 0.f);
     }
 }
 

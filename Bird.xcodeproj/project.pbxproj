@@ -10,35 +10,44 @@
 		D04F6F5018A9EBE6000509AA /* SoundEffectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F6F4F18A9EBE6000509AA /* SoundEffectHelper.m */; };
 		D04F6F5318A9ED28000509AA /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F6F5218A9ED28000509AA /* SoundManager.m */; };
 		D04F6F5618A9FD34000509AA /* NSArray+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F6F5518A9FD34000509AA /* NSArray+Util.m */; };
-		D04F6F5918A9FE09000509AA /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F6F5818A9FE09000509AA /* NotificationManager.m */; };
 		D04F704218AA1197000509AA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04F704118AA1197000509AA /* Social.framework */; };
-		D073FF1C18AA2D8500448FD5 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF1B18AA2D8500448FD5 /* MenuView.xib */; };
-		D073FF1F18AA2D9A00448FD5 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D073FF1E18AA2D9A00448FD5 /* MenuView.m */; };
+		D073FF3E18AA3AD800448FD5 /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = D073FF2218AA3AD800448FD5 /* BackgroundView.m */; };
+		D073FF3F18AA3AD800448FD5 /* GameConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D073FF2418AA3AD800448FD5 /* GameConstants.m */; };
+		D073FF4018AA3AD800448FD5 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D073FF2618AA3AD800448FD5 /* GameViewController.m */; };
+		D073FF4118AA3AD800448FD5 /* LadyBugView.m in Sources */ = {isa = PBXBuildFile; fileRef = D073FF2818AA3AD800448FD5 /* LadyBugView.m */; };
+		D073FF4218AA3AD800448FD5 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = D073FF2A18AA3AD800448FD5 /* MainView.m */; };
+		D073FF4318AA3AD800448FD5 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D073FF2C18AA3AD800448FD5 /* MenuView.m */; };
+		D073FF4418AA3AD900448FD5 /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D073FF2E18AA3AD800448FD5 /* NotificationManager.m */; };
+		D073FF4518AA3AD900448FD5 /* PipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D073FF3018AA3AD800448FD5 /* PipeView.m */; };
+		D073FF4618AA3AD900448FD5 /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = D073FF3218AA3AD800448FD5 /* ResultView.m */; };
+		D073FF4718AA3AD900448FD5 /* TutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = D073FF3418AA3AD800448FD5 /* TutorialView.m */; };
+		D073FF4818AA3AD900448FD5 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF3618AA3AD800448FD5 /* GameViewController.xib */; };
+		D073FF4918AA3AD900448FD5 /* LadyBugView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF3718AA3AD800448FD5 /* LadyBugView.xib */; };
+		D073FF4A18AA3AD900448FD5 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF3818AA3AD800448FD5 /* MainView.xib */; };
+		D073FF4B18AA3AD900448FD5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF3918AA3AD800448FD5 /* MainWindow.xib */; };
+		D073FF4C18AA3AD900448FD5 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF3A18AA3AD800448FD5 /* MenuView.xib */; };
+		D073FF4D18AA3AD900448FD5 /* PipeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF3B18AA3AD800448FD5 /* PipeView.xib */; };
+		D073FF4E18AA3AD900448FD5 /* ResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF3C18AA3AD800448FD5 /* ResultView.xib */; };
+		D073FF4F18AA3AD900448FD5 /* TutorialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF3D18AA3AD800448FD5 /* TutorialView.xib */; };
+		D073FF5118AA3AEB00448FD5 /* BackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF5018AA3AEB00448FD5 /* BackgroundView.xib */; };
+		D073FF5518AA3B5700448FD5 /* GameViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF5218AA3B5700448FD5 /* GameViewController~ipad.xib */; };
+		D073FF5618AA3B5700448FD5 /* LadyBugView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF5318AA3B5700448FD5 /* LadyBugView~ipad.xib */; };
+		D073FF5718AA3B5700448FD5 /* PipeView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF5418AA3B5700448FD5 /* PipeView~ipad.xib */; };
+		D073FF5918AA3C8400448FD5 /* BackgroundView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF5818AA3C8400448FD5 /* BackgroundView~ipad.xib */; };
 		D07F418018A4D8C7009680FD /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07F417F18A4D8C7009680FD /* iAd.framework */; };
-		D07F418218A4E208009680FD /* PipeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D07F418118A4E208009680FD /* PipeView.xib */; };
-		D07F418518A4E223009680FD /* PipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D07F418418A4E223009680FD /* PipeView.m */; };
-		D08942C718A6E84500C44A0A /* ResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08942C618A6E84500C44A0A /* ResultView.xib */; };
-		D08942CA18A6E86100C44A0A /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = D08942C918A6E86100C44A0A /* ResultView.m */; };
-		D0E11EC118A4ABD600DC7793 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E11EC018A4ABD600DC7793 /* GameViewController.xib */; };
 		D0E30E8518A376E300FFD3CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30E8418A376E300FFD3CE /* Foundation.framework */; };
 		D0E30E8718A376E300FFD3CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30E8618A376E300FFD3CE /* CoreGraphics.framework */; };
 		D0E30E8918A376E300FFD3CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30E8818A376E300FFD3CE /* UIKit.framework */; };
 		D0E30E8F18A376E300FFD3CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0E30E8D18A376E300FFD3CE /* InfoPlist.strings */; };
 		D0E30E9118A376E300FFD3CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E30E9018A376E300FFD3CE /* main.m */; };
 		D0E30E9518A376E300FFD3CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E30E9418A376E300FFD3CE /* AppDelegate.m */; };
-		D0E30E9B18A376E300FFD3CE /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E30E9A18A376E300FFD3CE /* GameViewController.m */; };
 		D0E30E9D18A376E300FFD3CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E30E9C18A376E300FFD3CE /* Images.xcassets */; };
 		D0E30EA418A376E300FFD3CE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30EA318A376E300FFD3CE /* XCTest.framework */; };
 		D0E30EA518A376E300FFD3CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30E8418A376E300FFD3CE /* Foundation.framework */; };
 		D0E30EA618A376E300FFD3CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30E8818A376E300FFD3CE /* UIKit.framework */; };
 		D0E30EAE18A376E300FFD3CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0E30EAC18A376E300FFD3CE /* InfoPlist.strings */; };
 		D0E30EB018A376E300FFD3CE /* BirdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E30EAF18A376E300FFD3CE /* BirdTests.m */; };
-		D0E30ED918A37A3900FFD3CE /* BackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E30ED818A37A3900FFD3CE /* BackgroundView.xib */; };
-		D0E30EDD18A37A8E00FFD3CE /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E30EDC18A37A8E00FFD3CE /* BackgroundView.m */; };
 		D0E30EDF18A37D6400FFD3CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30EDE18A37D6400FFD3CE /* QuartzCore.framework */; };
-		D0E30EEA18A387A500FFD3CE /* LadyBugView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E30EE918A387A500FFD3CE /* LadyBugView.m */; };
-		D0E30EEE18A3938200FFD3CE /* LadyBugView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E30EED18A3938200FFD3CE /* LadyBugView.xib */; };
-		D0E41ED118A3965700B37819 /* GameConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E41ED018A3965700B37819 /* GameConstants.m */; };
 		D0E50A3118A7349300AA353E /* background_cloud.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D0E50A2918A7349300AA353E /* background_cloud.jpeg */; };
 		D0E50A3218A7349300AA353E /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E50A2A18A7349300AA353E /* bg.png */; };
 		D0E50A3318A7349300AA353E /* Ladybug.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E50A2B18A7349300AA353E /* Ladybug.png */; };
@@ -60,11 +69,6 @@
 		D0E50A6418A745CA00AA353E /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0E50A5418A745CA00AA353E /* iRate.bundle */; };
 		D0E50A6518A745CA00AA353E /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E50A5618A745CA00AA353E /* iRate.m */; };
 		D0E50A6618A745CA00AA353E /* FXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E50A5918A745CA00AA353E /* FXLabel.m */; };
-		D0E50A6818A75ACC00AA353E /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E50A6718A75ACC00AA353E /* MainView.xib */; };
-		D0E50A6B18A75AE200AA353E /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E50A6A18A75AE200AA353E /* MainView.m */; };
-		D0E50A6D18A7701200AA353E /* TutorialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E50A6C18A7701200AA353E /* TutorialView.xib */; };
-		D0E50A7018A7702100AA353E /* TutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E50A6F18A7702100AA353E /* TutorialView.m */; };
-		D0E79C9E18A4B40F00CBBF73 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E79C9D18A4B40F00CBBF73 /* MainWindow.xib */; };
 		D0EDB82818A8A55100C103F5 /* bumpEffect.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0EDB82718A8A55100C103F5 /* bumpEffect.caf */; };
 		D0EDB82C18A8AFAC00C103F5 /* THLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EDB82B18A8AFAC00C103F5 /* THLabel.m */; };
 		D0F7853818A8659F00CA1ADA /* bounceEffect.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0F7853718A8659F00CA1ADA /* bounceEffect.caf */; };
@@ -87,20 +91,41 @@
 		D04F6F5218A9ED28000509AA /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
 		D04F6F5418A9FD34000509AA /* NSArray+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Util.h"; sourceTree = "<group>"; };
 		D04F6F5518A9FD34000509AA /* NSArray+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Util.m"; sourceTree = "<group>"; };
-		D04F6F5718A9FE09000509AA /* NotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationManager.h; path = Classes/NotificationManager.h; sourceTree = "<group>"; };
-		D04F6F5818A9FE09000509AA /* NotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotificationManager.m; path = Classes/NotificationManager.m; sourceTree = "<group>"; };
 		D04F704118AA1197000509AA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		D073FF1B18AA2D8500448FD5 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
-		D073FF1D18AA2D9A00448FD5 /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuView.h; path = Classes/MenuView.h; sourceTree = "<group>"; };
-		D073FF1E18AA2D9A00448FD5 /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuView.m; path = Classes/MenuView.m; sourceTree = "<group>"; };
+		D073FF2118AA3AD800448FD5 /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
+		D073FF2218AA3AD800448FD5 /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
+		D073FF2318AA3AD800448FD5 /* GameConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConstants.h; sourceTree = "<group>"; };
+		D073FF2418AA3AD800448FD5 /* GameConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameConstants.m; sourceTree = "<group>"; };
+		D073FF2518AA3AD800448FD5 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		D073FF2618AA3AD800448FD5 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		D073FF2718AA3AD800448FD5 /* LadyBugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LadyBugView.h; sourceTree = "<group>"; };
+		D073FF2818AA3AD800448FD5 /* LadyBugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LadyBugView.m; sourceTree = "<group>"; };
+		D073FF2918AA3AD800448FD5 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
+		D073FF2A18AA3AD800448FD5 /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
+		D073FF2B18AA3AD800448FD5 /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuView.h; sourceTree = "<group>"; };
+		D073FF2C18AA3AD800448FD5 /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuView.m; sourceTree = "<group>"; };
+		D073FF2D18AA3AD800448FD5 /* NotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationManager.h; sourceTree = "<group>"; };
+		D073FF2E18AA3AD800448FD5 /* NotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationManager.m; sourceTree = "<group>"; };
+		D073FF2F18AA3AD800448FD5 /* PipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PipeView.h; sourceTree = "<group>"; };
+		D073FF3018AA3AD800448FD5 /* PipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PipeView.m; sourceTree = "<group>"; };
+		D073FF3118AA3AD800448FD5 /* ResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultView.h; sourceTree = "<group>"; };
+		D073FF3218AA3AD800448FD5 /* ResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultView.m; sourceTree = "<group>"; };
+		D073FF3318AA3AD800448FD5 /* TutorialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialView.h; sourceTree = "<group>"; };
+		D073FF3418AA3AD800448FD5 /* TutorialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialView.m; sourceTree = "<group>"; };
+		D073FF3618AA3AD800448FD5 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		D073FF3718AA3AD800448FD5 /* LadyBugView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LadyBugView.xib; sourceTree = "<group>"; };
+		D073FF3818AA3AD800448FD5 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		D073FF3918AA3AD800448FD5 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		D073FF3A18AA3AD800448FD5 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		D073FF3B18AA3AD800448FD5 /* PipeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PipeView.xib; sourceTree = "<group>"; };
+		D073FF3C18AA3AD800448FD5 /* ResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultView.xib; sourceTree = "<group>"; };
+		D073FF3D18AA3AD800448FD5 /* TutorialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialView.xib; sourceTree = "<group>"; };
+		D073FF5018AA3AEB00448FD5 /* BackgroundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackgroundView.xib; sourceTree = "<group>"; };
+		D073FF5218AA3B5700448FD5 /* GameViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "GameViewController~ipad.xib"; sourceTree = "<group>"; };
+		D073FF5318AA3B5700448FD5 /* LadyBugView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "LadyBugView~ipad.xib"; sourceTree = "<group>"; };
+		D073FF5418AA3B5700448FD5 /* PipeView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "PipeView~ipad.xib"; sourceTree = "<group>"; };
+		D073FF5818AA3C8400448FD5 /* BackgroundView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "BackgroundView~ipad.xib"; sourceTree = "<group>"; };
 		D07F417F18A4D8C7009680FD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		D07F418118A4E208009680FD /* PipeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PipeView.xib; sourceTree = "<group>"; };
-		D07F418318A4E223009680FD /* PipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PipeView.h; path = Classes/PipeView.h; sourceTree = "<group>"; };
-		D07F418418A4E223009680FD /* PipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PipeView.m; path = Classes/PipeView.m; sourceTree = "<group>"; };
-		D08942C618A6E84500C44A0A /* ResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultView.xib; sourceTree = "<group>"; };
-		D08942C818A6E86100C44A0A /* ResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultView.h; path = Classes/ResultView.h; sourceTree = "<group>"; };
-		D08942C918A6E86100C44A0A /* ResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultView.m; path = Classes/ResultView.m; sourceTree = "<group>"; };
-		D0E11EC018A4ABD600DC7793 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		D0E30E8118A376E300FFD3CE /* Bird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E30E8418A376E300FFD3CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0E30E8618A376E300FFD3CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -111,23 +136,13 @@
 		D0E30E9218A376E300FFD3CE /* Bird-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bird-Prefix.pch"; sourceTree = "<group>"; };
 		D0E30E9318A376E300FFD3CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D0E30E9418A376E300FFD3CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D0E30E9918A376E300FFD3CE /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
-		D0E30E9A18A376E300FFD3CE /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		D0E30E9C18A376E300FFD3CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D0E30EA218A376E300FFD3CE /* BirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E30EA318A376E300FFD3CE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D0E30EAB18A376E300FFD3CE /* BirdTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BirdTests-Info.plist"; sourceTree = "<group>"; };
 		D0E30EAD18A376E300FFD3CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0E30EAF18A376E300FFD3CE /* BirdTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirdTests.m; sourceTree = "<group>"; };
-		D0E30ED818A37A3900FFD3CE /* BackgroundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackgroundView.xib; sourceTree = "<group>"; };
-		D0E30EDB18A37A8E00FFD3CE /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackgroundView.h; path = Classes/BackgroundView.h; sourceTree = "<group>"; };
-		D0E30EDC18A37A8E00FFD3CE /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BackgroundView.m; path = Classes/BackgroundView.m; sourceTree = "<group>"; };
 		D0E30EDE18A37D6400FFD3CE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		D0E30EE818A387A500FFD3CE /* LadyBugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LadyBugView.h; path = Classes/LadyBugView.h; sourceTree = "<group>"; };
-		D0E30EE918A387A500FFD3CE /* LadyBugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LadyBugView.m; path = Classes/LadyBugView.m; sourceTree = "<group>"; };
-		D0E30EED18A3938200FFD3CE /* LadyBugView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LadyBugView.xib; sourceTree = "<group>"; };
-		D0E41ECF18A3965700B37819 /* GameConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameConstants.h; path = Classes/GameConstants.h; sourceTree = "<group>"; };
-		D0E41ED018A3965700B37819 /* GameConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameConstants.m; path = Classes/GameConstants.m; sourceTree = "<group>"; };
 		D0E50A2918A7349300AA353E /* background_cloud.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background_cloud.jpeg; sourceTree = "<group>"; };
 		D0E50A2A18A7349300AA353E /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		D0E50A2B18A7349300AA353E /* Ladybug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ladybug.png; sourceTree = "<group>"; };
@@ -162,13 +177,6 @@
 		D0E50A5618A745CA00AA353E /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
 		D0E50A5818A745CA00AA353E /* FXLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXLabel.h; sourceTree = "<group>"; };
 		D0E50A5918A745CA00AA353E /* FXLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXLabel.m; sourceTree = "<group>"; };
-		D0E50A6718A75ACC00AA353E /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
-		D0E50A6918A75AE200AA353E /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainView.h; path = Classes/MainView.h; sourceTree = "<group>"; };
-		D0E50A6A18A75AE200AA353E /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainView.m; path = Classes/MainView.m; sourceTree = "<group>"; };
-		D0E50A6C18A7701200AA353E /* TutorialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialView.xib; sourceTree = "<group>"; };
-		D0E50A6E18A7702100AA353E /* TutorialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TutorialView.h; path = Classes/TutorialView.h; sourceTree = "<group>"; };
-		D0E50A6F18A7702100AA353E /* TutorialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TutorialView.m; path = Classes/TutorialView.m; sourceTree = "<group>"; };
-		D0E79C9D18A4B40F00CBBF73 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		D0EDB82718A8A55100C103F5 /* bumpEffect.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bumpEffect.caf; sourceTree = "<group>"; };
 		D0EDB82A18A8AFAC00C103F5 /* THLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THLabel.h; sourceTree = "<group>"; };
 		D0EDB82B18A8AFAC00C103F5 /* THLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THLabel.m; sourceTree = "<group>"; };
@@ -209,6 +217,53 @@
 			name = Xib;
 			sourceTree = "<group>";
 		};
+		D073FF2018AA3AD800448FD5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D073FF2118AA3AD800448FD5 /* BackgroundView.h */,
+				D073FF2218AA3AD800448FD5 /* BackgroundView.m */,
+				D073FF2318AA3AD800448FD5 /* GameConstants.h */,
+				D073FF2418AA3AD800448FD5 /* GameConstants.m */,
+				D073FF2518AA3AD800448FD5 /* GameViewController.h */,
+				D073FF2618AA3AD800448FD5 /* GameViewController.m */,
+				D073FF2718AA3AD800448FD5 /* LadyBugView.h */,
+				D073FF2818AA3AD800448FD5 /* LadyBugView.m */,
+				D073FF2918AA3AD800448FD5 /* MainView.h */,
+				D073FF2A18AA3AD800448FD5 /* MainView.m */,
+				D073FF2B18AA3AD800448FD5 /* MenuView.h */,
+				D073FF2C18AA3AD800448FD5 /* MenuView.m */,
+				D073FF2D18AA3AD800448FD5 /* NotificationManager.h */,
+				D073FF2E18AA3AD800448FD5 /* NotificationManager.m */,
+				D073FF2F18AA3AD800448FD5 /* PipeView.h */,
+				D073FF3018AA3AD800448FD5 /* PipeView.m */,
+				D073FF3118AA3AD800448FD5 /* ResultView.h */,
+				D073FF3218AA3AD800448FD5 /* ResultView.m */,
+				D073FF3318AA3AD800448FD5 /* TutorialView.h */,
+				D073FF3418AA3AD800448FD5 /* TutorialView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D073FF3518AA3AD800448FD5 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				D073FF5818AA3C8400448FD5 /* BackgroundView~ipad.xib */,
+				D073FF5218AA3B5700448FD5 /* GameViewController~ipad.xib */,
+				D073FF5318AA3B5700448FD5 /* LadyBugView~ipad.xib */,
+				D073FF5418AA3B5700448FD5 /* PipeView~ipad.xib */,
+				D073FF5018AA3AEB00448FD5 /* BackgroundView.xib */,
+				D073FF3618AA3AD800448FD5 /* GameViewController.xib */,
+				D073FF3718AA3AD800448FD5 /* LadyBugView.xib */,
+				D073FF3818AA3AD800448FD5 /* MainView.xib */,
+				D073FF3918AA3AD800448FD5 /* MainWindow.xib */,
+				D073FF3A18AA3AD800448FD5 /* MenuView.xib */,
+				D073FF3B18AA3AD800448FD5 /* PipeView.xib */,
+				D073FF3C18AA3AD800448FD5 /* ResultView.xib */,
+				D073FF3D18AA3AD800448FD5 /* TutorialView.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
 		D0E30E7818A376E300FFD3CE = {
 			isa = PBXGroup;
 			children = (
@@ -247,12 +302,10 @@
 		D0E30E8A18A376E300FFD3CE /* Bird */ = {
 			isa = PBXGroup;
 			children = (
-				D0E30EDA18A37A4700FFD3CE /* Classes */,
-				D0E30ED718A37A1F00FFD3CE /* Xib */,
+				D073FF2018AA3AD800448FD5 /* Classes */,
+				D073FF3518AA3AD800448FD5 /* Xib */,
 				D0E30E9318A376E300FFD3CE /* AppDelegate.h */,
 				D0E30E9418A376E300FFD3CE /* AppDelegate.m */,
-				D0E30E9918A376E300FFD3CE /* GameViewController.h */,
-				D0E30E9A18A376E300FFD3CE /* GameViewController.m */,
 				D0E30E9C18A376E300FFD3CE /* Images.xcassets */,
 				D0E30E8B18A376E300FFD3CE /* Supporting Files */,
 			);
@@ -307,47 +360,6 @@
 				D0E50A2818A7349300AA353E /* Images */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		D0E30ED718A37A1F00FFD3CE /* Xib */ = {
-			isa = PBXGroup;
-			children = (
-				D0E30ED818A37A3900FFD3CE /* BackgroundView.xib */,
-				D0E79C9D18A4B40F00CBBF73 /* MainWindow.xib */,
-				D0E30EED18A3938200FFD3CE /* LadyBugView.xib */,
-				D0E11EC018A4ABD600DC7793 /* GameViewController.xib */,
-				D07F418118A4E208009680FD /* PipeView.xib */,
-				D08942C618A6E84500C44A0A /* ResultView.xib */,
-				D0E50A6718A75ACC00AA353E /* MainView.xib */,
-				D073FF1B18AA2D8500448FD5 /* MenuView.xib */,
-				D0E50A6C18A7701200AA353E /* TutorialView.xib */,
-			);
-			name = Xib;
-			sourceTree = "<group>";
-		};
-		D0E30EDA18A37A4700FFD3CE /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				D0E30EDB18A37A8E00FFD3CE /* BackgroundView.h */,
-				D0E30EDC18A37A8E00FFD3CE /* BackgroundView.m */,
-				D04F6F5718A9FE09000509AA /* NotificationManager.h */,
-				D04F6F5818A9FE09000509AA /* NotificationManager.m */,
-				D0E30EE818A387A500FFD3CE /* LadyBugView.h */,
-				D0E30EE918A387A500FFD3CE /* LadyBugView.m */,
-				D0E41ECF18A3965700B37819 /* GameConstants.h */,
-				D0E41ED018A3965700B37819 /* GameConstants.m */,
-				D073FF1D18AA2D9A00448FD5 /* MenuView.h */,
-				D073FF1E18AA2D9A00448FD5 /* MenuView.m */,
-				D07F418318A4E223009680FD /* PipeView.h */,
-				D07F418418A4E223009680FD /* PipeView.m */,
-				D08942C818A6E86100C44A0A /* ResultView.h */,
-				D08942C918A6E86100C44A0A /* ResultView.m */,
-				D0E50A6918A75AE200AA353E /* MainView.h */,
-				D0E50A6A18A75AE200AA353E /* MainView.m */,
-				D0E50A6E18A7702100AA353E /* TutorialView.h */,
-				D0E50A6F18A7702100AA353E /* TutorialView.m */,
-			);
-			name = Classes;
 			sourceTree = "<group>";
 		};
 		D0E50A2818A7349300AA353E /* Images */ = {
@@ -515,13 +527,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0E50A3518A7349300AA353E /* obstacles_bottom.png in Resources */,
-				D073FF1C18AA2D8500448FD5 /* MenuView.xib in Resources */,
 				D0E50A3218A7349300AA353E /* bg.png in Resources */,
-				D0E79C9E18A4B40F00CBBF73 /* MainWindow.xib in Resources */,
 				D0E50A3818A7349300AA353E /* pipe_face_up.png in Resources */,
-				D0E11EC118A4ABD600DC7793 /* GameViewController.xib in Resources */,
-				D0E30EEE18A3938200FFD3CE /* LadyBugView.xib in Resources */,
 				D0E50A3318A7349300AA353E /* Ladybug.png in Resources */,
+				D073FF5618AA3B5700448FD5 /* LadyBugView~ipad.xib in Resources */,
+				D073FF4D18AA3AD900448FD5 /* PipeView.xib in Resources */,
+				D073FF4E18AA3AD900448FD5 /* ResultView.xib in Resources */,
+				D073FF4818AA3AD900448FD5 /* GameViewController.xib in Resources */,
+				D073FF5718AA3B5700448FD5 /* PipeView~ipad.xib in Resources */,
+				D073FF4F18AA3AD900448FD5 /* TutorialView.xib in Resources */,
 				D0E50A3118A7349300AA353E /* background_cloud.jpeg in Resources */,
 				D0E50A3418A7349300AA353E /* man.png in Resources */,
 				D0E30E9D18A376E300FFD3CE /* Images.xcassets in Resources */,
@@ -529,13 +543,15 @@
 				D0EDB82818A8A55100C103F5 /* bumpEffect.caf in Resources */,
 				D0E50A3718A7349300AA353E /* pipe_face_down.png in Resources */,
 				D0E50A6418A745CA00AA353E /* iRate.bundle in Resources */,
-				D0E50A6818A75ACC00AA353E /* MainView.xib in Resources */,
-				D08942C718A6E84500C44A0A /* ResultView.xib in Resources */,
-				D07F418218A4E208009680FD /* PipeView.xib in Resources */,
+				D073FF4918AA3AD900448FD5 /* LadyBugView.xib in Resources */,
+				D073FF4C18AA3AD900448FD5 /* MenuView.xib in Resources */,
+				D073FF5518AA3B5700448FD5 /* GameViewController~ipad.xib in Resources */,
+				D073FF4A18AA3AD900448FD5 /* MainView.xib in Resources */,
+				D073FF5118AA3AEB00448FD5 /* BackgroundView.xib in Resources */,
 				D0E50A3618A7349300AA353E /* obstacles_top.png in Resources */,
-				D0E30ED918A37A3900FFD3CE /* BackgroundView.xib in Resources */,
+				D073FF5918AA3C8400448FD5 /* BackgroundView~ipad.xib in Resources */,
 				D0F7853818A8659F00CA1ADA /* bounceEffect.caf in Resources */,
-				D0E50A6D18A7701200AA353E /* TutorialView.xib in Resources */,
+				D073FF4B18AA3AD900448FD5 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,34 +570,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D073FF4718AA3AD900448FD5 /* TutorialView.m in Sources */,
+				D073FF4618AA3AD900448FD5 /* ResultView.m in Sources */,
 				D0E50A6318A745CA00AA353E /* XibView.m in Sources */,
 				D0E50A5B18A745CA00AA353E /* Base.m in Sources */,
-				D0E30EDD18A37A8E00FFD3CE /* BackgroundView.m in Sources */,
-				D0E30E9B18A376E300FFD3CE /* GameViewController.m in Sources */,
+				D073FF3E18AA3AD800448FD5 /* BackgroundView.m in Sources */,
 				D04F6F5318A9ED28000509AA /* SoundManager.m in Sources */,
+				D073FF4418AA3AD900448FD5 /* NotificationManager.m in Sources */,
 				D0EDB82C18A8AFAC00C103F5 /* THLabel.m in Sources */,
-				D04F6F5918A9FE09000509AA /* NotificationManager.m in Sources */,
+				D073FF4318AA3AD800448FD5 /* MenuView.m in Sources */,
 				D04F6F5618A9FD34000509AA /* NSArray+Util.m in Sources */,
 				D0E50A6018A745CA00AA353E /* Utils.m in Sources */,
 				D0E50A5A18A745CA00AA353E /* AnimUtil.m in Sources */,
-				D0E30EEA18A387A500FFD3CE /* LadyBugView.m in Sources */,
+				D073FF4518AA3AD900448FD5 /* PipeView.m in Sources */,
 				D0E50A6518A745CA00AA353E /* iRate.m in Sources */,
-				D07F418518A4E223009680FD /* PipeView.m in Sources */,
-				D073FF1F18AA2D9A00448FD5 /* MenuView.m in Sources */,
+				D073FF4118AA3AD800448FD5 /* LadyBugView.m in Sources */,
+				D073FF3F18AA3AD800448FD5 /* GameConstants.m in Sources */,
 				D0E50A6218A745CA00AA353E /* WorldObjectView.m in Sources */,
 				D04F6F5018A9EBE6000509AA /* SoundEffectHelper.m in Sources */,
 				D0E30E9518A376E300FFD3CE /* AppDelegate.m in Sources */,
 				D0E50A5C18A745CA00AA353E /* GameLoopTimer.m in Sources */,
 				D0E30E9118A376E300FFD3CE /* main.m in Sources */,
+				D073FF4218AA3AD800448FD5 /* MainView.m in Sources */,
 				D0E50A5E18A745CA00AA353E /* SoundEffect.m in Sources */,
+				D073FF4018AA3AD800448FD5 /* GameViewController.m in Sources */,
 				D0E50A5D18A745CA00AA353E /* Hex.m in Sources */,
 				D0E50A5F18A745CA00AA353E /* UIView+ViewUtil.m in Sources */,
-				D08942CA18A6E86100C44A0A /* ResultView.m in Sources */,
 				D0E50A6118A745CA00AA353E /* WorldObjectProperties.m in Sources */,
-				D0E50A7018A7702100AA353E /* TutorialView.m in Sources */,
 				D0E50A6618A745CA00AA353E /* FXLabel.m in Sources */,
-				D0E41ED118A3965700B37819 /* GameConstants.m in Sources */,
-				D0E50A6B18A75AE200AA353E /* MainView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

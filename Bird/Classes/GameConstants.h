@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define IPAD_SCALE ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 2.2f : 1.0f)
+
 #define GRAVITY 0.2f
 #define TAP_ACCELATION_INCREASE 0.0f
 #define TAP_SPEED_INCREASE -12.0f

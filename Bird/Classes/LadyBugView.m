@@ -38,9 +38,9 @@
             self.properties.accelerationMin = CGPointMake(0.f, 0.00f);
             self.properties.accelerationMax = CGPointMake(0.f, 0.00);
             
-            self.properties.speed = CGPointMake(0.f, 2.f);
-            self.properties.speedMin = CGPointMake(0.f, -3.f);
-            self.properties.speedMax = CGPointMake(0.f, 3.f);
+            self.properties.speed = CGPointMake(0.f, 2.f * IPAD_SCALE);
+            self.properties.speedMin = CGPointMake(0.f, -3.f * IPAD_SCALE);
+            self.properties.speedMax = CGPointMake(0.f, 3.f * IPAD_SCALE);
             
             self.properties.gravity = CGPointMake(0.f, 0.f);
             
@@ -49,13 +49,13 @@
             self.properties.rotation = 0.f;
             self.properties.acceleration = CGPointMake(0.f, 0.f);
             self.properties.accelerationMin = CGPointMake(0.f, 0.00f);
-            self.properties.accelerationMax = CGPointMake(0.f, 1.50f);
+            self.properties.accelerationMax = CGPointMake(0.f, 1.50f * IPAD_SCALE);
             
-            self.properties.speed = CGPointMake(0.f, 2.f);
-            self.properties.speedMin = CGPointMake(0.f, TAP_SPEED_INCREASE);
-            self.properties.speedMax = CGPointMake(0.f, 14.f);
+            self.properties.speed = CGPointMake(0.f, 2.f * IPAD_SCALE);
+            self.properties.speedMin = CGPointMake(0.f, TAP_SPEED_INCREASE * IPAD_SCALE);
+            self.properties.speedMax = CGPointMake(0.f, 14.f * IPAD_SCALE);
             
-            self.properties.gravity = CGPointMake(0.f, GRAVITY);
+            self.properties.gravity = CGPointMake(0.f, GRAVITY * IPAD_SCALE);
             
             break;
         default:
@@ -73,9 +73,9 @@
 }
 
 - (void)resume {
-    self.properties.speed = CGPointMake(0.f, 2.f);
+    self.properties.speed = CGPointMake(0.f, 2.f * IPAD_SCALE);
     self.properties.acceleration = CGPointMake(0.f, 0.f);
-    self.properties.gravity = CGPointMake(0.f, GRAVITY);
+    self.properties.gravity = CGPointMake(0.f, GRAVITY * IPAD_SCALE);
 }
 
 - (void)drawGameStep {
@@ -101,9 +101,9 @@
 
 - (void)drawTutorialStep {
     if (self.center.y > self.startingPoint.y + self.height/2.f) {
-        self.properties.speed = CGPointMake(0.f, -5.f);
+        self.properties.speed = CGPointMake(0.f, -5.f * IPAD_SCALE);
     } else if (self.center.y < self.startingPoint.y - self.height/2.f) {
-        self.properties.speed = CGPointMake(0.f, 5.f);
+        self.properties.speed = CGPointMake(0.f, 5.f * IPAD_SCALE);
     }
 }
 
