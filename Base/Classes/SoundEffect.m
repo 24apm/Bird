@@ -12,40 +12,25 @@
 
 @interface SoundEffect()
 
-@property (nonatomic, retain) NSMutableDictionary *soundEffects;
 @property (nonatomic, retain) AVAudioPlayer *audio;
 
 @end
 
 @implementation SoundEffect
 
-+ (SoundEffect *)instance {
-    static SoundEffect *instance = nil;
-    if (!instance) {
-        instance = [[SoundEffect alloc] init];
-        instance.soundEffects = [NSMutableDictionary dictionary];
+- (id)initAVSoundNamed:(NSString *)fileName {
+    self = [super init];
+    if (self) {
+        NSString *fileExt = [fileName pathExtension];
+        if (!fileExt || fileExt.length <= 0) {
+            fileExt = @"caf";
+        }
+        fileName = [fileName stringByDeletingPathExtension];
+        NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:fileExt];
+        self.audio = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+        [self.audio prepareToPlay];
     }
-    return instance;
-}
-
-- (AVAudioPlayer *)createAVSoundNamed:(NSString *)fileName {
-    NSString *fileExt = [fileName pathExtension];
-	fileName = [fileName stringByDeletingPathExtension];
-    NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:fileExt];
-    AVAudioPlayer *audio = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
-    [audio prepareToPlay];
-    return audio;
-}
-
-- (void)play:(NSString *)fileName {
-    if (!self.audio) {
-        [self prepare:fileName];
-    }
-    [self.audio play];
-}
-
-- (void)prepare:(NSString *)fileName {
-    self.audio = [self createAVSoundNamed:fileName];
+    return self;
 }
 
 - (void)play {

@@ -19,6 +19,9 @@
 #import "SoundEffect.h"
 #import "SoundManager.h"
 
+#define SOUND_EFFECT_BUMP @"bumpEffect"
+#define SOUND_EFFECT_BOUNCE @"bounceEffect"
+
 @interface GameViewController ()
 
 @property (strong, nonatomic) NSMutableArray *worldObstacles;
@@ -33,9 +36,6 @@
 @property (strong, nonatomic) TutorialView *tutorialView;
 @property (strong, nonatomic) ResultView *resultView;
 @property (strong, nonatomic) MenuView *menuView;
-
-
-
 
 @end
 
@@ -73,11 +73,14 @@
     if (BLACK_AND_WHITE_MODE) {
         [self blackAndWhite];
     }
-    [[SoundManager instance] preloadSoundEffects];
+    [self preloadSounds];
     [self updateGameState:GameStateMenuMode];
 }
 
-
+- (void)preloadSounds {
+    [[SoundManager instance] prepare:SOUND_EFFECT_BUMP count:1];
+    [[SoundManager instance] prepare:SOUND_EFFECT_BOUNCE count:5];
+}
 
 - (void)gameViewsHidden:(BOOL)hidden {
     self.ladyBugView.hidden = hidden;
@@ -163,7 +166,7 @@
         
         self.ladyBugView.properties.acceleration = CGPointMake(self.ladyBugView.properties.acceleration.x, 0);
     }
-    [[SoundManager instance] playTapSound];
+    [[SoundManager instance] play:SOUND_EFFECT_BOUNCE];
 }
 
 - (void)createObstacle {
@@ -314,7 +317,7 @@
     
     [AnimUtil wobble:self.view duration:0.1f angle:M_PI/128.f];
     
-    [[SoundManager instance] playCrashSound];
+    [[SoundManager instance] play:SOUND_EFFECT_BUMP];
 }
 
 - (void)checkIfScored {

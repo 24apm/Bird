@@ -1,5 +1,5 @@
 //
-//  SoundManager.h
+//  SoundManagerBase.h
 //  Bird
 //
 //  Created by MacCoder on 2/10/14.
@@ -11,8 +11,7 @@
 @interface SoundManager : NSObject
 
 + (SoundManager *)instance;
-- (void)preloadSoundEffects;
-- (void)playCrashSound;
-- (void)playTapSound;
+- (void)play:(NSString *)fileName;
+- (void)prepare:(NSString *)fileName count:(int)count;
 
 @end

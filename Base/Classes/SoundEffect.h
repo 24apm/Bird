@@ -11,10 +11,7 @@
 
 @interface SoundEffect : NSObject
 
-+ (SoundEffect *)instance;
-- (AVAudioPlayer *)createAVSoundNamed:(NSString *)fileName;
-- (void)play:(NSString *)fileName;
-- (void)prepare:(NSString *)fileName;
+- (id)initAVSoundNamed:(NSString *)fileName;
 - (void)play;
 
 @end
