@@ -7,7 +7,6 @@
 //
 
 #import "ResultView.h"
-#import "iRate.h"
 #import <Social/Social.h>
 
 @interface ResultView()
@@ -71,10 +70,6 @@
 
 - (void)animateLabel {
     self.timer = [NSTimer scheduledTimerWithTimeInterval:RESULT_VIEW_SCORE_LABEL_ANIMATION_STEP_DURATION target:self selector:@selector(updateScoreLabel) userInfo:nil repeats:YES];
-}
-
-- (IBAction)ratePressed:(id)sender {
-	[[iRate sharedInstance] promptIfNetworkAvailable];
 }
 
 - (IBAction)socialPressed:(id)sender {

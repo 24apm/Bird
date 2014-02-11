@@ -7,6 +7,7 @@
 //
 
 #import "MenuView.h"
+#import "iRate.h"
 
 @implementation MenuView
 
@@ -21,6 +22,10 @@
 
 - (IBAction)startButtonPressed:(id)sender {
     [self hide];
+}
+
+- (IBAction)ratePressed:(id)sender {
+	[[iRate sharedInstance] promptIfNetworkAvailable];
 }
 
 - (void)show {
