@@ -53,7 +53,7 @@
         [UIView animateWithDuration:RESULT_VIEW_VIEW_TOTAL_DURATION * 0.1f animations:^{
             self.y = 0.f;
         } completion:^(BOOL complete) {
-            [self animateLabel];
+            [self performSelector:@selector(animateLabel) withObject:nil afterDelay:1.0f];
         }];
     }];
 }

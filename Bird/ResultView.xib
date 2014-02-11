@@ -94,7 +94,6 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="ratePressed:" destination="-1" eventType="touchUpInside" id="A3w-H3-Ttx"/>
                         <action selector="socialPressed:" destination="-1" eventType="touchUpInside" id="cY9-qT-bde"/>
                     </connections>
                 </button>
@@ -107,7 +106,6 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="ratePressed:" destination="-1" eventType="touchUpInside" id="joJ-5F-33v"/>
                         <action selector="socialPressed:" destination="-1" eventType="touchUpInside" id="r4L-W7-f7v"/>
                     </connections>
                 </button>
