@@ -22,6 +22,7 @@
 
 #define SOUND_EFFECT_BUMP @"bumpEffect"
 #define SOUND_EFFECT_BOUNCE @"bounceEffect"
+#define SOUND_EFFECT_BLING @"blingEffect"
 
 @interface GameViewController ()
 
@@ -95,8 +96,9 @@
 }
 
 - (void)preloadSounds {
-    [[SoundManager instance] prepare:SOUND_EFFECT_BUMP count:1];
+    [[SoundManager instance] prepare:SOUND_EFFECT_BUMP count:2];
     [[SoundManager instance] prepare:SOUND_EFFECT_BOUNCE count:5];
+    [[SoundManager instance] prepare:SOUND_EFFECT_BLING count:2];
 }
 
 - (void)gameViewsHidden:(BOOL)hidden {
@@ -300,11 +302,17 @@
 }
 
 - (void)boundaryTestForLadyBug {
-    
-    if ((self.ladyBugView.frame.origin.y + self.ladyBugView.frame.size.height) > self.view.frame.size.height) {
-        self.ladyBugView.frame = CGRectMake(self.ladyBugView.frame.origin.x, (self.self.view.frame.size.height - self.ladyBugView.frame.size.height), self.ladyBugView.frame.size.width, self.ladyBugView.frame.size.height);
+    if ((self.ladyBugView.y + self.ladyBugView.height) > self.view.height) {
+        self.ladyBugView.y = (self.view.height - self.ladyBugView.height);        
         self.ladyBugView.properties.rotation = 90.f;
         [self.ladyBugView paused];
+        
+        // not game
+        // is already game
+        
+        if (self.isGameOver) {
+            [[SoundManager instance] play:SOUND_EFFECT_BUMP];
+        }
         self.isGameOver = YES;
     }
 }
@@ -314,7 +322,7 @@
 
     for (PipeView *pipeView in self.worldObstacles) {
         // off map
-        if (pipeView.center.x < -pipeView.frame.size.width) {
+        if (pipeView.center.x < -pipeView.width) {
             [self resetPipe:pipeView];
         }
     }
@@ -325,6 +333,7 @@
     
     for (PipeView *pipe in self.worldObstacles) {
         
+        // Screen points
         CGRect topFrame = [pipe.pipeTopView.superview convertRect:pipe.pipeTopView.frame toView:self.ladyBugView.superview];
         CGRect bottomFrame = [pipe.pipeDownView.superview convertRect:pipe.pipeDownView.frame toView:self.ladyBugView.superview];
         
@@ -353,6 +362,12 @@
 
 
 - (void)animateCollision {
+    [self flash];
+    [AnimUtil wobble:self.view duration:0.1f angle:M_PI/128.f];
+    [[SoundManager instance] play:SOUND_EFFECT_BUMP];
+}
+
+- (void)flash {
     float duration = 0.2f;
     self.flashOverlay.alpha = 0.f;
     [UIView animateWithDuration:duration delay:0.f options:UIViewAnimationOptionLayoutSubviews animations:^{
@@ -363,10 +378,6 @@
             self.flashOverlay.alpha = 0.0f;
         } ];
     } ];
-    
-    [AnimUtil wobble:self.view duration:0.1f angle:M_PI/128.f];
-    
-    [[SoundManager instance] play:SOUND_EFFECT_BUMP];
 }
 
 - (void)checkIfScored {
@@ -379,6 +390,7 @@
         CGRect pipeFrame = [pipeView.superview convertRect:pipeView.frame toView:self.ladyBugView.superview];
         if (self.ladyBugView.center.x > pipeFrame.origin.x + pipeView.frame.size.width) {
             self.score++;
+            [[SoundManager instance] play:SOUND_EFFECT_BLING];
             [self refreshLabel];
         } else {
             [scorableObjectsTemp addObject:pipeView];
@@ -457,6 +469,7 @@
     } else {
         self.adBannerView = [[ADBannerView alloc] init];
     }
+    self.adBannerView.y = -self.adBannerView.height;
     self.adBannerView.delegate = self;
 }
 
@@ -471,18 +484,15 @@
         self.adBannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierLandscape;
     }
     
-    CGRect bannerFrame = self.adBannerView.frame;
+    float bannerYOffset = 0.f;
     if (self.adBannerView.bannerLoaded) {
-        contentFrame.size.height -= self.adBannerView.frame.size.height;
-        bannerFrame.origin.y = contentFrame.size.height;
+        bannerYOffset = 0;
     } else {
-        bannerFrame.origin.y = contentFrame.size.height;
+        bannerYOffset = -self.adBannerView.height;
     }
     
     [UIView animateWithDuration:animated ? 0.25 : 0.0 animations:^{
-        self.view.frame = contentFrame;
-        [self.view layoutIfNeeded];
-        self.adBannerView.frame = bannerFrame;
+        self.adBannerView.y = bannerYOffset;
     }];
 }
 

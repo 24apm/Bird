@@ -7,6 +7,7 @@
 //
 
 #import "BackgroundView.h"
+#import "GameConstants.h"
 
 @interface BackgroundView()
 
@@ -26,7 +27,7 @@
 
 - (void)setup {
     [super setup];
-    self.speed = CGPointMake(2.f, 2.f);
+    self.speed = CGPointMake(2.f * IPAD_SCALE, 0);
     self.backgroundImage.frame = CGRectMake(0.f,
                                 0.f,
                                 self.backgroundImage.frame.size.width,
@@ -36,7 +37,7 @@
 
 - (void)drawStep {
     CGRect backgroundFrame = self.backgroundImage.frame;
-    backgroundFrame.origin.x -= self.speed.x;
+    backgroundFrame.origin.x -= self.speed.x * IPAD_SCALE;
     
     // background reaches endpoint and resets
     if (backgroundFrame.origin.x + backgroundFrame.size.width < self.frame.size.width) {

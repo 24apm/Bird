@@ -71,6 +71,7 @@
 		D0E50A6618A745CA00AA353E /* FXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E50A5918A745CA00AA353E /* FXLabel.m */; };
 		D0EDB82818A8A55100C103F5 /* bumpEffect.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0EDB82718A8A55100C103F5 /* bumpEffect.caf */; };
 		D0EDB82C18A8AFAC00C103F5 /* THLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EDB82B18A8AFAC00C103F5 /* THLabel.m */; };
+		D0EE1F2D18AB4BE800AD7C8F /* blingEffect.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0EE1F2C18AB4BE800AD7C8F /* blingEffect.caf */; };
 		D0F7853818A8659F00CA1ADA /* bounceEffect.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0F7853718A8659F00CA1ADA /* bounceEffect.caf */; };
 /* End PBXBuildFile section */
 
@@ -180,6 +181,7 @@
 		D0EDB82718A8A55100C103F5 /* bumpEffect.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bumpEffect.caf; sourceTree = "<group>"; };
 		D0EDB82A18A8AFAC00C103F5 /* THLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THLabel.h; sourceTree = "<group>"; };
 		D0EDB82B18A8AFAC00C103F5 /* THLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THLabel.m; sourceTree = "<group>"; };
+		D0EE1F2C18AB4BE800AD7C8F /* blingEffect.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = blingEffect.caf; sourceTree = "<group>"; };
 		D0F7853718A8659F00CA1ADA /* bounceEffect.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bounceEffect.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -443,6 +445,7 @@
 		D0F7853418A8655800CA1ADA /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				D0EE1F2C18AB4BE800AD7C8F /* blingEffect.caf */,
 				D0EDB82718A8A55100C103F5 /* bumpEffect.caf */,
 				D0F7853718A8659F00CA1ADA /* bounceEffect.caf */,
 			);
@@ -537,6 +540,7 @@
 				D073FF5718AA3B5700448FD5 /* PipeView~ipad.xib in Resources */,
 				D073FF4F18AA3AD900448FD5 /* TutorialView.xib in Resources */,
 				D0E50A3118A7349300AA353E /* background_cloud.jpeg in Resources */,
+				D0EE1F2D18AB4BE800AD7C8F /* blingEffect.caf in Resources */,
 				D0E50A3418A7349300AA353E /* man.png in Resources */,
 				D0E30E9D18A376E300FFD3CE /* Images.xcassets in Resources */,
 				D0E30E8F18A376E300FFD3CE /* InfoPlist.strings in Resources */,

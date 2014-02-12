@@ -27,8 +27,12 @@
         }
         fileName = [fileName stringByDeletingPathExtension];
         NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:fileExt];
-        self.audio = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
-        [self.audio prepareToPlay];
+        if (path) {
+            self.audio = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+            [self.audio prepareToPlay];
+        } else {
+            NSLog(@"File not found: %@", fileName);
+        }
     }
     return self;
 }
