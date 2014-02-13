@@ -7,12 +7,14 @@
 //
 
 #import "XibView.h"
+#import "LadyBugView.h"
 
 @interface MainView : XibView
 
 #define MAIN_VIEW_DISMISSED_NOTIFICATION @"MAIN_VIEW_DISMISSED_NOTIFICATION"
 
 @property (strong, nonatomic) IBOutlet UIView *titleView;
+@property (strong, nonatomic) IBOutlet LadyBugView *ladyBugView;
 
 - (void)show;
 

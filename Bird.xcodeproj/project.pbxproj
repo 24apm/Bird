@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D048A83C18AC973300411DF9 /* cow.png in Resources */ = {isa = PBXBuildFile; fileRef = D048A83B18AC973300411DF9 /* cow.png */; };
+		D048A83F18ACAAAB00411DF9 /* facebook_share.png in Resources */ = {isa = PBXBuildFile; fileRef = D048A83D18ACAAAB00411DF9 /* facebook_share.png */; };
+		D048A84018ACAAAB00411DF9 /* twitter_share.png in Resources */ = {isa = PBXBuildFile; fileRef = D048A83E18ACAAAB00411DF9 /* twitter_share.png */; };
+		D048A84618ACB25200411DF9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D048A84518ACB25200411DF9 /* GameKit.framework */; };
+		D048A84918ACB2A500411DF9 /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D048A84818ACB2A500411DF9 /* GameCenterManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D04F6F5018A9EBE6000509AA /* SoundEffectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F6F4F18A9EBE6000509AA /* SoundEffectHelper.m */; };
 		D04F6F5318A9ED28000509AA /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F6F5218A9ED28000509AA /* SoundManager.m */; };
 		D04F6F5618A9FD34000509AA /* NSArray+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F6F5518A9FD34000509AA /* NSArray+Util.m */; };
@@ -86,6 +91,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D048A83B18AC973300411DF9 /* cow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cow.png; sourceTree = "<group>"; };
+		D048A83D18ACAAAB00411DF9 /* facebook_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_share.png; sourceTree = "<group>"; };
+		D048A83E18ACAAAB00411DF9 /* twitter_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_share.png; sourceTree = "<group>"; };
+		D048A84518ACB25200411DF9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		D048A84718ACB2A500411DF9 /* GameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenterManager.h; sourceTree = "<group>"; };
+		D048A84818ACB2A500411DF9 /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCenterManager.m; sourceTree = "<group>"; };
 		D04F6F4E18A9EBE6000509AA /* SoundEffectHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundEffectHelper.h; sourceTree = "<group>"; };
 		D04F6F4F18A9EBE6000509AA /* SoundEffectHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundEffectHelper.m; sourceTree = "<group>"; };
 		D04F6F5118A9ED28000509AA /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
@@ -190,6 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D048A84618ACB25200411DF9 /* GameKit.framework in Frameworks */,
 				D04F704218AA1197000509AA /* Social.framework in Frameworks */,
 				D07F418018A4D8C7009680FD /* iAd.framework in Frameworks */,
 				D0E30EDF18A37D6400FFD3CE /* QuartzCore.framework in Frameworks */,
@@ -212,6 +224,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D048A84118ACACDB00411DF9 /* GameCenter */ = {
+			isa = PBXGroup;
+			children = (
+				D048A84718ACB2A500411DF9 /* GameCenterManager.h */,
+				D048A84818ACB2A500411DF9 /* GameCenterManager.m */,
+			);
+			path = GameCenter;
+			sourceTree = "<group>";
+		};
 		D04F704618AA12B1000509AA /* Xib */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +311,7 @@
 		D0E30E8318A376E300FFD3CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D048A84518ACB25200411DF9 /* GameKit.framework */,
 				D04F704118AA1197000509AA /* Social.framework */,
 				D07F417F18A4D8C7009680FD /* iAd.framework */,
 				D0E30EDE18A37D6400FFD3CE /* QuartzCore.framework */,
@@ -346,6 +368,7 @@
 		D0E30EB918A3771C00FFD3CE /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				D048A84118ACACDB00411DF9 /* GameCenter */,
 				D04F704618AA12B1000509AA /* Xib */,
 				D0EDB82918A8AFAC00C103F5 /* THLabel */,
 				D0E50A3D18A745CA00AA353E /* Classes */,
@@ -367,6 +390,9 @@
 		D0E50A2818A7349300AA353E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D048A83D18ACAAAB00411DF9 /* facebook_share.png */,
+				D048A83E18ACAAAB00411DF9 /* twitter_share.png */,
+				D048A83B18AC973300411DF9 /* cow.png */,
 				D0E50A2918A7349300AA353E /* background_cloud.jpeg */,
 				D0E50A2A18A7349300AA353E /* bg.png */,
 				D0E50A2B18A7349300AA353E /* Ladybug.png */,
@@ -540,6 +566,7 @@
 				D073FF5718AA3B5700448FD5 /* PipeView~ipad.xib in Resources */,
 				D073FF4F18AA3AD900448FD5 /* TutorialView.xib in Resources */,
 				D0E50A3118A7349300AA353E /* background_cloud.jpeg in Resources */,
+				D048A84018ACAAAB00411DF9 /* twitter_share.png in Resources */,
 				D0EE1F2D18AB4BE800AD7C8F /* blingEffect.caf in Resources */,
 				D0E50A3418A7349300AA353E /* man.png in Resources */,
 				D0E30E9D18A376E300FFD3CE /* Images.xcassets in Resources */,
@@ -552,9 +579,11 @@
 				D073FF5518AA3B5700448FD5 /* GameViewController~ipad.xib in Resources */,
 				D073FF4A18AA3AD900448FD5 /* MainView.xib in Resources */,
 				D073FF5118AA3AEB00448FD5 /* BackgroundView.xib in Resources */,
+				D048A83C18AC973300411DF9 /* cow.png in Resources */,
 				D0E50A3618A7349300AA353E /* obstacles_top.png in Resources */,
 				D073FF5918AA3C8400448FD5 /* BackgroundView~ipad.xib in Resources */,
 				D0F7853818A8659F00CA1ADA /* bounceEffect.caf in Resources */,
+				D048A83F18ACAAAB00411DF9 /* facebook_share.png in Resources */,
 				D073FF4B18AA3AD900448FD5 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,6 +627,7 @@
 				D073FF4218AA3AD800448FD5 /* MainView.m in Sources */,
 				D0E50A5E18A745CA00AA353E /* SoundEffect.m in Sources */,
 				D073FF4018AA3AD800448FD5 /* GameViewController.m in Sources */,
+				D048A84918ACB2A500411DF9 /* GameCenterManager.m in Sources */,
 				D0E50A5D18A745CA00AA353E /* Hex.m in Sources */,
 				D0E50A5F18A745CA00AA353E /* UIView+ViewUtil.m in Sources */,
 				D0E50A6118A745CA00AA353E /* WorldObjectProperties.m in Sources */,

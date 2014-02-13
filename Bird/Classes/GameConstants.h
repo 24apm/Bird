@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define IPAD_SCALE ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 2.2f : 1.0f)
+#define IPAD_SCALE ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 2.0f : 1.0f)
 
 #define GRAVITY 0.2f
 #define TAP_ACCELATION_INCREASE 0.0f
@@ -20,7 +20,7 @@
 
 #define PIPES_COUNT 5
 #define DEBUG_MODE NO
-#define BLACK_AND_WHITE_MODE NO
+#define BLACK_AND_WHITE_MODE YES
 
 @interface GameConstants : NSObject
 

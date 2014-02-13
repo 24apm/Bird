@@ -20,6 +20,14 @@
 
 - (void)setup {
     [super setup];
+    
+    if (BLACK_AND_WHITE_MODE) {
+        self.pipeTopView.image = nil;
+        self.pipeTopView.backgroundColor = [UIColor grayColor];
+        self.pipeDownView.image = nil;
+        self.pipeDownView.backgroundColor = [UIColor grayColor];
+    }
+    
     self.properties.speedMin = CGPointMake(OBSTACLE_SPEED * IPAD_SCALE, 0.f);
     self.properties.speedMax = CGPointMake(0.f, 0.f);
     self.properties.speed = CGPointMake(OBSTACLE_SPEED * IPAD_SCALE, 0.f);

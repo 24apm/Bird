@@ -26,8 +26,18 @@
 
 - (void)setup {
     [super setup];
+    if (BLACK_AND_WHITE_MODE) {
+        [self blackAndWhite];
+    }
     self.currentState = LadyBugViewStateTutorialMode;
     [self refresh];
+}
+
+- (void)blackAndWhite {
+    self.imageView.image = nil;
+    self.imageView.backgroundColor = [UIColor blueColor];
+    self.imageView.layer.cornerRadius = self.imageView.size.width / 2;
+
 }
 
 - (void)refresh {
