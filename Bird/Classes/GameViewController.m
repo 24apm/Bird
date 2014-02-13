@@ -19,6 +19,7 @@
 #import "SoundEffect.h"
 #import "SoundManager.h"
 #import "MenuView.h"
+#import "AppSpecificValues.h"
 
 #define SOUND_EFFECT_BUMP @"bumpEffect"
 #define SOUND_EFFECT_BOUNCE @"bounceEffect"
@@ -95,6 +96,23 @@
     [self updateGameState:GameStateMainMode];
 }
 
+- (void)loginToGameCenter {
+    
+    self.currentLeaderBoard = kLeaderboardID;
+
+    if ([GameCenterManager isGameCenterAvailable]) {
+        
+        self.gameCenterManager = [[GameCenterManager alloc] init];
+        [self.gameCenterManager setDelegate:self];
+        [self.gameCenterManager authenticateLocalUser];
+        
+    } else {
+        
+        // The current device does not support Game Center.
+        
+    }
+}
+
 - (void)preloadSounds {
     [[SoundManager instance] prepare:SOUND_EFFECT_BUMP count:2];
     [[SoundManager instance] prepare:SOUND_EFFECT_BOUNCE count:5];
@@ -106,14 +124,21 @@
     self.obstacleLayer.hidden = hidden;
     self.scoreLabel.hidden = hidden;
     self.menuButton.hidden = hidden;
-    
-    
+    self.maxScoreLabel.hidden = hidden;
+    self.highestScoreText.hidden = hidden;
 }
 
 - (void)saveUserData{
+    [self submitScore:self.maxScore];
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
     [defaults setValue:@(self.maxScore) forKey:@"maxScore"];
     [defaults synchronize];
+}
+
+- (void)submitScore:(int)score {
+    if(score > 0) {
+        [self.gameCenterManager reportScore: score forCategory: self.currentLeaderBoard];
+    }
 }
 
 - (IBAction)menuPressed:(id)sender {
@@ -122,6 +147,7 @@
 
 - (void)loadUserData {
     self.maxScore = [[[NSUserDefaults standardUserDefaults] valueForKey:@"maxScore"] intValue];
+    self.maxScoreLabel.text = [NSString stringWithFormat:@"%d", self.maxScore];
 }
 
 - (void)mainMenuCallback {
@@ -182,6 +208,8 @@
             [self gameViewsHidden:NO];
             self.scoreLabel.hidden = YES;
             self.menuButton.hidden = YES;
+            self.highestScoreText.hidden = YES;
+            self.maxScoreLabel.hidden = YES;
             self.resultView.sharedText = [NSString stringWithFormat:@"High Score: %d!", self.maxScore];
             [self showResult];
             break;
@@ -276,6 +304,11 @@
     [self restartGame];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self loginToGameCenter];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -341,6 +374,7 @@
     int tMaxScore = self.maxScore;
     if (self.score > self.maxScore) {
         self.maxScore = self.score;
+        self.maxScoreLabel.text = [NSString stringWithFormat:@"%d", self.maxScore];
         [self saveUserData];
     } else {
         self.resultView.recordLabel.hidden = YES;

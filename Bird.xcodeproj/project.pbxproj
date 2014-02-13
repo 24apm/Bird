@@ -97,6 +97,7 @@
 		D048A84518ACB25200411DF9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		D048A84718ACB2A500411DF9 /* GameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenterManager.h; sourceTree = "<group>"; };
 		D048A84818ACB2A500411DF9 /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCenterManager.m; sourceTree = "<group>"; };
+		D048A84A18ACB62600411DF9 /* AppSpecificValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSpecificValues.h; sourceTree = "<group>"; };
 		D04F6F4E18A9EBE6000509AA /* SoundEffectHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundEffectHelper.h; sourceTree = "<group>"; };
 		D04F6F4F18A9EBE6000509AA /* SoundEffectHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundEffectHelper.m; sourceTree = "<group>"; };
 		D04F6F5118A9ED28000509AA /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
@@ -326,6 +327,7 @@
 		D0E30E8A18A376E300FFD3CE /* Bird */ = {
 			isa = PBXGroup;
 			children = (
+				D048A84A18ACB62600411DF9 /* AppSpecificValues.h */,
 				D073FF2018AA3AD800448FD5 /* Classes */,
 				D073FF3518AA3AD800448FD5 /* Xib */,
 				D0E30E9318A376E300FFD3CE /* AppDelegate.h */,
