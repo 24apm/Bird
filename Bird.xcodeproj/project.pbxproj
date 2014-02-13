@@ -12,6 +12,7 @@
 		D048A84018ACAAAB00411DF9 /* twitter_share.png in Resources */ = {isa = PBXBuildFile; fileRef = D048A83E18ACAAAB00411DF9 /* twitter_share.png */; };
 		D048A84618ACB25200411DF9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D048A84518ACB25200411DF9 /* GameKit.framework */; };
 		D048A84918ACB2A500411DF9 /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D048A84818ACB2A500411DF9 /* GameCenterManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D048A84C18ACC53500411DF9 /* MainView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D048A84B18ACC53500411DF9 /* MainView~ipad.xib */; };
 		D04F6F5018A9EBE6000509AA /* SoundEffectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F6F4F18A9EBE6000509AA /* SoundEffectHelper.m */; };
 		D04F6F5318A9ED28000509AA /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F6F5218A9ED28000509AA /* SoundManager.m */; };
 		D04F6F5618A9FD34000509AA /* NSArray+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F6F5518A9FD34000509AA /* NSArray+Util.m */; };
@@ -98,6 +99,7 @@
 		D048A84718ACB2A500411DF9 /* GameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenterManager.h; sourceTree = "<group>"; };
 		D048A84818ACB2A500411DF9 /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCenterManager.m; sourceTree = "<group>"; };
 		D048A84A18ACB62600411DF9 /* AppSpecificValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSpecificValues.h; sourceTree = "<group>"; };
+		D048A84B18ACC53500411DF9 /* MainView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MainView~ipad.xib"; sourceTree = "<group>"; };
 		D04F6F4E18A9EBE6000509AA /* SoundEffectHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundEffectHelper.h; sourceTree = "<group>"; };
 		D04F6F4F18A9EBE6000509AA /* SoundEffectHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundEffectHelper.m; sourceTree = "<group>"; };
 		D04F6F5118A9ED28000509AA /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 		D073FF3518AA3AD800448FD5 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
+				D048A84B18ACC53500411DF9 /* MainView~ipad.xib */,
 				D073FF5818AA3C8400448FD5 /* BackgroundView~ipad.xib */,
 				D073FF5218AA3B5700448FD5 /* GameViewController~ipad.xib */,
 				D073FF5318AA3B5700448FD5 /* LadyBugView~ipad.xib */,
@@ -573,6 +576,7 @@
 				D0E50A3418A7349300AA353E /* man.png in Resources */,
 				D0E30E9D18A376E300FFD3CE /* Images.xcassets in Resources */,
 				D0E30E8F18A376E300FFD3CE /* InfoPlist.strings in Resources */,
+				D048A84C18ACC53500411DF9 /* MainView~ipad.xib in Resources */,
 				D0EDB82818A8A55100C103F5 /* bumpEffect.caf in Resources */,
 				D0E50A3718A7349300AA353E /* pipe_face_down.png in Resources */,
 				D0E50A6418A745CA00AA353E /* iRate.bundle in Resources */,

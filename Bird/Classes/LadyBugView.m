@@ -36,7 +36,7 @@
 - (void)blackAndWhite {
     self.imageView.image = nil;
     self.imageView.backgroundColor = [UIColor blueColor];
-    self.imageView.layer.cornerRadius = self.imageView.size.width / 2;
+//    self.imageView.layer.cornerRadius = self.imageView.size.width / 2;
 
 }
 
