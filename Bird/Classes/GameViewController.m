@@ -21,6 +21,7 @@
 #import "MenuView.h"
 #import "AppSpecificValues.h"
 
+
 #define SOUND_EFFECT_BUMP @"bumpEffect"
 #define SOUND_EFFECT_BOUNCE @"bounceEffect"
 #define SOUND_EFFECT_BLING @"blingEffect"
@@ -159,7 +160,11 @@
 }
 
 - (void)resumeCallback {
-    [self updateGameState:GameStateResumeMode];
+    if (self.isGameOver) {
+        [self updateGameState:GameStateResultMode];
+    } else {
+        [self updateGameState:GameStateResumeMode];
+    }
 }
 
 - (void)refresh {
@@ -180,6 +185,7 @@
             break;
         case GameStateTutorialMode:
             [self gameViewsHidden:NO];
+            self.menuButton.hidden = YES;
             self.containerView.userInteractionEnabled = NO;
             self.tutorialView.hidden = NO;
             [self restartGame];

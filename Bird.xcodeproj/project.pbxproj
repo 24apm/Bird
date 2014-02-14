@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D015791018ACD9F500AA3803 /* FlappyBall152x152.png in Resources */ = {isa = PBXBuildFile; fileRef = D015790718ACD9F500AA3803 /* FlappyBall152x152.png */; };
+		D015791118ACD9F500AA3803 /* FlappyBallIcon60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = D015790818ACD9F500AA3803 /* FlappyBallIcon60x60.png */; };
 		D048A83C18AC973300411DF9 /* cow.png in Resources */ = {isa = PBXBuildFile; fileRef = D048A83B18AC973300411DF9 /* cow.png */; };
 		D048A83F18ACAAAB00411DF9 /* facebook_share.png in Resources */ = {isa = PBXBuildFile; fileRef = D048A83D18ACAAAB00411DF9 /* facebook_share.png */; };
 		D048A84018ACAAAB00411DF9 /* twitter_share.png in Resources */ = {isa = PBXBuildFile; fileRef = D048A83E18ACAAAB00411DF9 /* twitter_share.png */; };
 		D048A84618ACB25200411DF9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D048A84518ACB25200411DF9 /* GameKit.framework */; };
 		D048A84918ACB2A500411DF9 /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D048A84818ACB2A500411DF9 /* GameCenterManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D048A84C18ACC53500411DF9 /* MainView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D048A84B18ACC53500411DF9 /* MainView~ipad.xib */; };
+		D04BEB9A18ADD12E00DB72F5 /* ResultView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04BEB9918ADD12E00DB72F5 /* ResultView~ipad.xib */; };
+		D04BEB9C18ADD14D00DB72F5 /* MenuView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04BEB9B18ADD14D00DB72F5 /* MenuView~ipad.xib */; };
+		D04BEB9E18ADD4C100DB72F5 /* TutorialView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04BEB9D18ADD4C100DB72F5 /* TutorialView~ipad.xib */; };
+		D04BEBA118ADD8A000DB72F5 /* FloorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D04BEBA018ADD8A000DB72F5 /* FloorView.m */; };
+		D04BEBA318ADD93100DB72F5 /* FloorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04BEBA218ADD93000DB72F5 /* FloorView.xib */; };
+		D04BEBA518ADECAD00DB72F5 /* Floor.png in Resources */ = {isa = PBXBuildFile; fileRef = D04BEBA418ADECAD00DB72F5 /* Floor.png */; };
+		D04BEBA718ADFDE400DB72F5 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04BEBA618ADFDE400DB72F5 /* GameViewController.xib */; };
 		D04F6F5018A9EBE6000509AA /* SoundEffectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F6F4F18A9EBE6000509AA /* SoundEffectHelper.m */; };
 		D04F6F5318A9ED28000509AA /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F6F5218A9ED28000509AA /* SoundManager.m */; };
 		D04F6F5618A9FD34000509AA /* NSArray+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F6F5518A9FD34000509AA /* NSArray+Util.m */; };
@@ -27,7 +36,7 @@
 		D073FF4518AA3AD900448FD5 /* PipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D073FF3018AA3AD800448FD5 /* PipeView.m */; };
 		D073FF4618AA3AD900448FD5 /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = D073FF3218AA3AD800448FD5 /* ResultView.m */; };
 		D073FF4718AA3AD900448FD5 /* TutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = D073FF3418AA3AD800448FD5 /* TutorialView.m */; };
-		D073FF4818AA3AD900448FD5 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF3618AA3AD800448FD5 /* GameViewController.xib */; };
+		D073FF4818AA3AD900448FD5 /* GameViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF3618AA3AD800448FD5 /* GameViewController~ipad.xib */; };
 		D073FF4918AA3AD900448FD5 /* LadyBugView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF3718AA3AD800448FD5 /* LadyBugView.xib */; };
 		D073FF4A18AA3AD900448FD5 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF3818AA3AD800448FD5 /* MainView.xib */; };
 		D073FF4B18AA3AD900448FD5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF3918AA3AD800448FD5 /* MainWindow.xib */; };
@@ -36,7 +45,6 @@
 		D073FF4E18AA3AD900448FD5 /* ResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF3C18AA3AD800448FD5 /* ResultView.xib */; };
 		D073FF4F18AA3AD900448FD5 /* TutorialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF3D18AA3AD800448FD5 /* TutorialView.xib */; };
 		D073FF5118AA3AEB00448FD5 /* BackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF5018AA3AEB00448FD5 /* BackgroundView.xib */; };
-		D073FF5518AA3B5700448FD5 /* GameViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF5218AA3B5700448FD5 /* GameViewController~ipad.xib */; };
 		D073FF5618AA3B5700448FD5 /* LadyBugView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF5318AA3B5700448FD5 /* LadyBugView~ipad.xib */; };
 		D073FF5718AA3B5700448FD5 /* PipeView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF5418AA3B5700448FD5 /* PipeView~ipad.xib */; };
 		D073FF5918AA3C8400448FD5 /* BackgroundView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF5818AA3C8400448FD5 /* BackgroundView~ipad.xib */; };
@@ -92,6 +100,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D015790718ACD9F500AA3803 /* FlappyBall152x152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlappyBall152x152.png; sourceTree = "<group>"; };
+		D015790818ACD9F500AA3803 /* FlappyBallIcon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlappyBallIcon60x60.png; sourceTree = "<group>"; };
 		D048A83B18AC973300411DF9 /* cow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cow.png; sourceTree = "<group>"; };
 		D048A83D18ACAAAB00411DF9 /* facebook_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_share.png; sourceTree = "<group>"; };
 		D048A83E18ACAAAB00411DF9 /* twitter_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_share.png; sourceTree = "<group>"; };
@@ -100,6 +110,14 @@
 		D048A84818ACB2A500411DF9 /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCenterManager.m; sourceTree = "<group>"; };
 		D048A84A18ACB62600411DF9 /* AppSpecificValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSpecificValues.h; sourceTree = "<group>"; };
 		D048A84B18ACC53500411DF9 /* MainView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MainView~ipad.xib"; sourceTree = "<group>"; };
+		D04BEB9918ADD12E00DB72F5 /* ResultView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "ResultView~ipad.xib"; sourceTree = "<group>"; };
+		D04BEB9B18ADD14D00DB72F5 /* MenuView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MenuView~ipad.xib"; sourceTree = "<group>"; };
+		D04BEB9D18ADD4C100DB72F5 /* TutorialView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "TutorialView~ipad.xib"; sourceTree = "<group>"; };
+		D04BEB9F18ADD8A000DB72F5 /* FloorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FloorView.h; path = ../Xib/FloorView.h; sourceTree = "<group>"; };
+		D04BEBA018ADD8A000DB72F5 /* FloorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FloorView.m; path = ../Xib/FloorView.m; sourceTree = "<group>"; };
+		D04BEBA218ADD93000DB72F5 /* FloorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FloorView.xib; path = ../Classes/FloorView.xib; sourceTree = "<group>"; };
+		D04BEBA418ADECAD00DB72F5 /* Floor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Floor.png; sourceTree = "<group>"; };
+		D04BEBA618ADFDE400DB72F5 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		D04F6F4E18A9EBE6000509AA /* SoundEffectHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundEffectHelper.h; sourceTree = "<group>"; };
 		D04F6F4F18A9EBE6000509AA /* SoundEffectHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundEffectHelper.m; sourceTree = "<group>"; };
 		D04F6F5118A9ED28000509AA /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
@@ -127,7 +145,7 @@
 		D073FF3218AA3AD800448FD5 /* ResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultView.m; sourceTree = "<group>"; };
 		D073FF3318AA3AD800448FD5 /* TutorialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialView.h; sourceTree = "<group>"; };
 		D073FF3418AA3AD800448FD5 /* TutorialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialView.m; sourceTree = "<group>"; };
-		D073FF3618AA3AD800448FD5 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		D073FF3618AA3AD800448FD5 /* GameViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "GameViewController~ipad.xib"; sourceTree = "<group>"; };
 		D073FF3718AA3AD800448FD5 /* LadyBugView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LadyBugView.xib; sourceTree = "<group>"; };
 		D073FF3818AA3AD800448FD5 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		D073FF3918AA3AD800448FD5 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
@@ -136,7 +154,6 @@
 		D073FF3C18AA3AD800448FD5 /* ResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultView.xib; sourceTree = "<group>"; };
 		D073FF3D18AA3AD800448FD5 /* TutorialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialView.xib; sourceTree = "<group>"; };
 		D073FF5018AA3AEB00448FD5 /* BackgroundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackgroundView.xib; sourceTree = "<group>"; };
-		D073FF5218AA3B5700448FD5 /* GameViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "GameViewController~ipad.xib"; sourceTree = "<group>"; };
 		D073FF5318AA3B5700448FD5 /* LadyBugView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "LadyBugView~ipad.xib"; sourceTree = "<group>"; };
 		D073FF5418AA3B5700448FD5 /* PipeView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "PipeView~ipad.xib"; sourceTree = "<group>"; };
 		D073FF5818AA3C8400448FD5 /* BackgroundView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "BackgroundView~ipad.xib"; sourceTree = "<group>"; };
@@ -227,6 +244,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D015790618ACD9F500AA3803 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				D015790718ACD9F500AA3803 /* FlappyBall152x152.png */,
+				D015790818ACD9F500AA3803 /* FlappyBallIcon60x60.png */,
+			);
+			name = Icons;
+			path = Resources/Icons;
+			sourceTree = "<group>";
+		};
 		D048A84118ACACDB00411DF9 /* GameCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +293,8 @@
 				D073FF3218AA3AD800448FD5 /* ResultView.m */,
 				D073FF3318AA3AD800448FD5 /* TutorialView.h */,
 				D073FF3418AA3AD800448FD5 /* TutorialView.m */,
+				D04BEB9F18ADD8A000DB72F5 /* FloorView.h */,
+				D04BEBA018ADD8A000DB72F5 /* FloorView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -273,20 +302,24 @@
 		D073FF3518AA3AD800448FD5 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
-				D048A84B18ACC53500411DF9 /* MainView~ipad.xib */,
+				D04BEBA218ADD93000DB72F5 /* FloorView.xib */,
 				D073FF5818AA3C8400448FD5 /* BackgroundView~ipad.xib */,
-				D073FF5218AA3B5700448FD5 /* GameViewController~ipad.xib */,
 				D073FF5318AA3B5700448FD5 /* LadyBugView~ipad.xib */,
 				D073FF5418AA3B5700448FD5 /* PipeView~ipad.xib */,
 				D073FF5018AA3AEB00448FD5 /* BackgroundView.xib */,
-				D073FF3618AA3AD800448FD5 /* GameViewController.xib */,
+				D073FF3618AA3AD800448FD5 /* GameViewController~ipad.xib */,
+				D04BEBA618ADFDE400DB72F5 /* GameViewController.xib */,
 				D073FF3718AA3AD800448FD5 /* LadyBugView.xib */,
+				D048A84B18ACC53500411DF9 /* MainView~ipad.xib */,
 				D073FF3818AA3AD800448FD5 /* MainView.xib */,
 				D073FF3918AA3AD800448FD5 /* MainWindow.xib */,
 				D073FF3A18AA3AD800448FD5 /* MenuView.xib */,
+				D04BEB9B18ADD14D00DB72F5 /* MenuView~ipad.xib */,
 				D073FF3B18AA3AD800448FD5 /* PipeView.xib */,
 				D073FF3C18AA3AD800448FD5 /* ResultView.xib */,
+				D04BEB9918ADD12E00DB72F5 /* ResultView~ipad.xib */,
 				D073FF3D18AA3AD800448FD5 /* TutorialView.xib */,
+				D04BEB9D18ADD4C100DB72F5 /* TutorialView~ipad.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -386,6 +419,7 @@
 		D0E30ECD18A3780B00FFD3CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D015790618ACD9F500AA3803 /* Icons */,
 				D0F7853418A8655800CA1ADA /* Sounds */,
 				D0E50A2818A7349300AA353E /* Images */,
 			);
@@ -395,6 +429,7 @@
 		D0E50A2818A7349300AA353E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D04BEBA418ADECAD00DB72F5 /* Floor.png */,
 				D048A83D18ACAAAB00411DF9 /* facebook_share.png */,
 				D048A83E18ACAAAB00411DF9 /* twitter_share.png */,
 				D048A83B18AC973300411DF9 /* cow.png */,
@@ -563,31 +598,38 @@
 				D0E50A3518A7349300AA353E /* obstacles_bottom.png in Resources */,
 				D0E50A3218A7349300AA353E /* bg.png in Resources */,
 				D0E50A3818A7349300AA353E /* pipe_face_up.png in Resources */,
+				D04BEBA718ADFDE400DB72F5 /* GameViewController.xib in Resources */,
 				D0E50A3318A7349300AA353E /* Ladybug.png in Resources */,
+				D015791118ACD9F500AA3803 /* FlappyBallIcon60x60.png in Resources */,
+				D04BEB9E18ADD4C100DB72F5 /* TutorialView~ipad.xib in Resources */,
 				D073FF5618AA3B5700448FD5 /* LadyBugView~ipad.xib in Resources */,
 				D073FF4D18AA3AD900448FD5 /* PipeView.xib in Resources */,
 				D073FF4E18AA3AD900448FD5 /* ResultView.xib in Resources */,
-				D073FF4818AA3AD900448FD5 /* GameViewController.xib in Resources */,
+				D073FF4818AA3AD900448FD5 /* GameViewController~ipad.xib in Resources */,
 				D073FF5718AA3B5700448FD5 /* PipeView~ipad.xib in Resources */,
 				D073FF4F18AA3AD900448FD5 /* TutorialView.xib in Resources */,
 				D0E50A3118A7349300AA353E /* background_cloud.jpeg in Resources */,
 				D048A84018ACAAAB00411DF9 /* twitter_share.png in Resources */,
 				D0EE1F2D18AB4BE800AD7C8F /* blingEffect.caf in Resources */,
+				D04BEBA318ADD93100DB72F5 /* FloorView.xib in Resources */,
 				D0E50A3418A7349300AA353E /* man.png in Resources */,
 				D0E30E9D18A376E300FFD3CE /* Images.xcassets in Resources */,
 				D0E30E8F18A376E300FFD3CE /* InfoPlist.strings in Resources */,
 				D048A84C18ACC53500411DF9 /* MainView~ipad.xib in Resources */,
 				D0EDB82818A8A55100C103F5 /* bumpEffect.caf in Resources */,
+				D04BEB9C18ADD14D00DB72F5 /* MenuView~ipad.xib in Resources */,
 				D0E50A3718A7349300AA353E /* pipe_face_down.png in Resources */,
 				D0E50A6418A745CA00AA353E /* iRate.bundle in Resources */,
 				D073FF4918AA3AD900448FD5 /* LadyBugView.xib in Resources */,
 				D073FF4C18AA3AD900448FD5 /* MenuView.xib in Resources */,
-				D073FF5518AA3B5700448FD5 /* GameViewController~ipad.xib in Resources */,
+				D015791018ACD9F500AA3803 /* FlappyBall152x152.png in Resources */,
+				D04BEBA518ADECAD00DB72F5 /* Floor.png in Resources */,
 				D073FF4A18AA3AD900448FD5 /* MainView.xib in Resources */,
 				D073FF5118AA3AEB00448FD5 /* BackgroundView.xib in Resources */,
 				D048A83C18AC973300411DF9 /* cow.png in Resources */,
 				D0E50A3618A7349300AA353E /* obstacles_top.png in Resources */,
 				D073FF5918AA3C8400448FD5 /* BackgroundView~ipad.xib in Resources */,
+				D04BEB9A18ADD12E00DB72F5 /* ResultView~ipad.xib in Resources */,
 				D0F7853818A8659F00CA1ADA /* bounceEffect.caf in Resources */,
 				D048A83F18ACAAAB00411DF9 /* facebook_share.png in Resources */,
 				D073FF4B18AA3AD900448FD5 /* MainWindow.xib in Resources */,
@@ -618,6 +660,7 @@
 				D073FF4418AA3AD900448FD5 /* NotificationManager.m in Sources */,
 				D0EDB82C18A8AFAC00C103F5 /* THLabel.m in Sources */,
 				D073FF4318AA3AD800448FD5 /* MenuView.m in Sources */,
+				D04BEBA118ADD8A000DB72F5 /* FloorView.m in Sources */,
 				D04F6F5618A9FD34000509AA /* NSArray+Util.m in Sources */,
 				D0E50A6018A745CA00AA353E /* Utils.m in Sources */,
 				D0E50A5A18A745CA00AA353E /* AnimUtil.m in Sources */,

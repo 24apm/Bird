@@ -27,7 +27,7 @@
 - (void)setup {
     [super setup];
     if (BLACK_AND_WHITE_MODE) {
-        [self blackAndWhite];
+   //     [self blackAndWhite];
     }
     self.currentState = LadyBugViewStateTutorialMode;
     [self refresh];

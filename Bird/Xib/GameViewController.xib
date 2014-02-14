@@ -10,6 +10,7 @@
                 <outlet property="backgroundView" destination="ud9-hT-BwW" id="wbI-db-BqQ"/>
                 <outlet property="containerView" destination="lGG-UK-Ija" id="SU2-hX-dry"/>
                 <outlet property="flashOverlay" destination="tU8-3W-3Ec" id="Yqa-3d-Pxa"/>
+                <outlet property="floorView" destination="6Pf-Dg-sLr" id="nrx-8h-mOu"/>
                 <outlet property="highestScoreText" destination="Ler-c2-kiA" id="WIt-M2-npW"/>
                 <outlet property="ladyBugView" destination="e5o-3P-nu2" id="OXH-zP-8az"/>
                 <outlet property="maxScoreLabel" destination="24g-iU-uFB" id="cVQ-wK-xpo"/>
@@ -28,6 +29,11 @@
                 <view contentMode="scaleToFill" id="ud9-hT-BwW" customClass="BackgroundView">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" id="6Pf-Dg-sLr" customClass="FloorView">
+                    <rect key="frame" x="0.0" y="380" width="320" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" id="hSA-WF-Sfn" userLabel="Obstacles">
@@ -108,11 +114,12 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="E78-Nf-1Zk">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="E78-Nf-1Zk">
                     <rect key="frame" x="30" y="60" width="60" height="30"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.19550459685508373" green="0.55125884329905506" blue="0.69548357664233584" alpha="1" colorSpace="deviceRGB"/>
-                    <state key="normal" title="MENU">
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Pause">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
