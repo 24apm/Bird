@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FlappyBall152x152.png" id="hIj-pf-Z39">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FlappyBall2.png" id="hIj-pf-Z39">
                     <rect key="frame" x="-5" y="-5" width="40" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -26,6 +26,6 @@
         </view>
     </objects>
     <resources>
-        <image name="FlappyBall152x152.png" width="152" height="152"/>
+        <image name="FlappyBall2.png" width="100" height="100"/>
     </resources>
 </document>

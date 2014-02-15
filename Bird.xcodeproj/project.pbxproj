@@ -49,6 +49,7 @@
 		D073FF5718AA3B5700448FD5 /* PipeView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF5418AA3B5700448FD5 /* PipeView~ipad.xib */; };
 		D073FF5918AA3C8400448FD5 /* BackgroundView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073FF5818AA3C8400448FD5 /* BackgroundView~ipad.xib */; };
 		D07F418018A4D8C7009680FD /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07F417F18A4D8C7009680FD /* iAd.framework */; };
+		D0C79E8018AF4BFD0032BDB8 /* FlappyBall2.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C79E7F18AF4BFD0032BDB8 /* FlappyBall2.png */; };
 		D0E30E8518A376E300FFD3CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30E8418A376E300FFD3CE /* Foundation.framework */; };
 		D0E30E8718A376E300FFD3CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30E8618A376E300FFD3CE /* CoreGraphics.framework */; };
 		D0E30E8918A376E300FFD3CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E30E8818A376E300FFD3CE /* UIKit.framework */; };
@@ -158,6 +159,7 @@
 		D073FF5418AA3B5700448FD5 /* PipeView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "PipeView~ipad.xib"; sourceTree = "<group>"; };
 		D073FF5818AA3C8400448FD5 /* BackgroundView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "BackgroundView~ipad.xib"; sourceTree = "<group>"; };
 		D07F417F18A4D8C7009680FD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		D0C79E7F18AF4BFD0032BDB8 /* FlappyBall2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlappyBall2.png; sourceTree = "<group>"; };
 		D0E30E8118A376E300FFD3CE /* Bird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E30E8418A376E300FFD3CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0E30E8618A376E300FFD3CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -429,6 +431,7 @@
 		D0E50A2818A7349300AA353E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D0C79E7F18AF4BFD0032BDB8 /* FlappyBall2.png */,
 				D04BEBA418ADECAD00DB72F5 /* Floor.png */,
 				D048A83D18ACAAAB00411DF9 /* facebook_share.png */,
 				D048A83E18ACAAAB00411DF9 /* twitter_share.png */,
@@ -607,6 +610,7 @@
 				D073FF4E18AA3AD900448FD5 /* ResultView.xib in Resources */,
 				D073FF4818AA3AD900448FD5 /* GameViewController~ipad.xib in Resources */,
 				D073FF5718AA3B5700448FD5 /* PipeView~ipad.xib in Resources */,
+				D0C79E8018AF4BFD0032BDB8 /* FlappyBall2.png in Resources */,
 				D073FF4F18AA3AD900448FD5 /* TutorialView.xib in Resources */,
 				D0E50A3118A7349300AA353E /* background_cloud.jpeg in Resources */,
 				D048A84018ACAAAB00411DF9 /* twitter_share.png in Resources */,

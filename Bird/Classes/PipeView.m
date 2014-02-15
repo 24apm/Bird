@@ -23,9 +23,13 @@
     
     if (BLACK_AND_WHITE_MODE) {
         self.pipeTopView.image = nil;
-        self.pipeTopView.backgroundColor = [UIColor grayColor];
+        self.pipeTopView.backgroundColor = [UIColor clearColor];
         self.pipeDownView.image = nil;
-        self.pipeDownView.backgroundColor = [UIColor grayColor];
+        self.pipeDownView.backgroundColor = [UIColor clearColor];
+        self.pipeTopView.layer.borderColor = [UIColor greenColor].CGColor;
+        self.pipeDownView.layer.borderColor = [UIColor greenColor].CGColor;
+        self.pipeTopView.layer.borderWidth = 3.f * IPAD_SCALE;
+        self.pipeDownView.layer.borderWidth = 3.f * IPAD_SCALE;
     }
     
     self.properties.speedMin = CGPointMake(OBSTACLE_SPEED * IPAD_SCALE, 0.f);
