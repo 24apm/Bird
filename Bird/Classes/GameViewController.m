@@ -464,18 +464,7 @@
 
 #pragma mark - ADs
 
-- (void) createAdBannerView
-{
-//    self.adBannerView = [[ADBannerView alloc] initWithFrame:CGRectZero];
-//    CGSize bannerSize = [ADBannerView sizeFromBannerContentSizeIdentifier:self.adBannerView.currentContentSizeIdentifier];
-//
-//    CGRect bannerFrame = self.adBannerView.frame;
-//    bannerFrame.origin.y = -bannerSize.height;
-//    self.adBannerView.frame = bannerFrame;
-//    
-//    self.adBannerView.delegate = self;
-//    self.adBannerView.requiredContentSizeIdentifiers = [NSSet setWithObjects:ADBannerContentSizeIdentifierPortrait, ADBannerContentSizeIdentifierLandscape, nil];
-    
+- (void) createAdBannerView {
     if ([ADBannerView instancesRespondToSelector:@selector(initWithAdType:)]) {
         self.adBannerView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
     } else {
@@ -485,11 +474,7 @@
     self.adBannerView.delegate = self;
 }
 
-- (void)layoutAnimated:(BOOL)animated
-{
-    // As of iOS 6.0, the banner will automatically resize itself based on its width.
-    // To support iOS 5.0 however, we continue to set the currentContentSizeIdentifier appropriately.
-    
+- (void)layoutAnimated:(BOOL)animated {
     float bannerYOffset = 0.f;
     if (self.adBannerView.bannerLoaded) {
         bannerYOffset = 0;
@@ -504,18 +489,15 @@
 
 #pragma mark - ADBannerViewDelegate
 
-- (void)viewDidLayoutSubviews
-{
+- (void)viewDidLayoutSubviews {
     [self layoutAnimated:[UIView areAnimationsEnabled]];
 }
 
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner
-{
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
     [self layoutAnimated:YES];
 }
 
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
-{
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
     [self layoutAnimated:YES];
 }
 
