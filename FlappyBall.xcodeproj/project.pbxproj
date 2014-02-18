@@ -160,20 +160,20 @@
 		D073FF5818AA3C8400448FD5 /* BackgroundView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "BackgroundView~ipad.xib"; sourceTree = "<group>"; };
 		D07F417F18A4D8C7009680FD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		D0C79E7F18AF4BFD0032BDB8 /* FlappyBall2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlappyBall2.png; sourceTree = "<group>"; };
-		D0E30E8118A376E300FFD3CE /* Bird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bird.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0E30E8118A376E300FFD3CE /* FlappyBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E30E8418A376E300FFD3CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0E30E8618A376E300FFD3CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D0E30E8818A376E300FFD3CE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		D0E30E8C18A376E300FFD3CE /* Bird-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bird-Info.plist"; sourceTree = "<group>"; };
+		D0E30E8C18A376E300FFD3CE /* FlappyBall-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlappyBall-Info.plist"; sourceTree = "<group>"; };
 		D0E30E8E18A376E300FFD3CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0E30E9018A376E300FFD3CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D0E30E9218A376E300FFD3CE /* Bird-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bird-Prefix.pch"; sourceTree = "<group>"; };
+		D0E30E9218A376E300FFD3CE /* FlappyBall-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlappyBall-Prefix.pch"; sourceTree = "<group>"; };
 		D0E30E9318A376E300FFD3CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D0E30E9418A376E300FFD3CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D0E30E9C18A376E300FFD3CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D0E30EA218A376E300FFD3CE /* BirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0E30EA218A376E300FFD3CE /* FlappyBallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappyBallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E30EA318A376E300FFD3CE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		D0E30EAB18A376E300FFD3CE /* BirdTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BirdTests-Info.plist"; sourceTree = "<group>"; };
+		D0E30EAB18A376E300FFD3CE /* FlappyBallTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlappyBallTests-Info.plist"; sourceTree = "<group>"; };
 		D0E30EAD18A376E300FFD3CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0E30EAF18A376E300FFD3CE /* BirdTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirdTests.m; sourceTree = "<group>"; };
 		D0E30EDE18A37D6400FFD3CE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -341,8 +341,8 @@
 		D0E30E8218A376E300FFD3CE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D0E30E8118A376E300FFD3CE /* Bird.app */,
-				D0E30EA218A376E300FFD3CE /* BirdTests.xctest */,
+				D0E30E8118A376E300FFD3CE /* FlappyBall.app */,
+				D0E30EA218A376E300FFD3CE /* FlappyBallTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -379,10 +379,10 @@
 		D0E30E8B18A376E300FFD3CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D0E30E8C18A376E300FFD3CE /* Bird-Info.plist */,
+				D0E30E8C18A376E300FFD3CE /* FlappyBall-Info.plist */,
 				D0E30E8D18A376E300FFD3CE /* InfoPlist.strings */,
 				D0E30E9018A376E300FFD3CE /* main.m */,
-				D0E30E9218A376E300FFD3CE /* Bird-Prefix.pch */,
+				D0E30E9218A376E300FFD3CE /* FlappyBall-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -399,7 +399,7 @@
 		D0E30EAA18A376E300FFD3CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D0E30EAB18A376E300FFD3CE /* BirdTests-Info.plist */,
+				D0E30EAB18A376E300FFD3CE /* FlappyBallTests-Info.plist */,
 				D0E30EAC18A376E300FFD3CE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -525,9 +525,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D0E30E8018A376E300FFD3CE /* Bird */ = {
+		D0E30E8018A376E300FFD3CE /* FlappyBall */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0E30EB318A376E300FFD3CE /* Build configuration list for PBXNativeTarget "Bird" */;
+			buildConfigurationList = D0E30EB318A376E300FFD3CE /* Build configuration list for PBXNativeTarget "FlappyBall" */;
 			buildPhases = (
 				D0E30E7D18A376E300FFD3CE /* Sources */,
 				D0E30E7E18A376E300FFD3CE /* Frameworks */,
@@ -537,14 +537,14 @@
 			);
 			dependencies = (
 			);
-			name = Bird;
+			name = FlappyBall;
 			productName = Bird;
-			productReference = D0E30E8118A376E300FFD3CE /* Bird.app */;
+			productReference = D0E30E8118A376E300FFD3CE /* FlappyBall.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D0E30EA118A376E300FFD3CE /* BirdTests */ = {
+		D0E30EA118A376E300FFD3CE /* FlappyBallTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0E30EB618A376E300FFD3CE /* Build configuration list for PBXNativeTarget "BirdTests" */;
+			buildConfigurationList = D0E30EB618A376E300FFD3CE /* Build configuration list for PBXNativeTarget "FlappyBallTests" */;
 			buildPhases = (
 				D0E30E9E18A376E300FFD3CE /* Sources */,
 				D0E30E9F18A376E300FFD3CE /* Frameworks */,
@@ -555,9 +555,9 @@
 			dependencies = (
 				D0E30EA818A376E300FFD3CE /* PBXTargetDependency */,
 			);
-			name = BirdTests;
+			name = FlappyBallTests;
 			productName = BirdTests;
-			productReference = D0E30EA218A376E300FFD3CE /* BirdTests.xctest */;
+			productReference = D0E30EA218A376E300FFD3CE /* FlappyBallTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -574,7 +574,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D0E30E7C18A376E300FFD3CE /* Build configuration list for PBXProject "Bird" */;
+			buildConfigurationList = D0E30E7C18A376E300FFD3CE /* Build configuration list for PBXProject "FlappyBall" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -587,8 +587,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D0E30E8018A376E300FFD3CE /* Bird */,
-				D0E30EA118A376E300FFD3CE /* BirdTests */,
+				D0E30E8018A376E300FFD3CE /* FlappyBall */,
+				D0E30EA118A376E300FFD3CE /* FlappyBallTests */,
 			);
 		};
 /* End PBXProject section */
@@ -701,7 +701,7 @@
 /* Begin PBXTargetDependency section */
 		D0E30EA818A376E300FFD3CE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D0E30E8018A376E300FFD3CE /* Bird */;
+			target = D0E30E8018A376E300FFD3CE /* FlappyBall */;
 			targetProxy = D0E30EA718A376E300FFD3CE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -804,9 +804,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Bird/Bird-Prefix.pch";
-				INFOPLIST_FILE = "Bird/Bird-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Bird/FlappyBall-Prefix.pch";
+				INFOPLIST_FILE = "Bird/FlappyBall-Info.plist";
+				PRODUCT_NAME = FlappyBall;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -818,9 +818,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Bird/Bird-Prefix.pch";
-				INFOPLIST_FILE = "Bird/Bird-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Bird/FlappyBall-Prefix.pch";
+				INFOPLIST_FILE = "Bird/FlappyBall-Info.plist";
+				PRODUCT_NAME = FlappyBall;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -842,8 +842,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "BirdTests/BirdTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "BirdTests/FlappyBallTests-Info.plist";
+				PRODUCT_NAME = FlappyBallTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -861,8 +861,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bird/Bird-Prefix.pch";
-				INFOPLIST_FILE = "BirdTests/BirdTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "BirdTests/FlappyBallTests-Info.plist";
+				PRODUCT_NAME = FlappyBallTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -871,7 +871,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D0E30E7C18A376E300FFD3CE /* Build configuration list for PBXProject "Bird" */ = {
+		D0E30E7C18A376E300FFD3CE /* Build configuration list for PBXProject "FlappyBall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0E30EB118A376E300FFD3CE /* Debug */,
@@ -880,7 +880,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D0E30EB318A376E300FFD3CE /* Build configuration list for PBXNativeTarget "Bird" */ = {
+		D0E30EB318A376E300FFD3CE /* Build configuration list for PBXNativeTarget "FlappyBall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0E30EB418A376E300FFD3CE /* Debug */,
@@ -889,7 +889,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D0E30EB618A376E300FFD3CE /* Build configuration list for PBXNativeTarget "BirdTests" */ = {
+		D0E30EB618A376E300FFD3CE /* Build configuration list for PBXNativeTarget "FlappyBallTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0E30EB718A376E300FFD3CE /* Debug */,
