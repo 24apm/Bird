@@ -26,7 +26,7 @@ typedef enum {
     GameStateResultMode
 } GameState;
 
-@interface GameViewController : UIViewController <ADBannerViewDelegate, GKLeaderboardViewControllerDelegate, GKAchievementViewControllerDelegate, GameCenterManagerDelegate>
+@interface GameViewController : UIViewController <ADBannerViewDelegate, GKLeaderboardViewControllerDelegate, GameCenterManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet BackgroundView *backgroundView;
 @property (weak, nonatomic) IBOutlet UIView *obstacleLayer;

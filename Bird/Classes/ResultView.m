@@ -9,6 +9,7 @@
 #import "ResultView.h"
 #import <Social/Social.h>
 #import "AnimUtil.h"
+#import "iRate.h"
 
 @interface ResultView()
 
@@ -60,6 +61,8 @@
             [self performSelector:@selector(animateLabel) withObject:nil afterDelay:0.4f];
         }];
     }];
+    
+    [[iRate sharedInstance] promptIfNetworkAvailable];
 }
 
 - (void)updateScoreLabel {

@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" id="nvy-id-Xfr" userLabel="TItle View">
-                    <rect key="frame" x="-10" y="126" width="315" height="100"/>
+                    <rect key="frame" x="-10" y="126" width="315.00000000000006" height="100"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" id="lXO-0l-wZS" customClass="LadyBugView">
@@ -64,9 +64,9 @@
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <state key="normal" title="RATE"/>
+                    <state key="normal" title="LEADERBOARD"/>
                     <connections>
-                        <action selector="ratePressed:" destination="-1" eventType="touchUpInside" id="EkI-IN-4cH"/>
+                        <action selector="leaderboardPressed:" destination="-1" eventType="touchUpInside" id="126-Sd-e1Y"/>
                     </connections>
                 </button>
             </subviews>

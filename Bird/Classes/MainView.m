@@ -24,8 +24,8 @@
     [self hide];
 }
 
-- (IBAction)ratePressed:(id)sender {
-	[[iRate sharedInstance] promptIfNetworkAvailable];
+- (IBAction)leaderboardPressed:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:SHOW_LEADERBOARD_NOTIFICATION object:self];
 }
 
 - (void)show {

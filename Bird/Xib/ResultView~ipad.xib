@@ -56,7 +56,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Record!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nap-mM-14x">
-                    <rect key="frame" x="418" y="517" width="274" height="45"/>
+                    <rect key="frame" x="418" y="517.00000000000011" width="274" height="45.000000000000007"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -99,7 +99,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.27843138575553894" green="0.84705889225006104" blue="0.45098042488098145" alpha="1" colorSpace="deviceRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                    <state key="normal" title="Play again"/>
+                    <state key="normal" title="BACK"/>
                     <connections>
                         <action selector="playAgainPressed:" destination="-1" eventType="touchUpInside" id="bcL-9o-D0E"/>
                     </connections>

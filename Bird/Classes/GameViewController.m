@@ -65,6 +65,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resumeCallback) name:MENU_VIEW_DISMISSED_NOTIFICATION object:nil];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mainMenuCallback) name:MENU_VIEW_GO_TO_MAIN_MENU_NOTIFICATION object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showLeaderboard) name:SHOW_LEADERBOARD_NOTIFICATION object:nil];
 
     [self createObstacle];
     
@@ -95,23 +96,6 @@
     }
     [self preloadSounds];
     [self updateGameState:GameStateMainMode];
-}
-
-- (void)loginToGameCenter {
-    
-    self.currentLeaderBoard = kLeaderboardID;
-
-    if ([GameCenterManager isGameCenterAvailable]) {
-        
-        self.gameCenterManager = [[GameCenterManager alloc] init];
-        [self.gameCenterManager setDelegate:self];
-        [self.gameCenterManager authenticateLocalUser];
-        
-    } else {
-        
-        // The current device does not support Game Center.
-        
-    }
 }
 
 - (void)preloadSounds {
@@ -310,11 +294,6 @@
     [self restartGame];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self loginToGameCenter];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -324,6 +303,7 @@
     
     [self createAdBannerView];
     [self.view addSubview:self.adBannerView];
+    [self loginToGameCenter];
 }
 
 - (void)didReceiveMemoryWarning
@@ -509,12 +489,6 @@
 {
     // As of iOS 6.0, the banner will automatically resize itself based on its width.
     // To support iOS 5.0 however, we continue to set the currentContentSizeIdentifier appropriately.
-    CGRect contentFrame = self.view.bounds;
-    if (contentFrame.size.width < contentFrame.size.height) {
-        self.adBannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
-    } else {
-        self.adBannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierLandscape;
-    }
     
     float bannerYOffset = 0.f;
     if (self.adBannerView.bannerLoaded) {
@@ -545,5 +519,38 @@
     [self layoutAnimated:YES];
 }
 
+#pragma mark - GameCenter
+
+- (void)loginToGameCenter {
+    self.currentLeaderBoard = kLeaderboardID;
+    
+    if ([GameCenterManager isGameCenterAvailable]) {
+        
+        self.gameCenterManager = [[GameCenterManager alloc] init];
+        [self.gameCenterManager setDelegate:self];
+        [self.gameCenterManager authenticateLocalUser];
+        
+    } else {
+        
+        // The current device does not support Game Center.
+        
+    }
+}
+
+#pragma mark - Leaderboard
+
+- (IBAction) showLeaderboard {
+    GKLeaderboardViewController *leaderboardController = [[GKLeaderboardViewController alloc] init];
+    if (leaderboardController != NULL) {
+        leaderboardController.category = self.currentLeaderBoard;
+        leaderboardController.timeScope = GKLeaderboardTimeScopeWeek;
+        leaderboardController.leaderboardDelegate = self;
+        [self presentViewController:leaderboardController animated:YES completion:nil];
+    }
+}
+
+- (void)leaderboardViewControllerDidFinish:(GKLeaderboardViewController *)viewController {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
