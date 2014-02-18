@@ -79,7 +79,7 @@
     self.resultView.hidden = YES;
     self.resultView.size = self.containerView.size;
     self.resultView.vc = self;
-    self.resultView.sharedImage = [UIImage imageNamed:@"man.png"];
+    self.resultView.sharedImage = self.ladyBugView.imageView.image;
     
     self.mainView = [[MainView alloc] init];
     [self.containerView addSubview:self.mainView];
