@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0E30E8018A376E300FFD3CE"
-               BuildableName = "Bird.app"
+               BuildableName = "FlappyBall.app"
                BlueprintName = "FlappyBall"
                ReferencedContainer = "container:FlappyBall.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0E30EA118A376E300FFD3CE"
-               BuildableName = "BirdTests.xctest"
+               BuildableName = "FlappyBallTests.xctest"
                BlueprintName = "FlappyBallTests"
                ReferencedContainer = "container:FlappyBall.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0E30E8018A376E300FFD3CE"
-            BuildableName = "Bird.app"
+            BuildableName = "FlappyBall.app"
             BlueprintName = "FlappyBall"
             ReferencedContainer = "container:FlappyBall.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0E30E8018A376E300FFD3CE"
-            BuildableName = "Bird.app"
+            BuildableName = "FlappyBall.app"
             BlueprintName = "FlappyBall"
             ReferencedContainer = "container:FlappyBall.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0E30E8018A376E300FFD3CE"
-            BuildableName = "Bird.app"
+            BuildableName = "FlappyBall.app"
             BlueprintName = "FlappyBall"
             ReferencedContainer = "container:FlappyBall.xcodeproj">
          </BuildableReference>
