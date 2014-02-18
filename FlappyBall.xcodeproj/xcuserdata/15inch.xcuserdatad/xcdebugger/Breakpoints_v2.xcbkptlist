@@ -66,11 +66,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bird/Classes/GameViewController.m"
-            timestampString = "414379844.894092"
+            timestampString = "414380662.579471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "527"
-            endingLineNumber = "527"
+            startingLineNumber = "509"
+            endingLineNumber = "509"
             landmarkName = "-loginToGameCenter"
             landmarkType = "5">
          </BreakpointContent>
